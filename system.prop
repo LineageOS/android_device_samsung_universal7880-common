@@ -55,6 +55,7 @@ ro.telephony.ril_class=SlteRIL
 ro.ril.gprsclass=10
 ro.ril.hsxpa=1
 ro.ril.telephony.mqanelements=6
+ro.telephony.mms_data_profile=5
 
 # Wifi
 wifi.interface=wlan0
