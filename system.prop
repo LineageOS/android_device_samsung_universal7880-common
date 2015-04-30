@@ -54,6 +54,7 @@ ro.telephony.default_network=9
 ro.ril.gprsclass=10
 ro.ril.hsxpa=1
 ro.ril.telephony.mqanelements=6
+ro.telephony.mms_data_profile=5
 
 # SDcardfs
 ro.sys.sdcardfs=false
