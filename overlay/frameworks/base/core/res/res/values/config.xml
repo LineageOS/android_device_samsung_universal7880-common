@@ -203,6 +203,9 @@
         <item>255</item>
     </integer-array>
 
+    <!-- Operating voltage for bluetooth controller. 0 by default -->
+    <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
+
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">10</integer>
