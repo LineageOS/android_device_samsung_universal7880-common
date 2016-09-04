@@ -488,10 +488,9 @@ int read_hci_event(int fd, unsigned char* buf, int size)
     while (count < 3) {
             r = read(fd, buf + count, 3 - count);
             if (r <= 0)
-                    return -1;
+                return -1;
             count += r;
     }
-
     /* Now we read the parameters. */
     if (buf[2] < (size - 3))
             remain = buf[2];
