@@ -29,6 +29,9 @@
 #include <hardware/hardware.h>
 #include <hardware/camera3.h>
 #include <utils/threads.h>
+#include <camera/CameraMetadata.h>
+
+#include "SECCameraProperties.h"
 
 static android::Mutex gCameraWrapperLock;
 static camera_module_t *gVendorModule = 0;
@@ -135,7 +138,30 @@ const camera_metadata_t * camera_construct_default_request_settings(
 
     ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device, (uintptr_t)(((wrapper_camera_device_t*)device)->vendor));
 
-    return VENDOR_CALL(device, construct_default_request_settings, type);
+    android::CameraMetadata metadata;
+    metadata = VENDOR_CALL(device, construct_default_request_settings, type);
+
+    /* enable phase detection auto focus by default */
+    int32_t pafMode[1] = {PAF_MODE_ON};
+    metadata.update(PAF_MODE, pafMode, 1);
+
+#ifdef HAS_OIS
+    /* enable optical image stabilization by default */
+    uint8_t oisMode[1] = {ANDROID_LENS_OPTICAL_STABILIZATION_MODE_ON};
+    metadata.update(ANDROID_LENS_OPTICAL_STABILIZATION_MODE, oisMode, 1);
+
+    int32_t oisOpMode[1];
+    /* video mode ois */
+    if (type == CAMERA3_TEMPLATE_VIDEO_RECORD) {
+        oisOpMode[0] = OIS_OPERATION_MODE_VIDEO;
+    /* picture mode ois */
+    } else {
+        oisOpMode[0] = OIS_OPERATION_MODE_PICTURE;
+    }
+    metadata.update(OIS_OPERATION_MODE, oisOpMode, 1);
+#endif
+
+    return metadata.release();
 }
 
 int camera_process_capture_request(const struct camera3_device *device,
