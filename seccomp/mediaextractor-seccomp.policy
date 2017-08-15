@@ -1,0 +1,4 @@
+nanosleep: 1
+_llseek: 1
+pread64: 1
+readlinkat: 1

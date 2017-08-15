@@ -1,0 +1,15 @@
+# allow fingerprintd to communicate with various devices
+
+# kernel fp device
+allow fingerprintd fingerprint_device:chr_file rw_file_perms;
+
+# secure memory device
+allow fingerprintd secmem_device:chr_file rw_file_perms;
+
+# trust zone device
+allow fingerprintd tee_device:chr_file rw_file_perms;
+allow fingerprintd tee:unix_stream_socket connectto;
+
+# /data/biometrics/*
+allow fingerprintd fingerprintd_data_file:dir create_dir_perms;
+allow fingerprintd fingerprintd_data_file:file create_file_perms;

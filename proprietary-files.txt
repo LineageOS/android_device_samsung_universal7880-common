@@ -1,0 +1,197 @@
+#
+# Copyright (C) 2017 The LineageOS Project
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+
+# Audio - Fix OSS HAL and remove this!
+lib/hw/audio.primary.universal7880.so
+lib/lib_SamsungRec_06002.so
+lib/lib_SoundAlive_SRC384_ver300.so
+lib/lib_soundaliveresampler.so
+lib/lib_SoundBooster_ver710.so
+lib/libaudio-ril.so
+lib/libaudioroute.so
+lib/libcodecdump.so
+lib/librecordalive.so
+lib/libpreprocessing_nxp.so
+lib/libSamsungPostProcess.so
+lib/libSamsungPostProcessConvertor.so
+lib/libsamsungSoundbooster_plus.so
+lib/libsamsungDiamondVoice.so
+lib/libsecaudioinfo.so
+lib64/libsecaudioinfo.so
+lib/libsecril-client.so
+lib64/libsecril-client.so
+lib/libtinyalsa.so
+lib64/libtinyalsa.so
+lib/libtinycompress.so
+vendor/lib/libLifevibes_lvvetx.so
+vendor/lib/libLifevibes_lvverx.so
+
+# Audio amplifier
+lib/libtfa98xx_samsung.so
+etc/Tfa9896.cnt
+
+# Bluetooth
+bin/wcnss_filter
+lib/libbt-vendor.so
+
+# Camera
+lib/hw/camera.exynos5.so
+lib64/hw/camera.exynos5.so
+lib/libexynoscamera.so
+lib64/libexynoscamera.so
+lib/libexynoscamera3.so
+lib64/libexynoscamera3.so
+lib/libuniapi.so
+lib64/libuniapi.so
+lib/libuniplugin.so
+lib64/libuniplugin.so
+lib/libhwjpeg.so
+lib64/libhwjpeg.so
+vendor/firmware/setfile_3p8_front.bin
+vendor/firmware/setfile_3p8.bin
+
+# DRM
+vendor/lib/mediadrm/libdrmclearkeyplugin.so
+vendor/lib64/mediadrm/libdrmclearkeyplugin.so
+vendor/lib/mediadrm/libwvdrmengine.so
+
+# Fingerprint
+lib64/libbauthserver.so
+lib64/libbauthtzcommon.so
+lib64/libegis_fp_normal_sensor_test.so
+lib64/libsynaFpSensorTestNwd.so
+
+# GPS
+bin/gpsd
+etc/ca.pem
+lib64/hw/gps.default.so
+lib/libfloatingfeature.so
+lib64/libfloatingfeature.so
+lib/libwrappergps.so
+lib64/libwrappergps.so
+
+# Graphics
+# Vulcan and OpenCL are implemented in this file,
+# so we create symlinks in setup-makefiles.sh.
+vendor/lib/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_mali.so
+
+# Media
+vendor/firmware/fimc_is_lib.bin
+vendor/firmware/mfc_fw.bin
+
+# Mobicore
+app/FFFFFFFF000000000000000000000001.drbin
+app/mcRegistry/00060308060501020000000000000000.tlbin
+app/mcRegistry/07010000000000000000000000000000.tlbin
+app/mcRegistry/07060000000000000000000000000000.tlbin
+app/mcRegistry/08130000000000000000000000000000.tlbin
+app/mcRegistry/ffffffff000000000000000000000004.tlbin
+app/mcRegistry/ffffffff000000000000000000000005.tlbin
+app/mcRegistry/ffffffff00000000000000000000000a.tlbin
+app/mcRegistry/ffffffff00000000000000000000000b.tlbin
+app/mcRegistry/ffffffff00000000000000000000000c.tlbin
+app/mcRegistry/ffffffff00000000000000000000000d.tlbin
+app/mcRegistry/ffffffff00000000000000000000000f.tlbin
+app/mcRegistry/ffffffff000000000000000000000012.tlbin
+app/mcRegistry/ffffffff000000000000000000000013.tlbin
+app/mcRegistry/ffffffff000000000000000000000016.tlbin
+app/mcRegistry/ffffffff000000000000000000000017.tlbin
+app/mcRegistry/ffffffff000000000000000000000019.tlbin
+app/mcRegistry/ffffffff00000000000000000000001f.tlbin
+app/mcRegistry/ffffffff00000000000000000000002e.tlbin
+app/mcRegistry/ffffffff000000000000000000000038.tlbin
+app/mcRegistry/ffffffff000000000000000000000041.tlbin
+app/mcRegistry/ffffffff000000000000000000000045.tlbin
+app/mcRegistry/ffffffffd00000000000000000000004.tlbin
+app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
+app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
+app/mcRegistry/ffffffffd00000000000000000000014.tlbin
+app/mcRegistry/ffffffffd00000000000000000000016.tlbin
+app/mcRegistry/ffffffffd00000000000000000000017.tlbin
+app/mcRegistry/fffffffff0000000000000000000001b.tlbin
+app/mcRegistry/fffffffff0000000000000000000001e.tlbin
+bin/mcDriverDaemon
+vendor/lib64/libMcClient.so
+vendor/lib64/libMcRegistry.so
+
+# NFC
+etc/nfc/sec_s3nrn81_rfreg.bin
+lib/hw/nfc_nci.universal7880.so
+lib64/hw/nfc_nci.universal7880.so
+vendor/firmware/nfc/sec_s3nrn81_firmware.bin
+
+# OMX
+lib/omx/libOMX.Exynos.AVC.Encoder.so
+lib64/omx/libOMX.Exynos.AVC.Encoder.so
+lib/omx/libOMX.Exynos.HEVC.Decoder.so
+lib64/omx/libOMX.Exynos.HEVC.Decoder.so
+lib/omx/libOMX.Exynos.HEVC.Encoder.so
+lib64/omx/libOMX.Exynos.HEVC.Encoder.so
+lib/omx/libOMX.Exynos.VP9.Decoder.so
+lib64/omx/libOMX.Exynos.VP9.Decoder.so
+
+# Radio
+bin/rild
+lib/libreference-ril.so
+lib64/libreference-ril.so
+lib/libril.so
+lib64/libril.so
+lib/libsec-ril.so
+lib64/libsec-ril.so
+lib/libsec-ril-dsds.so
+lib64/libsec-ril-dsds.so
+lib/libsecnativefeature.so
+lib64/libsecnativefeature.so
+
+# Sensors
+bin/sensorhubservice
+lib64/hw/sensors.universal7880.so
+lib64/hw/sensorhubs.universal7880.so
+lib64/libsensorhub.so
+lib64/libsensorhubservice.so
+lib/libsensorlistener.so
+lib64/libsensorlistener.so
+
+# Surface Composer
+lib/libion.so
+lib64/libion.so
+lib/hw/gralloc.exynos5.so
+lib64/hw/gralloc.exynos5.so
+
+# Wifi
+etc/firmware/bdwlan30.bin
+etc/firmware/bdwlan30_OLD.bin
+etc/firmware/bdwlan32.bin
+etc/firmware/otp30.bin
+etc/firmware/qwlan30.bin
+etc/firmware/qwlan30_ibss.bin
+etc/firmware/Data.msc
+etc/firmware/nvm_tlv.bin
+etc/firmware/nvm_tlv_1.3.bin
+etc/firmware/nvm_tlv_2.1.bin
+etc/firmware/nvm_tlv_3.0.bin
+etc/firmware/nvm_tlv_3.2.bin
+etc/firmware/nvm_tlv_tf_1.1.bin
+etc/firmware/rampatch_tlv.img
+etc/firmware/rampatch_tlv_1.3.tlv
+etc/firmware/rampatch_tlv_2.1.tlv
+etc/firmware/rampatch_tlv_3.0.tlv
+etc/firmware/rampatch_tlv_3.2.tlv
+etc/firmware/rampatch_tlv_tf_1.1.tlv
+etc/firmware/utf30.bin
+etc/firmware/utfbd30.bin
+etc/firmware/utfbd30_OLD.bin
+etc/firmware/utfbd32.bin
+lib/modules/qca_cld/qca_cld_wlan.ko

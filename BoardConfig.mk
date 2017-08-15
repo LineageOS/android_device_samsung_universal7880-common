@@ -1,0 +1,192 @@
+#
+# Copyright (C) 2017 The LineageOS Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+LOCAL_PATH := device/samsung/a5y17lte
+
+# Include path
+TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
+
+# Firmware
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_RADIOIMAGE := true
+
+# Platform
+TARGET_BOARD_PLATFORM := exynos5
+TARGET_SLSI_VARIANT := cm
+TARGET_SOC := exynos7880
+TARGET_BOOTLOADER_BOARD_NAME := universal7880
+
+# CPU
+TARGET_ARCH := arm64
+TARGET_ARCH_VARIANT := armv8-a
+TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_ABI2 :=
+TARGET_CPU_VARIANT := generic
+
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := cortex-a53
+
+# Binder
+TARGET_USES_64_BIT_BINDER := true
+
+# Assertions
+TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
+
+# Extracted with libbootimg
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(LOCAL_PATH)/dtb.img
+BOARD_KERNEL_BASE := 0x10000000
+BOARD_KERNEL_PAGESIZE := 2048
+#BOARD_KERNEL_CMDLINE := The bootloader ignores the cmdline from the boot.img
+#BOARD_KERNEL_SEPARATED_DT := true
+#TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
+
+# Kernel
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+TARGET_USES_UNCOMPRESSED_KERNEL := true
+
+# Kernel config
+TARGET_KERNEL_SOURCE := kernel/samsung/a5y17lte
+TARGET_KERNEL_CONFIG := lineage-a5y17lte_defconfig
+
+# Partitions
+BOARD_BOOTIMAGE_PARTITION_SIZE     := 33554432
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 39845888
+BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 5083496448
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 25656557568
+BOARD_CACHEIMAGE_PARTITION_SIZE    := 209715200
+
+# blockdev --getbsz /dev/block/mmcblk0p9
+BOARD_FLASH_BLOCK_SIZE := 4096
+
+# Use these flags if the board has a ext4 partition larger than 2gb
+BOARD_HAS_LARGE_FILESYSTEM := true
+TARGET_USERIMAGES_USE_EXT4 := true
+
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+BOARD_HAS_QCA_BT_ROME := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+QCOM_BT_USE_BTNV := true
+QCOM_BT_USE_SMD_TTY := true
+
+# Samsung HALs
+TARGET_AUDIOHAL_VARIANT := samsung
+TARGET_POWERHAL_VARIANT := samsung
+TARGET_SEC_FP_HAL_VARIANT := bauth
+
+# Samsung Hardware
+BOARD_HARDWARE_CLASS += $(LOCAL_PATH)/cmhw
+BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
+
+# Samsung Camera
+BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
+
+# Graphics
+USE_OPENGL_RENDERER := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+
+# Renderscript
+BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a53
+BOARD_OVERRIDE_RS_CPU_VARIANT_64 := cortex-a53
+
+# HDMI
+BOARD_HDMI_INCAPABLE := true
+# FIMG2D
+BOARD_USES_SKIA_FIMGAPI := true
+# (G)SCALER
+BOARD_USES_SCALER := true
+# Samsung OpenMAX Video
+BOARD_USE_STOREMETADATA := true
+BOARD_USE_METADATABUFFERTYPE := true
+BOARD_USE_DMA_BUF := true
+BOARD_USE_ANB_OUTBUF_SHARE := true
+BOARD_USE_IMPROVED_BUFFER := true
+BOARD_USE_NON_CACHED_GRAPHICBUFFER := true
+BOARD_USE_GSC_RGB_ENCODER := true
+BOARD_USE_CSC_HW := false
+BOARD_USE_QOS_CTRL := false
+BOARD_USE_S3D_SUPPORT := true
+BOARD_USE_VP8ENC_SUPPORT := true
+
+# Wifi
+BOARD_HAS_QCOM_WLAN := true
+BOARD_WLAN_DEVICE := qcwcn
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+WIFI_DRIVER_FW_PATH_AP := "ap"
+WIFI_DRIVER_FW_PATH_STA := "sta"
+WIFI_DRIVER_FW_PATH_P2P := "p2p"
+WIFI_DRIVER_MODULE_NAME := wlan
+WIFI_DRIVER_MODULE_PATH := /system/lib/modules/qca_cld/qca_cld_wlan.ko
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+# Wifi loader
+BOARD_HAVE_SAMSUNG_WIFI := true
+
+# Charger
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
+
+# RIL
+BOARD_VENDOR := samsung
+BOARD_MODEM_TYPE := ss333
+BOARD_PROVIDES_RILD := true
+
+# RIL.java overwrite
+BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
+
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_sec
+
+# Release tools
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
+
+# Recovery
+#RECOVERY_VARIANT := twrp
+BOARD_HAS_DOWNLOAD_MODE := true
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.samsungexynos7880
+TARGET_OTA_ASSERT_DEVICE := a5y17lte,a5y17ltexx
+
+# TWRP
+ifeq ($(RECOVERY_VARIANT),twrp)
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/twrp.fstab
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_THEME := portrait_hdpi
+TW_BRIGHTNESS_PATH := /sys/class/backlight/panel/brightness
+TW_MAX_BRIGHTNESS := 255
+TW_NO_REBOOT_BOOTLOADER := true
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_NTFS_3G := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_NO_EXFAT_FUSE := true
+TW_EXCLUDE_SUPERSU := true
+endif
+
+# Seccomp filters
+BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
+
+# SELinux
+BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
