@@ -51,7 +51,15 @@ SYMLINKS := \$(TARGET_OUT)/vendor
 	\$(hide) ln -sf egl/libGLES_mali.so \$@/lib64/libOpenCL.so.1.1
 
 ALL_MODULES.\$(LOCAL_MODULE).INSTALLED := \\
-    \$(ALL_MODULES.\$(LOCAL_MODULE).INSTALLED) \$(SYMLINKS)
+	\$(ALL_MODULES.\$(LOCAL_MODULE).INSTALLED) \$(SYMLINKS)
+
+QCA_CLD := \$(TARGET_OUT)/system/lib/modules
+\$(QCA_CLD):
+	@mkdir -p \$@/qca_cld
+	\$(hide) ln -sf qca_cld/qca_cld_wlan.ko \$@/wlan.ko
+
+ALL_MODULES.\$(LOCAL_MODULE).INSTALLED := \\
+	\$(ALL_MODULES.\$(LOCAL_MODULE).INSTALLED) \$(QCA_CLD)
 
 endif
 EOF
