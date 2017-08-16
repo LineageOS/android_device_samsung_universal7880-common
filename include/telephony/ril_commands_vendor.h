@@ -44,3 +44,8 @@
     {RIL_REQUEST_SET_INCOMING_COMMUNICATION_BARRING, dispatchVoid, responseVoid}, // 10028
     {RIL_REQUEST_QUERY_CNAP, dispatchVoid, responseVoid}, // 10029
     {RIL_REQUEST_SET_TRANSFER_CALL, dispatchVoid, responseVoid}, // 10030
+    {10031, NULL, NULL},
+    {10032, NULL, NULL},
+    {10033, NULL, NULL},
+    {10034, NULL, NULL},
+    {10035, NULL, NULL},
