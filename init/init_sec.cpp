@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
@@ -12,8 +11,10 @@
 
 #include "init_sec.h"
 
+#define MODEL_NAME_LEN 5  // e.g. "A520F"
+#define BUILD_NAME_LEN 8  // e.g. "XXU2BQH4"
+#define CODENAME_LEN   11 // e.g. "a5y17ltecan"
 
-static std::string bootloader;
 
 static void property_override(char const prop[], char const value[]) {
     prop_info *pi;
@@ -25,49 +26,49 @@ static void property_override(char const prop[], char const value[]) {
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-static device_variant parse_variant(std::string bl) {
-    device_variant ret = VARIANT_MAX;
-
-    if (bl.find("A520F") != std::string::npos)
-        ret = VARIANT_A520F;
-
-    return ret;
-}
-
-static device_variant get_variant_from_cmdline()
-{
-    bootloader = property_get("ro.bootloader");
-    device_variant ret = parse_variant(bootloader);
-
-    if (ret >= VARIANT_MAX) {
-        INFO("Unknown bootloader id: %s, forcing international (F) variant\n", bootloader.c_str());
-        ret = VARIANT_A520F;
-    }
-
-    return ret;
-}
-
 void vendor_load_properties()
 {
-    const device_variant variant = get_variant_from_cmdline();
+    const std::string bootloader = property_get("ro.bootloader");
+    const std::string bl_model = bootloader.substr(0, MODEL_NAME_LEN);
+    const std::string bl_build = bootloader.substr(MODEL_NAME_LEN);
 
-    std::string model, device, description, fingerprint;
+    std::string model;  // A520F
+    std::string device; // a5y17lte
+    std::string name;    // a5y17ltexx
+    std::string description;
+    std::string fingerprint;
 
-    switch (variant) {
-    case VARIANT_A520F:
-        model = "SM-A520F";
-        device = "a5y17lte";
-        description = "a5y17ltexx-user 7.0 NRD90M A520FXXU2BQH4 release-keys";
-        fingerprint = "samsung/a5y17ltexx/a5y17lte:7.0/NRD90M/A520FXXU2BQH4:user/release-keys";
-        break;
-    default:
-        break;
+    model = "SM-" + bl_model;
+
+    for (size_t i = 0; i < VARIANT_MAX; i++) {
+        std::string model_ = all_variants[i]->model;
+        if (model.compare(model_) == 0) {
+            device = all_variants[i]->codename;
+            break;
+        }
     }
 
-    INFO("Found bootloader id: %s setting build properties for: %s device\n", bootloader.c_str(), device.c_str());
+    if (device.size() == 0) {
+        ERROR("Could not detect device, forcing a5y17lte");
+        device = "a5y17lte";
+    }
+
+    name = device + "xx";
+
+    description = name + "-user 7.0 NRD90M " + bl_model + bl_build + " release-keys";
+    fingerprint = "samsung/" + name + "/" + device + ":7.0/NRD90M/" + bl_model + bl_build + ":user/release-keys";
+
+    INFO("Found bootloader: %s", bootloader.c_str());
+    INFO("Setting ro.product.model: %s", model.c_str());
+    INFO("Setting ro.product.device: %s", device.c_str());
+    INFO("Setting ro.product.name: %s", name.c_str());
+    INFO("Setting ro.build.product: %s", device.c_str());
+    INFO("Setting ro.build.description: %s", description.c_str());
+    INFO("Setting ro.build.fingerprint: %s", fingerprint.c_str());
 
     property_override("ro.product.model", model.c_str());
     property_override("ro.product.device", device.c_str());
+    property_override("ro.product.name", name.c_str());
     property_override("ro.build.product", device.c_str());
     property_override("ro.build.description", description.c_str());
     property_override("ro.build.fingerprint", fingerprint.c_str());
