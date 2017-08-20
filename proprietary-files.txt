@@ -38,7 +38,7 @@ vendor/lib/libLifevibes_lvvetx.so
 vendor/lib/libLifevibes_lvverx.so
 
 # Audio amplifier
-lib/libtfa98xx_samsung.so
+lib/libtfa98xx.so
 etc/Tfa9896.cnt
 
 # Bluetooth
@@ -123,8 +123,10 @@ app/mcRegistry/ffffffffd00000000000000000000017.tlbin
 app/mcRegistry/fffffffff0000000000000000000001b.tlbin
 app/mcRegistry/fffffffff0000000000000000000001e.tlbin
 bin/mcDriverDaemon
-vendor/lib64/libMcClient.so
-vendor/lib64/libMcRegistry.so
+vendor/lib/libMcClient.so:lib/libMcClient.so
+vendor/lib64/libMcClient.so:lib64/libMcClient.so
+vendor/lib/libMcRegistry.so:lib/libMcRegistry.so
+vendor/lib64/libMcRegistry.so:lib64/libMcRegistry.so
 
 # NFC
 etc/nfc/sec_s3nrn81_rfreg.bin

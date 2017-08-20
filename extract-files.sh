@@ -32,6 +32,7 @@ for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
             adb pull /system/$DEST $BASE/$DEST
         else
             cp $STOCK_ROM_DIR/$DEST $BASE/$DEST
+        fi
     fi
 done
 
