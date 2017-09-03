@@ -53,6 +53,7 @@ public class SlteRIL extends RIL {
     private static final int RIL_UNSOL_STK_CALL_CONTROL_RESULT = 11003;
 
     private static final int RIL_UNSOL_DEVICE_READY_NOTI = 11008;
+    private static final int RIL_UNSOL_GPS_NOTI = 11009;
     private static final int RIL_UNSOL_AM = 11010;
     private static final int RIL_UNSOL_DUN_PIN_CONTROL_SIGNAL = 11011;
     private static final int RIL_UNSOL_SIM_PB_READY = 11021;
@@ -346,6 +347,7 @@ public class SlteRIL extends RIL {
             case RIL_UNSOL_WB_AMR_STATE:
             case RIL_UNSOL_DEVICE_READY_NOTI: /* Registrant notification */
             case RIL_UNSOL_SIM_PB_READY: /* Registrant notification */
+            case RIL_UNSOL_GPS_NOTI: /* GPS notification */
                 Rlog.v(RILJ_LOG_TAG,
                        "XMM7260: ignoring unsolicited response " +
                        origResponse);
