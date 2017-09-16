@@ -123,7 +123,7 @@ enum {
     /* buffer will be used by the HW IPs when sysmmu is off */
     GRALLOC_USAGE_PHYSICALLY_LINEAR     = 0x01000000,
     /* mask for the software usage bit-mask */
-    GRALLOC_USAGE_HW_MASK               = 0x00079F00,
+    GRALLOC_USAGE_HW_MASK               = 0x00071F00,
 
     /* buffer will be used as a RenderScript Allocation */
     GRALLOC_USAGE_RENDERSCRIPT          = 0x00100000,
@@ -353,21 +353,6 @@ typedef struct gralloc_module_t {
 
 typedef struct alloc_device_t {
     struct hw_device_t common;
-
-#ifdef QCOM_BSP
-    /*
-     * (*allocSize)() Allocates a buffer in graphic memory with the requested
-     * bufferSize parameter and returns a buffer_handle_t and the stride in
-     * pixels to allow the implementation to satisfy hardware constraints on
-     * the width of a pixmap (eg: it may have to be multiple of 8 pixels).
-     * The CALLER TAKES OWNERSHIP of the buffer_handle_t.
-     *
-     * Returns 0 on success or -errno on error.
-     */
-    int (*allocSize)(struct alloc_device_t* dev,
-            int w, int h, int format, int usage,
-            buffer_handle_t* handle, int* stride, int bufferSize);
-#endif
 
     /* 
      * (*alloc)() Allocates a buffer in graphic memory with the requested
