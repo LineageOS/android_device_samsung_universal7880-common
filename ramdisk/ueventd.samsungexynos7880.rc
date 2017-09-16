@@ -99,7 +99,7 @@
 /dev/video11              0660   mediacodec mediadrm
 
 # jpeg
-/dev/video12              0660   media      media
+/dev/video12              0660   cameraserver      media
 
 # audio
 /dev/seiren               0660   system     audio
