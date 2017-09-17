@@ -12,31 +12,6 @@
 # GNU General Public License for more details.
 #
 
-# Audio - Fix OSS HAL and remove this!
-lib/hw/audio.primary.universal7880.so
-lib/lib_SamsungRec_06002.so
-lib/lib_SoundAlive_SRC384_ver300.so
-lib/lib_soundaliveresampler.so
-lib/lib_SoundBooster_ver710.so
-lib/libaudio-ril.so
-lib/libaudioroute.so
-lib/libcodecdump.so
-lib/librecordalive.so
-lib/libpreprocessing_nxp.so
-lib/libSamsungPostProcess.so
-lib/libSamsungPostProcessConvertor.so
-lib/libsamsungSoundbooster_plus.so
-lib/libsamsungDiamondVoice.so
-lib/libsecaudioinfo.so
-lib64/libsecaudioinfo.so
-lib/libsecril-client.so
-lib64/libsecril-client.so
-lib/libtinyalsa.so
-lib64/libtinyalsa.so
-lib/libtinycompress.so
-vendor/lib/libLifevibes_lvvetx.so
-vendor/lib/libLifevibes_lvverx.so
-
 # Audio amplifier
 lib/libtfa98xx.so
 etc/Tfa9896.cnt
