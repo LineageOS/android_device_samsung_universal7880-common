@@ -49,6 +49,9 @@
 
 /dev/batch_io                u:object_r:sensor_device:s0
 
+# TFA98xx amplifier
+/dev/i2c-20                  u:object_r:amplifier_device:s0
+
 ####################################
 # efs files
 /efs/FactoryApp(/.*)?        u:object_r:app_efs_file:s0

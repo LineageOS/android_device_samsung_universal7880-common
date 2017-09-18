@@ -24,3 +24,6 @@ type fingerprint_device, dev_type;
 
 # /dev/batch_io
 type sensor_device, dev_type;
+
+# /dev/i2c-20 - TFA98xx amplifier
+type amplifier_device, dev_type;
