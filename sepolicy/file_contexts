@@ -26,7 +26,7 @@
 /dev/gnss_ipc                u:object_r:gps_device:s0
 /dev/ttySAC[0-9]*            u:object_r:gps_device:s0
 
-/dev/block/sda[0-9]*         u:object_r:emmcblk_device:s0
+/dev/block/mmcblk0p[0-9]*    u:object_r:emmcblk_device:s0
 
 /dev/block/mmcblk0p10        u:object_r:boot_block_device:s0
 /dev/block/mmcblk0p11        u:object_r:recovery_block_device:s0
@@ -48,9 +48,13 @@
 /dev/esfp0                   u:object_r:fingerprint_device:s0
 
 /dev/batch_io                u:object_r:sensor_device:s0
+/dev/ssp_sensorhub           u:object_r:sensor_device:s0
 
 # TFA98xx amplifier
 /dev/i2c-20                  u:object_r:amplifier_device:s0
+
+# Knox status
+/dev/knox_kap                u:object_r:knox_device:s0
 
 ####################################
 # efs files
@@ -77,8 +81,8 @@
 ####################################
 # data files
 /data/nfc(/.*)?              u:object_r:nfc_data_file:s0
-/data/\.cid\.info            u:object_r:wifi_data_file:s0
-/data/\.wifiver\.info        u:object_r:wifi_data_file:s0
+/data/\.cid\.info                  u:object_r:wifi_data_file:s0
+/data/misc/conn/\.wifiver\.info    u:object_r:wifi_data_file:s0
 
 /data/misc/radio(/.*)?       u:object_r:radio_data_file:s0
 

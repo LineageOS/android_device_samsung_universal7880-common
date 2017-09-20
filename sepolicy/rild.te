@@ -44,3 +44,9 @@ allow rild storage_file:dir { r_dir_perms };
 allow rild storage_file:lnk_file { r_file_perms };
 allow rild mnt_user_file:dir { r_dir_perms };
 allow rild mnt_user_file:lnk_file { r_file_perms };
+
+# persist.ril.modem.board
+set_prop(modemloader, radio_prop)
+
+# /dev/knox_kap
+allow rild knox_device:chr_file r_file_perms;

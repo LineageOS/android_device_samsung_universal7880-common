@@ -19,3 +19,6 @@ allow gpsd gps_data_file:fifo_file { unlink create setattr getattr rw_file_perms
 allow gpsd sysfs_wake_lock:file rw_file_perms;
 
 allow gpsd sensorservice_service:service_manager { find };
+
+# /dev/umts_boot0
+allow gpsd mif_device:chr_file r_file_perms;

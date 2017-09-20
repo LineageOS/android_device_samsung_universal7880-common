@@ -42,3 +42,6 @@ allow system_server debugfs:file r_file_perms;
 allow system_server sensor_device:chr_file rw_file_perms;
 allow system_server baro_delta_factoryapp_efs_file:file r_file_perms;
 allow system_server sensor_factoryapp_efs_file:file r_file_perms;
+
+# /data/system/gps/xtraee.bin
+allow system_server gps_data_file:file rw_file_perms;
