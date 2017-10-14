@@ -5192,10 +5192,11 @@ typedef struct {
  * You normally find these constants if you decompile RILConstants.class in
  * framework2.odex.
  */
+#define RIL_OEM_REQUEST_BASE 10000
 #define RIL_REQUEST_DIAL_EMERGENCY_CALL 10001
 #define RIL_REQUEST_CALL_DEFLECTION 10002
 #define RIL_REQUEST_MODIFY_CALL_INITIATE 10003
-#define RIL_REQUEST_MODIFY_CALL_CONFIRM 10004
+#define RIL_REQUEST_SET_IMS_CALL_LIST 10004
 #define RIL_REQUEST_SET_VOICE_DOMAIN_PREF 10005
 #define RIL_REQUEST_SAFE_MODE 10006
 #define RIL_REQUEST_SET_TRANSMIT_POWER 10007
@@ -5227,6 +5228,7 @@ typedef struct {
 #define RIL_REQUEST_REFRESH_NITZ_TIME 10033
 #define RIL_REQUEST_ENABLE_UNSOL_RESPONSE 10034
 #define RIL_REQUEST_CANCEL_TRANSFER_CALL 10035
+#define RIL_REQUEST_SIM_OPEN_CHANNEL_WITH_P2 10036
 
 /***********************************************************************/
 
@@ -5865,7 +5867,6 @@ typedef struct {
  * SAMSUNG RESPONSE
  **********************************************************/
 #define SAMSUNG_UNSOL_RESPONSE_BASE 11000
-#define RIL_UNSOL_RESPONSE_NEW_CB_MSG 11000
 #define RIL_UNSOL_RELEASE_COMPLETE_MESSAGE 11001
 #define RIL_UNSOL_STK_SEND_SMS_RESULT 11002
 #define RIL_UNSOL_STK_CALL_CONTROL_RESULT 11003
