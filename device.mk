@@ -204,8 +204,8 @@ PRODUCT_PACKAGES += \
 
 
 # call Samsung LSI board support package
-$(call inherit-product, hardware/samsung_slsi-cm/exynos5/exynos5.mk)
-$(call inherit-product, hardware/samsung_slsi-cm/exynos7880/exynos7880.mk)
+$(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
+$(call inherit-product, hardware/samsung_slsi/exynos7880/exynos7880.mk)
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/a5y17lte/a5y17lte-vendor.mk)

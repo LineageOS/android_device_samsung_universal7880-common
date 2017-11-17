@@ -73,6 +73,11 @@ enum {
     GRALLOC_USAGE_SW_READ_RARELY        = 0x00000002,
     /* buffer is often read in software */
     GRALLOC_USAGE_SW_READ_OFTEN         = 0x00000003,
+    /* added for VR single buffer only */
+#ifdef USES_VR_FRONT_BUFFER
+    GRALLOC_USAGE_VR_SINGLE_BUFFER_USAGE= 0x00000004,
+#endif
+
     /* mask for the software read values */
     GRALLOC_USAGE_SW_READ_MASK          = 0x0000000F,
 
@@ -120,8 +125,6 @@ enum {
     GRALLOC_USAGE_HW_CAMERA_ZSL         = 0x00060000,
     /* mask for the camera access values */
     GRALLOC_USAGE_HW_CAMERA_MASK        = 0x00060000,
-    /* buffer will be used by the HW IPs when sysmmu is off */
-    GRALLOC_USAGE_PHYSICALLY_LINEAR     = 0x01000000,
     /* mask for the software usage bit-mask */
     GRALLOC_USAGE_HW_MASK               = 0x00071F00,
 
@@ -151,7 +154,13 @@ enum {
     GRALLOC_USAGE_EXTERNAL_BLOCK        = 0x40000000,
     GRALLOC_USAGE_EXTERNAL_ONLY         = 0x80000000,
     GRALLOC_USAGE_EXTERNAL_VIRTUALFB    = 0x00400000,
+    GRALLOC_USAGE_PROTECTED_DPB         = 0x00800000,
+    /* buffer will be used by the HW IPs when sysmmu is off */
+    GRALLOC_USAGE_PHYSICALLY_LINEAR     = 0x01000000,
     GRALLOC_USAGE_PRIVATE_NONSECURE     = 0x02000000,
+    GRALLOC_USAGE_CAMERA_RESERVED       = 0x04000000,
+    GRALLOC_USAGE_NOZEROED              = 0x08000000,
+    GRALLOC_USAGE_VIDEO_EXT             = 0x10000000,
 
 #ifdef EXYNOS4_ENHANCEMENTS
     /* SAMSUNG */
