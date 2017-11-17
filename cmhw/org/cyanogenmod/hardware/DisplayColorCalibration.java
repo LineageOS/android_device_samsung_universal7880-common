@@ -41,14 +41,12 @@ public class DisplayColorCalibration {
     static {
         // We can also support GPU transform using RenderEngine. This is not
         // preferred though, as it has a high power cost.
-        sUseGPUMode = SystemProperties.getBoolean("debug.livedisplay.force_gpu", false);
+        sUseGPUMode = !FileUtils.isFileWritable(RGB_FILE) ||
+                SystemProperties.getBoolean("debug.livedisplay.force_gpu", false);
     }
 
     public static boolean isSupported() {
-        if (!FileUtils.isFileWritable(RGB_FILE) && !sUseGPUMode) {
-            return false;
-        }
-
+        // Always true, use GPU mode if no HW support
         return true;
     }
 
