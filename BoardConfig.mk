@@ -95,7 +95,7 @@ TARGET_POWERHAL_VARIANT := samsung
 TARGET_SEC_FP_HAL_VARIANT := bauth
 
 # Samsung Hardware
-BOARD_HARDWARE_CLASS += $(LOCAL_PATH)/cmhw
+BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 
 # Samsung Camera
@@ -187,7 +187,7 @@ TW_EXCLUDE_SUPERSU := true
 endif
 
 # Seccomp filters
-BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
+BOARD_SECCOMP_POLICY += device/samsung/a5y17lte/seccomp
 
 # SELinux
-BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += device/samsung/a5y17lte/sepolicy
