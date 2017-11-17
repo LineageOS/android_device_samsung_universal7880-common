@@ -231,8 +231,6 @@
 
     <!-- Allow screen mirroring/miracast -->
     <bool name="config_enableWifiDisplay">true</bool>
-    <!-- Our gralloc has support for protected buffers -->
-    <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
 
     <!-- The device supports freeform window management -->
     <bool name="config_freeformWindowManagement">true</bool>
