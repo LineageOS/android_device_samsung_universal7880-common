@@ -151,6 +151,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml
 
 PRODUCT_PACKAGES += \
+    audio_amplifier.universal7880_32 \
     audio.primary.universal7880_32 \
     audio.a2dp.default \
     audio.usb.default \
