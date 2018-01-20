@@ -683,12 +683,12 @@ on charger
     chmod 0400 /efs/Battery/battery_data.dat
     write /sys/class/power_supply/battery/batt_update_data "/efs/Battery/battery_data.dat"
 
-service drm /system/bin/drmserver
-    class main
-    user drm
+#service drm /system/bin/drmserver
+#    class main
+#    user drm
 # [ SEC_MM_DRM
 # fix
-    group system drm inet drmrpc readproc dpgp
+#    group system drm inet drmrpc readproc dpgp
 # org
 #    group drm system inet drmrpc
 # ]
