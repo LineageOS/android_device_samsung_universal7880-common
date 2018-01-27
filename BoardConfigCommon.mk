@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/universal7880-common
+COMMON_PATH := device/samsung/universal7880-common
 
 BUILD_BROKEN_DUP_RULES := true
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 # Firmware
 TARGET_NO_BOOTLOADER := true
@@ -67,7 +67,7 @@ TARGET_LINUX_KERNEL_VERSION := 3.18
 TARGET_KERNEL_SOURCE := kernel/samsung/universal7880
 
 # Manifest
-DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
 # Partitions
@@ -87,7 +87,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Root extra folders
 BOARD_ROOT_EXTRA_FOLDERS += efs
-TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := system/vendor
@@ -96,7 +96,7 @@ TARGET_COPY_OUT_VENDOR := system/vendor
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BOARD_HAS_QCA_BT_ROME := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 QCOM_BT_USE_BTNV := true
 QCOM_BT_USE_SMD_TTY := true
 
@@ -204,16 +204,16 @@ TARGET_USES_VND_SECRIL := true
 VENDOR_SECURITY_PATCH := 2020-12-01
 
 # Release tools
-#TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
+#TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
 # Recovery
 #RECOVERY_VARIANT := twrp
 BOARD_HAS_DOWNLOAD_MODE := true
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.samsungexynos7880
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/ramdisk/fstab.samsungexynos7880
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)
-PRODUCT_COPY_FILES += device/samsung/universal7880-common/twrp/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += $(COMMON_PATH)/twrp/twrp.fstab:recovery/root/etc/twrp.fstab
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := /sys/class/backlight/panel/brightness
 TW_MAX_BRIGHTNESS := 255
@@ -232,14 +232,14 @@ TW_EXCLUDE_TWRPAPP := true
 endif
 
 # Seccomp filters
-BOARD_SECCOMP_POLICY += device/samsung/universal7880-common/seccomp
+BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
 # SELinux
 include device/lineage/sepolicy/exynos/sepolicy.mk
 BOARD_SEPOLICY_TEE_FLAVOR := mobicore
 include device/samsung_slsi/sepolicy/sepolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/samsung/universal7880-common/sepolicy/private
-BOARD_VENDOR_SEPOLICY_DIRS += device/samsung/universal7880-common/sepolicy/vendor
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
@@ -251,4 +251,4 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib64/libexynoscamera.so|libexynoscamera_shim.so
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
