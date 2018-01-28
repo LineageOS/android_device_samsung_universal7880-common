@@ -94,6 +94,10 @@ PRODUCT_PACKAGES += \
     camera.exynos5 \
     libcamera_client_shim
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    keystore.exynos5
+
 # hardware/samsung/AdvancedDisplay (MDNIE)
 PRODUCT_PACKAGES += \
     AdvancedDisplay
