@@ -31,11 +31,18 @@
 
 #include "tfa.h"
 
+typedef enum amp_state {
+    AMP_STATE_DISABLED = 0,
+    AMP_STATE_ENABLED,
+    AMP_STATE_MAX = AMP_STATE_ENABLED
+} amp_state_t;
+
 typedef struct amp_device {
     amplifier_device_t amp_dev;
     tfa_device_t *tfa_dev;
     audio_mode_t current_mode;
-    int refcount;
+    int refcount[Audio_Mode_Max];
+    amp_state_t amp_state;
 } amp_device_t;
 
 static amp_device_t *amp_dev = NULL;
@@ -75,29 +82,35 @@ static int amp_enable_output_devices(amplifier_device_t *device,
 {
     amp_device_t *dev = (amp_device_t *) device;
     tfa_mode_t tfa_mode = classify_snd_device(devices);
-    int old_refcount = dev->refcount;
     int rc = 0;
 
     ALOGV("%s: devices=0x%x, enable=%d, tfa_mode=%d", __func__, devices, enable, tfa_mode);
 
-    if (tfa_mode == Audio_Mode_None && dev->refcount == 0) {
+    if (tfa_mode == Audio_Mode_None) {
         return 0;
     }
 
     if (enable) {
-        dev->refcount++;
-    } else if (!enable && dev->refcount > 0) {
-        dev->refcount--;
+        dev->refcount[tfa_mode]++;
+    } else if (!enable && dev->refcount[tfa_mode] > 0) {
+        dev->refcount[tfa_mode]--;
     }
 
-    ALOGV("%s: old_refcount=%d, dev->refcount=%d", __func__, old_refcount, dev->refcount);
+    ALOGV("%s: enable=%d, dev->refcount=%d, amp_state=%d", __func__, enable,
+          dev->refcount[tfa_mode], dev->amp_state);
 
-    if (old_refcount == 0 && dev->refcount > 0) {
+    if (enable && dev->amp_state == AMP_STATE_DISABLED &&  dev->refcount[tfa_mode] == 1) {
         rc = tfa_power(dev->tfa_dev, true);
-        ALOGE("%s: tfa_power(true) with rc=%d", __func__, rc);
-    } else if (old_refcount > 0 && dev->refcount == 0) {
+        if (rc == 0) {
+            dev->amp_state = AMP_STATE_ENABLED;
+        }
+        ALOGV("%s: tfa_power(true) with rc=%d", __func__, rc);
+    } else if (!enable && dev->amp_state == AMP_STATE_ENABLED && dev->refcount[tfa_mode] == 0) {
         rc = tfa_power(dev->tfa_dev, false);
-        ALOGE("%s: tfa_power(false) with rc=%d", __func__, rc);
+        if (rc == 0) {
+            dev->amp_state = AMP_STATE_DISABLED;
+        }
+        ALOGV("%s: tfa_power(false) with rc=%d", __func__, rc);
     }
 
     // TODO: Distinguish between tfa modes
@@ -170,7 +183,8 @@ static int amp_module_open(const hw_module_t *module, const char *name,
     amp_dev->amp_dev.set_parameters = NULL;
 
     amp_dev->current_mode = AUDIO_MODE_NORMAL;
-    amp_dev->refcount = 0;
+    memset(amp_dev->refcount, 0, Audio_Mode_Max);
+    amp_dev->amp_state = AMP_STATE_DISABLED;
 
     amp_dev->tfa_dev = tfa_dev;
 
