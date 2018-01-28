@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 # Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +16,7 @@
 set -e
 
 VENDOR=samsung
-DEVICE=a5y17lte
+DEVICE=universal7880-common
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

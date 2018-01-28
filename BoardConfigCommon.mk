@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/a5y17lte
+LOCAL_PATH := device/samsung/universal7880-common
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
@@ -45,11 +45,8 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
-# Assertions
-TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
-
 # Extracted with libbootimg
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(LOCAL_PATH)/dtb.img
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_IMAGE_NAME := Image
@@ -64,8 +61,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_LINUX_KERNEL_VERSION := 3.18
 
 # Kernel config
-TARGET_KERNEL_SOURCE := kernel/samsung/a5y17lte
-TARGET_KERNEL_CONFIG := lineage-a5y17lte_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/universal7880
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 33554432
@@ -204,7 +200,6 @@ TARGET_INIT_VENDOR_LIB := libinit_sec
 #RECOVERY_VARIANT := twrp
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.samsungexynos7880
-TARGET_OTA_ASSERT_DEVICE := a5y17lte,a5y17ltexx
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)
@@ -222,7 +217,7 @@ TW_EXCLUDE_SUPERSU := true
 endif
 
 # Seccomp filters
-BOARD_SECCOMP_POLICY += device/samsung/a5y17lte/seccomp
+BOARD_SECCOMP_POLICY += device/samsung/universal7880-common/seccomp
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/samsung/a5y17lte/sepolicy
+BOARD_SEPOLICY_DIRS += device/samsung/universal7880-common/sepolicy

@@ -20,7 +20,7 @@
         "target_path": "hardware/samsung_slsi-cm/openmax"
     },
     {
-        "repository": "android_kernel_samsung_a5y17lte",
-        "target_path": "kernel/samsung/a5y17lte"
+        "repository": "android_kernel_samsung_universal7880",
+        "target_path": "kernel/samsung/universal7880"
     }
 ]

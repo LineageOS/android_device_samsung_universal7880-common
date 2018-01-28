@@ -1,1 +1,0 @@
-require version-bootloader=A520FXXU2BQH4|A520FXXU1AQD7

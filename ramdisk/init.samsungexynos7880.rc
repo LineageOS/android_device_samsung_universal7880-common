@@ -5,6 +5,7 @@ import init.fac.rc
 import init.carrier.rc
 import init.rilchip.rc
 import init.power.rc
+import init.target.rc
 
 # Samsung stock init.rc additions
 import init.samsung.rc
