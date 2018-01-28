@@ -9,6 +9,8 @@ enum device_variant {
     VARIANT_A520K,
     VARIANT_A520L,
     VARIANT_A520S,
+    VARIANT_A720F,
+    VARIANT_A720S,
     VARIANT_MAX
 };
 
@@ -42,12 +44,24 @@ static const variant korea_telecom_models = {
     .codename = "a5y17lteskt"
 };
 
+static const variant a7_international_models = {
+    .model = "SM-A720F",
+    .codename = "a7y17lte",
+};
+
+static const variant a7_korea_telecom_models = {
+    .model = "SM-A720S",
+    .codename = "a7y17lteskt",
+};
+
 static const variant *all_variants[VARIANT_MAX] = {
     &international_models,
     &canada_models,
     &korea_docomo_models,
     &korea_uplus_models,
-    &korea_telecom_models
+    &korea_telecom_models,
+    &a7_international_models,
+    &a7_korea_telecom_models,
 };
 
 #endif // INIT_SEC_H
