@@ -94,9 +94,13 @@ PRODUCT_PACKAGES += \
     camera.exynos5 \
     libcamera_client_shim
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    gatekeeper.exynos7880
+
 # Keymaster
 PRODUCT_PACKAGES += \
-    keystore.exynos5
+    keystore.exynos7880
 
 # hardware/samsung/AdvancedDisplay (MDNIE)
 PRODUCT_PACKAGES += \
