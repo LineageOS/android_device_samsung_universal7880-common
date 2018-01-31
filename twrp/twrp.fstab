@@ -1,0 +1,9 @@
+/boot emmc /dev/block/platform/13540000.dwmmc0/by-name/BOOT
+/recovery emmc /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY
+/system ext4 /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM
+/cache ext4 /dev/block/platform/13540000.dwmmc0/by-name/CACHE
+/data ext4 /dev/block/platform/13540000.dwmmc0/by-name/USERDATA  length=-16384
+/efs ext4 /dev/block/platform/13540000.dwmmc0/by-name/EFS   flags=display="EFS";backup=1
+
+#/devices/13560000.dwmmc2/mmc_host/mmc*                      auto        vfat    defaults    voldmanaged=sdcard:auto,encryptable=userdata
+#/devices/13600000.usb/13600000.dwc3/xhci-hcd.2.auto/usb*    auto        auto    defaults    voldmanaged=usb:auto
