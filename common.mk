@@ -112,9 +112,11 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full
 
 PRODUCT_PACKAGES += \
+    libril \
     libsecril-client \
     libsecril-client-sap \
-    modemloader
+    modemloader \
+    rild
 
 PRODUCT_PACKAGES += \
     SamsungServiceMode
