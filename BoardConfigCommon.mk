@@ -185,7 +185,6 @@ CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 BOARD_VENDOR := samsung
 BOARD_MODEM_TYPE := ss333
 BOARD_PROVIDES_LIBRIL := true
-SIM_COUNT := 2
 
 # RIL.java overwrite
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril

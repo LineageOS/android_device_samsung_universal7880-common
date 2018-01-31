@@ -13,7 +13,7 @@ service ril-daemon /system/bin/rild
     group radio cache inet misc audio sdcard_r sdcard_rw log vpn system readproc
     onrestart restart cpboot-daemon
 
-service ril-daemon1 /system/bin/rild -c 2
+service ril-daemon1 /system/bin/rild -c 2 -l /system/lib64/libsec-ril-dsds.so
     class main
     socket rild2 stream 660 root radio
     socket rild-debug2 stream 660 radio system
