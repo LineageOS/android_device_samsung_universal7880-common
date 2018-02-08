@@ -547,6 +547,7 @@ on fs
     chown system system /sys/class/sec/tsp/multi_count
     chown system system /sys/class/sec/tsp/wet_mode
     chown system system /sys/class/sec/tsp/comm_err_count
+    chown system system /sys/class/sec/tsp/dt2w_enable
 
 # Permissions for Touchkey
     chown system radio /sys/class/sec/sec_touchkey/brightness

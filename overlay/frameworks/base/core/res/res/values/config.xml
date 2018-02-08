@@ -241,4 +241,7 @@
 
     <!-- The device supports freeform window management -->
     <bool name="config_freeformWindowManagement">true</bool>
+
+    <!-- Enable double tap to wake gesture -->
+    <bool name="config_supportDoubleTapWake">true</bool>
 </resources>
