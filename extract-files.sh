@@ -17,7 +17,7 @@
 set -e
 
 VENDOR=samsung
-DEVICE=universal7880-common
+DEVICE_COMMON=universal7880-common
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -49,7 +49,7 @@ else
 fi
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
 

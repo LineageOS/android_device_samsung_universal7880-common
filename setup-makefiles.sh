@@ -16,7 +16,7 @@
 set -e
 
 VENDOR=samsung
-DEVICE=universal7880-common
+DEVICE_COMMON=universal7880-common
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -32,10 +32,10 @@ fi
 . "$HELPER"
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
 
 # Copyright headers and guards
-write_headers
+write_headers "a5y17lte a7y17lte"
 
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
@@ -44,9 +44,9 @@ write_makefiles "$MY_DIR"/proprietary-files.txt
 # CUSTOM PART START                                                                               #
 ###################################################################################################
 
-OUTDIR=vendor/$VENDOR/$DEVICE
+OUTDIR=vendor/$VENDOR/$DEVICE_COMMON
 
-(cat << EOF) >> ../../../$OUTDIR/Android.mk
+(cat << EOF) >> $CM_ROOT/$OUTDIR/Android.mk
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libGLES_mali
 LOCAL_MODULE_OWNER := samsung
@@ -97,7 +97,7 @@ include \$(BUILD_PREBUILT)
 
 EOF
 
-(cat << EOF) >> ../../../$OUTDIR/$DEVICE-vendor.mk
+(cat << EOF) >> $CM_ROOT/$OUTDIR/$DEVICE_COMMON-vendor.mk
 
 # Create Mali links for Vulkan and OpenCL
 PRODUCT_PACKAGES += libGLES_mali
