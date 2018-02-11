@@ -6,7 +6,7 @@
 /dev/bcm2079x                u:object_r:nfc_device:s0
 /dev/sec-nfc                 u:object_r:nfc_device:s0
 
-/dev/ttySAC3                 u:object_r:bluetooth_device:s0
+/dev/ttySAC0                 u:object_r:bluetooth_device:s0
 
 /dev/s5p-smem                u:object_r:secmem_device:s0
 /dev/mobicore                u:object_r:tee_device:s0
@@ -74,6 +74,8 @@
 /efs/h2k\.dat                u:object_r:cpk_efs_file:s0
 /efs/imei(/.*)?              u:object_r:imei_efs_file:s0
 /efs/nv_data.bin(.*)         u:object_r:bin_nv_data_efs_file:s0
+/efs/nv.log                  u:object_r:bin_nv_data_efs_file:s0
+/efs/\.nv_core\.bak(.*)      u:object_r:bin_nv_data_efs_file:s0
 /efs/prov(/.*)?              u:object_r:prov_efs_file:s0
 /efs/prov_data(/.*)?         u:object_r:prov_efs_file:s0
 /efs/wifi(/.*)?              u:object_r:wifi_efs_file:s0
@@ -109,8 +111,9 @@
 /sys/class/sec(/.*)?         -- u:object_r:sysfs_sec:s0
 
 # bluetooth
-/sys/devices/bluetooth.[0-9]*/rfkill/rfkill0/state  u:object_r:sysfs_bluetooth_writable:s0
-/sys/devices/bluetooth.[0-9]*/rfkill/rfkill0/type   u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/bluetooth/rfkill/rfkill0/state  u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/bluetooth/rfkill/rfkill0/type   u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/bluetooth/extldo                u:object_r:sysfs_bluetooth_writable:s0
 
 # camera
 /sys/devices/virtual/camera(/.*)?           u:object_r:sysfs_camera_writable:s0
@@ -141,6 +144,7 @@
 /system/bin/modemloader      u:object_r:modemloader_exec:s0
 /system/bin/sensorhubservice u:object_r:sensorhubservice_exec:s0
 /system/bin/wifiloader       u:object_r:wifiloader_exec:s0
+/system/bin/wcnss_filter     u:object_r:wcnss_filter_exec:s0
 
 /system/bin/cbd              u:object_r:cpboot-daemon_exec:s0
 /system/bin/gpsd             u:object_r:gpsd_exec:s0

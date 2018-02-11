@@ -505,6 +505,9 @@ on fs
 # Fingerprint
     mkdir /dev/validity 0770 system system
     mkdir /data/validity 0770 system system
+    mkdir /data/biometrics 0700 system system
+# FIXME: is this restorecon actually necessary?
+    restorecon -R /data/biometrics
 
 # Permissions for ION
     chmod 0660 /sys/class/ion_cma/ion_video_ext/isolated

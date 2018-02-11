@@ -1,4 +1,5 @@
 # allow fingerprintd to communicate with various devices
+binder_call(system_app, fingerprintd);
 
 # kernel fp device
 allow fingerprintd fingerprint_device:chr_file rw_file_perms;
