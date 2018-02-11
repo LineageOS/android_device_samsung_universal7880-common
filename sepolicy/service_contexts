@@ -1,2 +1,3 @@
 # HWC
 Exynos.HWCService                           u:object_r:surfaceflinger_service:s0
+sensorhubservice                            u:object_r:sensorhubservice_service:s0
