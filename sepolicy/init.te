@@ -10,6 +10,13 @@ allow init emmcblk_device:blk_file rw_file_perms;
 allow init block_device:lnk_file { setattr };
 allow init tmpfs:lnk_file create_file_perms;
 
+# /sys/class/power_supply/battery and /sys/class/android_usb/android0
+allow init sysfs:dir w_dir_perms;
+
+# Shim libs
+allow init cameraserver:process noatsecure;
+allow init fingerprintd:process noatsecure;
+
 # /data
 allow init sdcardd_exec:file r_file_perms;
 
