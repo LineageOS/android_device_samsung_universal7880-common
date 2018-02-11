@@ -9,3 +9,4 @@ allow wifiloader proc:file r_file_perms;
 
 # load .ko modules
 allow kernel self:capability sys_module;
+allow wifiloader self:capability sys_module;

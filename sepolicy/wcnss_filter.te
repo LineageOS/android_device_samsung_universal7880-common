@@ -1,0 +1,4 @@
+type wcnss-filter, domain;
+type wcnss-filter_exec, exec_type, file_type;
+
+allow wcnss-filter bluetooth_device:chr_file rw_file_perms;
