@@ -136,10 +136,6 @@ lib64/libsensorhubservice.so
 lib/libsensorlistener.so
 lib64/libsensorlistener.so
 
-# Surface Composer
-lib/hw/gralloc.exynos5.so
-lib64/hw/gralloc.exynos5.so
-
 # Wifi
 etc/firmware/bdwlan30.bin
 etc/firmware/bdwlan30_OLD.bin
