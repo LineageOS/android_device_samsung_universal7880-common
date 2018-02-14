@@ -123,6 +123,8 @@
 
 # rild
 /sys/devices/virtual/misc/multipdp(/.*)     u:object_r:sysfs_multipdp_writable:s0
+/dev/socket/rild2                           u:object_r:rild_socket:s0
+/dev/socket/rild-debug2                     u:object_r:rild_debug_socket:s0
 
 # mDNIe
 /sys/devices/[0-9]*\.dsim/lcd/panel/mdnie/mode       u:object_r:sysfs_mdnie_writable:s0
