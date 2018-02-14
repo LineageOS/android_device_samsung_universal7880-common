@@ -46,6 +46,7 @@ on post-fs-data
 # CPU Idle
     chown system system /sys/module/cpuidle_exynos64/parameters/enable_mask
 
+
 # Permissions for audio
     chown system radio /sys/class/audio/earjack/select_jack
     chown system radio /sys/class/audio/earjack/key_state
@@ -533,6 +534,8 @@ on fs
     chown system system /sys/class/mdnie/mdnie/mdnie_ldu
     chown system system /sys/class/mdnie/mdnie/night_mode
     chown system system /sys/class/mdnie/mdnie/whiteRGB
+    chmod 0660 /sys/class/mdnie/mdnie/lux
+    chown system system /sys/class/mdnie/mdnie/lux
 
 # Permissions for gnss
     chmod 0660 /dev/gnss_ipc
