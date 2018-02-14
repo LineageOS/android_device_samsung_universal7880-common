@@ -13,6 +13,7 @@
 /dev/mobicore-user           u:object_r:tee_device:s0
 
 /dev/v4l-subdev[0-9]*        u:object_r:video_device:s0
+/dev/m2m1shot_scaler[0-9]*   u:object_r:video_device:s0
 /dev/media[0-3]*             u:object_r:camera_device:s0
 /dev/m2m1shot_jpeg           u:object_r:camera_device:s0
 
