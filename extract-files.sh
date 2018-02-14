@@ -52,5 +52,6 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
+extract "$MY_DIR"/proprietary-files-bsp.txt "$SRC"
 
 "$MY_DIR"/setup-makefiles.sh
