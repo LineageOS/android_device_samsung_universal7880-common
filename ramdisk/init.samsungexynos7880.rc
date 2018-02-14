@@ -614,12 +614,6 @@ service vcsFPService /system/bin/vcsFPService
     user system
     group system
 
-# deferred initcall
-service sec-sh /system/bin/sh /system/etc/init.sec.boot.sh
-    class main
-    user root
-    oneshot
-
 # Modem boot daemon
 #    service cpboot-daemon /sbin/cbd -d -tss310 -bm -mm -P mmcblk0p14
 #    class main
