@@ -1,4 +1,4 @@
-# /dev/ttySAC3
+# /dev/ttySAC0
 allow bluetooth bluetooth_device:chr_file { rw_file_perms ioctl };
 
 # /data/.cid.info

@@ -24,7 +24,7 @@
 /dev/mipi-lli/lli_control    u:object_r:mif_device:s0
 
 /dev/gnss_ipc                u:object_r:gps_device:s0
-/dev/ttySAC[0-9]*            u:object_r:gps_device:s0
+/dev/ttySAC[1-9]*            u:object_r:gps_device:s0
 
 /dev/block/mmcblk0p[0-9]*    u:object_r:emmcblk_device:s0
 
@@ -126,6 +126,8 @@
 # mDNIe
 /sys/devices/[0-9]*\.dsim/lcd/panel/mdnie/mode       u:object_r:sysfs_mdnie_writable:s0
 /sys/devices/[0-9]*\.dsim/lcd/panel/mdnie/scenario   u:object_r:sysfs_mdnie_writable:s0
+/sys/devices/[0-9]*\.dsim/lcd/panel/mdnie/lux        u:object_r:sysfs_mdnie_writable:s0
+/sys/devices/[0-9]*\.dsim/lcd/panel/mdnie/sensorRGB  u:object_r:sysfs_mdnie_writable:s0
 
 ####################################
 # deamons
