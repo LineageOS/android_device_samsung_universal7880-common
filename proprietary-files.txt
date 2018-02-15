@@ -119,14 +119,6 @@ lib64/omx/libOMX.Exynos.HEVC.Encoder.so
 lib/omx/libOMX.Exynos.VP9.Decoder.so
 lib64/omx/libOMX.Exynos.VP9.Decoder.so
 
-# Radio
-lib/libsec-ril.so
-lib64/libsec-ril.so
-lib/libsec-ril-dsds.so
-lib64/libsec-ril-dsds.so
-lib/libsecnativefeature.so
-lib64/libsecnativefeature.so
-
 # Sensors
 bin/sensorhubservice
 lib64/hw/sensors.universal7880.so
