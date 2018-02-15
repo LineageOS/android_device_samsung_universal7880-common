@@ -1,9 +1,11 @@
 /boot emmc /dev/block/platform/13540000.dwmmc0/by-name/BOOT
-/recovery emmc /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY
+/recovery emmc /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY flags=backup=1
 /system ext4 /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM
 /cache ext4 /dev/block/platform/13540000.dwmmc0/by-name/CACHE
-/data ext4 /dev/block/platform/13540000.dwmmc0/by-name/USERDATA  length=-16384
-/efs ext4 /dev/block/platform/13540000.dwmmc0/by-name/EFS   flags=display="EFS";backup=1
+/data ext4 /dev/block/platform/13540000.dwmmc0/by-name/USERDATA flags=encryptable=footer;length=-16384
+/efs emmc /dev/block/platform/13540000.dwmmc0/by-name/EFS flags=display="EFS";backup=1
+/modem emmc /dev/block/platform/13540000.dwmmc0/by-name/RADIO flags=display="Baseband";backup=1
+/misc emmc /dev/block/platform/13540000.dwmmc0/by-name/OTA
 
-#/devices/13560000.dwmmc2/mmc_host/mmc*                      auto        vfat    defaults    voldmanaged=sdcard:auto,encryptable=userdata
-#/devices/13600000.usb/13600000.dwc3/xhci-hcd.2.auto/usb*    auto        auto    defaults    voldmanaged=usb:auto
+/external_sdcard vfat /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg vfat /dev/block/sda1 /dev/block/sda flags=display="USB-OTG";storage;wipeingui;removable
