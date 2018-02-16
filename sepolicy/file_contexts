@@ -129,6 +129,10 @@
 /dev/socket/rild2                           u:object_r:rild_socket:s0
 /dev/socket/rild-debug2                     u:object_r:rild_debug_socket:s0
 
+#sysfs_gps
+/sys/devices/soc0/machine                            u:object_r:sysfs_gps:s0
+/sys/devices/soc0/revision                           u:object_r:sysfs_gps:s0
+
 # mDNIe
 /sys/devices/[0-9]*\.dsim/lcd/panel/mdnie/mode       u:object_r:sysfs_mdnie_writable:s0
 /sys/devices/[0-9]*\.dsim/lcd/panel/mdnie/scenario   u:object_r:sysfs_mdnie_writable:s0
