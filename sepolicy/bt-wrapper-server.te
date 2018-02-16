@@ -1,0 +1,3 @@
+# bt-wrapper-server sec label
+type bt-wrapper-server, domain;
+type bt-wrapper-server_exec, exec_type, file_type;
