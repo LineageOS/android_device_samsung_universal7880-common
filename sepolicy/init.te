@@ -15,7 +15,7 @@ allow init sysfs:dir w_dir_perms;
 
 # Shim libs
 allow init cameraserver:process noatsecure;
-allow init fingerprintd:process noatsecure;
+allow init hal_fingerprint_default:process noatsecure;
 
 # /data
 allow init sdcardd_exec:file r_file_perms;
@@ -29,3 +29,5 @@ allow init sysfs_mdnie_writable:lnk_file { read setattr };
 # read/chown camera firmware
 allow init sysfs_camera_writable:file { relabelto setattr };
 allow init sysfs_camera_writable:filesystem associate;
+
+unix_socket_connect(init, property, rild)
