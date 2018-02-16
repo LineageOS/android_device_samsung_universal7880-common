@@ -581,7 +581,7 @@ service argos-daemon /system/bin/argosd
     group system radio
     
 # Copy DRM Key
-    copy /system/app/wv.keys /factory/wv.keys
+    #copy /system/app/wv.keys /factory/wv.keys
 
 # Permission for DRM Key
     chmod 0644 /factory/wv.keys
@@ -595,12 +595,6 @@ service argos-daemon /system/bin/argosd
 #    user drmrpc
 #    group drmrpc
 #    class core
-
-# FINGERPRINT FRAMEWORK : starts fingerprintd
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user system
-    group system
 
 # RPMB daemon
 service rpmbd /system/bin/rpmbd
@@ -649,7 +643,7 @@ service fuse_usb1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb1 /stor
 service start_hci_filter /system/bin/wcnss_filter
     class late_start
     user bluetooth
-    group bluetooth qcom_diag  sdcard_rw
+    group bluetooth oem_2950  sdcard_rw
     disabled
 
 # on userdebug and eng builds, enable kgdb on the serial console
