@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <android-base/logging.h>
+#include <android-base/properties.h>
+
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "log.h"
 #include "property_service.h"
-#include "util.h"
 #include "vendor_init.h"
 
 #include "init_sec.h"
@@ -28,7 +29,7 @@ static void property_override(char const prop[], char const value[]) {
 
 void vendor_load_properties()
 {
-    const std::string bootloader = property_get("ro.bootloader");
+    const std::string bootloader = android::base::GetProperty("ro.bootloader", "");
     const std::string bl_model = bootloader.substr(0, MODEL_NAME_LEN);
     const std::string bl_build = bootloader.substr(MODEL_NAME_LEN);
 
@@ -49,7 +50,7 @@ void vendor_load_properties()
     }
 
     if (device.size() == 0) {
-        ERROR("Could not detect device, forcing a5y17lte");
+        LOG(ERROR) << "Could not detect device, forcing a5y17lte";
         device = "a5y17lte";
     }
 
@@ -58,13 +59,13 @@ void vendor_load_properties()
     description = name + "-user 7.0 NRD90M " + bl_model + bl_build + " release-keys";
     fingerprint = "samsung/" + name + "/" + device + ":7.0/NRD90M/" + bl_model + bl_build + ":user/release-keys";
 
-    INFO("Found bootloader: %s", bootloader.c_str());
-    INFO("Setting ro.product.model: %s", model.c_str());
-    INFO("Setting ro.product.device: %s", device.c_str());
-    INFO("Setting ro.product.name: %s", name.c_str());
-    INFO("Setting ro.build.product: %s", device.c_str());
-    INFO("Setting ro.build.description: %s", description.c_str());
-    INFO("Setting ro.build.fingerprint: %s", fingerprint.c_str());
+    LOG(INFO) << "Found bootloader: %s", bootloader.c_str();
+    LOG(INFO) << "Setting ro.product.model: %s", model.c_str();
+    LOG(INFO) << "Setting ro.product.device: %s", device.c_str();
+    LOG(INFO) << "Setting ro.product.name: %s", name.c_str();
+    LOG(INFO) << "Setting ro.build.product: %s", device.c_str();
+    LOG(INFO) << "Setting ro.build.description: %s", description.c_str();
+    LOG(INFO) << "Setting ro.build.fingerprint: %s", fingerprint.c_str();
 
     property_override("ro.product.model", model.c_str());
     property_override("ro.product.device", device.c_str());
