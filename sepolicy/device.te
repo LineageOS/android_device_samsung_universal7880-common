@@ -30,3 +30,6 @@ type amplifier_device, dev_type;
 
 # /dev/knox_kap
 type knox_device, dev_type;
+
+# GPS
+type gps_device, dev_type;
