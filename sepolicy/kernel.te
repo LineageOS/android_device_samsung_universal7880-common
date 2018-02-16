@@ -1,4 +1,4 @@
-allow kernel self:capability { dac_override chown mknod };
+allow kernel self:capability { chown mknod };
 
 # /dev/mbin0
 allow kernel emmcblk_device:blk_file r_file_perms;
