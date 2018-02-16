@@ -22,9 +22,9 @@ DEVICE_COMMON=universal7880-common
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+LINEAGE_ROOT="$MY_DIR"/../../..
 
-HELPER="$CM_ROOT"/vendor/cm/build/tools/extract_utils.sh
+HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -32,7 +32,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
 write_headers "a5y17lte a7y17lte"
@@ -56,7 +56,7 @@ printf '%s\n' 'endif' >> "$ANDROIDMK"
 
 OUTDIR=vendor/$VENDOR/$DEVICE_COMMON
 
-(cat << EOF) >> $CM_ROOT/$OUTDIR/Android.mk
+(cat << EOF) >> $LINEAGE_ROOT/$OUTDIR/Android.mk
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libGLES_mali
 LOCAL_MODULE_OWNER := samsung
@@ -107,7 +107,7 @@ include \$(BUILD_PREBUILT)
 
 EOF
 
-(cat << EOF) >> $CM_ROOT/$OUTDIR/$DEVICE_COMMON-vendor.mk
+(cat << EOF) >> $LINEAGE_ROOT/$OUTDIR/$DEVICE_COMMON-vendor.mk
 
 # Create Mali links for Vulkan and OpenCL
 PRODUCT_PACKAGES += libGLES_mali
