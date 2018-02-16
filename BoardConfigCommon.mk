@@ -95,7 +95,7 @@ TARGET_POWERHAL_VARIANT := samsung
 TARGET_SEC_FP_HAL_VARIANT := bauth
 
 # Samsung Hardware
-BOARD_HARDWARE_CLASS := hardware/samsung/cmhw $(LOCAL_PATH)/cmhw
+BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw $(LOCAL_PATH)/lineagehw
 
 # Graphics
 USE_OPENGL_RENDERER := true
