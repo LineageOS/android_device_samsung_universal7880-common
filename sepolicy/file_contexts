@@ -124,6 +124,10 @@
 # cbd
 /sys/devices/10f24000.mipi-lli/lli_control  u:object_r:sysfs_mipi_writable:s0
 
+# gps
+/sys/devices/soc0/machine                            u:object_r:sysfs_gps:s0
+/sys/devices/soc0/revision                           u:object_r:sysfs_gps:s0
+
 # rild
 /sys/devices/virtual/misc/multipdp(/.*)     u:object_r:sysfs_multipdp_writable:s0
 /dev/socket/rild2                           u:object_r:rild_socket:s0
