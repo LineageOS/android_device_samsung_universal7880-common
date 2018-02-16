@@ -4,21 +4,23 @@
 # This is a common source of Android security bugs.
 #
 
-service ril-daemon /system/bin/rild
+service ril-daemon /vendor/bin/hw/rild -c 1 -l /system/lib64/libsec-ril.so
     class main
-    socket rild stream 660 root radio
+    socket rild stream 660 system radio
     socket sap_uim_socket1 stream 660 bluetooth bluetooth
-    socket rild-debug stream 660 radio system
-    user root
-    group radio cache inet misc audio sdcard_r sdcard_rw log vpn system readproc
+    socket rild-debug stream 660 system radio
+    user radio
+    group radio cache inet misc audio sdcard_r sdcard_rw log vpn system readproc wakelock
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
     onrestart restart cpboot-daemon
 
-service ril-daemon1 /system/bin/rild -c 2 -l /system/lib64/libsec-ril-dsds.so
+service ril-daemon1 /vendor/bin/hw/rild -c 2 -l /system/lib64/libsec-ril-dsds.so
     class main
-    socket rild2 stream 660 root radio
-    socket rild-debug2 stream 660 radio system
-    user root
-    group radio cache inet misc audio sdcard_r sdcard_rw log vpn system readproc
+    socket rild2 stream 660 system radio
+    socket rild-debug2 stream 660 system radio
+    user radio
+    group radio cache inet misc audio sdcard_r sdcard_rw log vpn system readproc wakelock
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
     disabled
     onrestart restart cpboot-daemon
 
