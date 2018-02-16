@@ -119,6 +119,12 @@ lib64/omx/libOMX.Exynos.HEVC.Encoder.so
 lib/omx/libOMX.Exynos.VP9.Decoder.so
 lib64/omx/libOMX.Exynos.VP9.Decoder.so
 
+# Protobuf compat
+lib64/libprotobuf-cpp-fulN.so
+lib/libprotobuf-cpp-fulN.so
+lib64/libprotobuf-cpp-litN.so
+lib/libprotobuf-cpp-litN.so
+
 # Sensors
 bin/sensorhubservice
 lib64/hw/sensors.universal7880.so
