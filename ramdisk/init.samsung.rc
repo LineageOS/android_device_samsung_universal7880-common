@@ -222,12 +222,12 @@ on boot
     chmod 0775 /efs/bluetooth
 
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
-    chown bluetooth net_bt_stack ro.bt.bdaddr_path
-    chown radio net_bt_stack /efs/bluetooth/bt_addr
+    chown bluetooth bluetooth ro.bt.bdaddr_path
+    chown radio bluetooth /efs/bluetooth/bt_addr
     chmod 0640 /efs/bluetooth/bt_addr
     chmod 0660 /sys/class/rfkill/rfkill0/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
 
     # set RLIMIT_NICE to allow priorities from 19 to -20
     setrlimit 13 40 40
