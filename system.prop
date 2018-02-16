@@ -55,6 +55,9 @@ ro.ril.gprsclass=10
 ro.ril.hsxpa=1
 ro.ril.telephony.mqanelements=6
 
+# SDcardfs
+ro.sys.sdcardfs=false
+
 # Wifi
 wifi.interface=wlan0
 
