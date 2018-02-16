@@ -193,9 +193,6 @@ BOARD_PROVIDES_LIBRIL := true
 BOARD_NEEDS_ROAMING_PROTOCOL_FIELD := true
 BOARD_NEEDS_IMS_TYPE_FIELD := true
 
-# RIL.java overwrite
-BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
-
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_sec
 
