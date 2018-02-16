@@ -18,7 +18,6 @@ etc/Tfa9896.cnt
 
 # Bluetooth
 bin/wcnss_filter
-lib/libbt-vendor.so
 
 # Camera
 lib/hw/camera.exynos5.so:lib/hw/camera.vendor.exynos5.so
