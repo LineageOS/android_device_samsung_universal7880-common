@@ -1,3 +1,14 @@
+type gpsd, domain;
+type gpsd_exec, exec_type, file_type;
+
+# Generic files
+allow gpsd gps_data_file:dir rw_dir_perms;
+allow gpsd gps_data_file:notdevfile_class_set create_file_perms;
+
+allow gpsd gps_socket:sock_file create_file_perms;
+
+type_transition gpsd gps_data_file:sock_file gps_socket;
+
 # Automatically label files created in /data/system/gps as gps_data_file
 file_type_auto_trans(gpsd, system_data_file, gps_data_file)
 
@@ -8,8 +19,6 @@ allow gpsd system_server:unix_stream_socket { read write setopt };
 
 binder_call(gpsd, system_server)
 binder_use(gpsd)
-
-allow gpsd self:netlink_kobject_uevent_socket create_socket_perms;
 
 # /dev/ttySAC0
 allow gpsd bluetooth_device:chr_file { getattr setattr rw_file_perms };
