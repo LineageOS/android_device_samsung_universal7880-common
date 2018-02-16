@@ -118,6 +118,10 @@
 # camera
 /sys/devices/virtual/camera(/.*)?           u:object_r:sysfs_camera_writable:s0
 
+# gps
+/sys/devices/soc0/machine                            u:object_r:sysfs_gps:s0
+/sys/devices/soc0/revision                           u:object_r:sysfs_gps:s0
+
 # CP device
 /dev/spi_boot_link              u:object_r:radio_device:s0
 
