@@ -46,6 +46,11 @@ ro.hwui.text_large_cache_height=1024
 ro.nfc.port="I2C"
 ro.nfc.sec_hal=true
 
+# Omx
+media.stagefright.legacyencoder=1
+media.stagefright.less-secure=1
+persist.media.treble_omx=false
+
 # Radio
 persist.radio.sib16_support=1
 rild.libpath=/system/lib64/libsec-ril.so
