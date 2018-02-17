@@ -122,3 +122,16 @@ EOF
 
 # Done
 write_footers
+
+if [ ! -z $DEVICE ]; then
+    setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
+
+    # Copyright headers and guards
+    write_headers
+
+    # Blobs
+    write_makefiles "$MY_DIR"/../"$DEVICE"/proprietary-files.txt
+
+    # Done
+    write_footers
+fi
