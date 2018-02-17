@@ -54,4 +54,11 @@ setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
 extract "$MY_DIR"/proprietary-files-bsp.txt "$SRC"
 
+if [ ! -z $DEVICE ]; then
+    # Reinitialise the helper for the device-specific blobs
+    setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
+
+    extract "$MY_DIR"/../"$DEVICE"/proprietary-files.txt "$SRC"
+fi
+
 "$MY_DIR"/setup-makefiles.sh
