@@ -101,8 +101,7 @@ PRODUCT_PACKAGES += \
     camera.exynos5 \
     libexynoscamera_shim \
     libcamera_client_shim \
-    libstagefright_shim \
-    Snap
+    libstagefright_shim
 
 # DRM
 PRODUCT_PACKAGES += \
