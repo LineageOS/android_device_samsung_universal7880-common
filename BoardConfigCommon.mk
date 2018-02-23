@@ -224,3 +224,6 @@ BOARD_SECCOMP_POLICY += device/samsung/universal7880-common/seccomp
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/samsung/universal7880-common/sepolicy
+
+# Shims
+TARGET_LD_SHIM_LIBS := /system/lib64/libbauthserver.so|libbauthtzcommon_shim.so:/system/lib/libcamera_client.so|libcamera_client_shim.so:/system/lib/libexynoscamera.so|libexynoscamera_shim.so:/system/lib64/libstagefright.so|libstagefright_shim.so:/system/lib/libstagefright.so|libstagefright_shim.so
