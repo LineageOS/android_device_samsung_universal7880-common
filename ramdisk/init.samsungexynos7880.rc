@@ -15,8 +15,6 @@ on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 on init
-    export LD_SHIM_LIBS "/system/lib64/libbauthserver.so|/system/lib64/libbauthtzcommon_shim.so:/system/lib/libcamera_client.so|libcamera_client_shim.so:/system/lib/libexynoscamera.so|libexynoscamera_shim.so:/system/lib64/libstagefright.so|/system/lib64/libstagefright_shim.so:/system/lib/libstagefright.so|/system/lib/libstagefright_shim.so"
-
     start watchdogd
     mkdir /preload 0771 system system
 
