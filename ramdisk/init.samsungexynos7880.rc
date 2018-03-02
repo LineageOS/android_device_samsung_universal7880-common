@@ -664,10 +664,10 @@ on property:ro.bootmode=charger
     wait /dev/block/platform/13540000.dwmmc0/by-name/EFS
     mount ext4 /dev/block/platform/13540000.dwmmc0/by-name/EFS /efs nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit
 
-service charger /sbin/healthd -c
+service charger /charger
     class charger
     critical
-    seclabel u:r:healthd:s0
+    seclabel u:r:charger:s0
 
 # umount service
 service umount_service /system/bin/umount -D /preload
