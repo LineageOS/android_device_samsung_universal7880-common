@@ -48,7 +48,7 @@ public class SunlightEnhancement {
      * the operation failed while reading the status; true in any other case.
      */
     public static boolean isEnabled() {
-        return FileUtils.readOneLine(HBM_PATH).equals(HBM_MIN_VALUE);
+        return Integer.parseInt(FileUtils.readOneLine(HBM_PATH)) > 0;
     }
 
     /**
