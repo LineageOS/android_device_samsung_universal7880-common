@@ -717,8 +717,7 @@ on property:ro.multisim.simslotcount=1
 
 on property:ro.multisim.simslotcount=2
     setprop persist.radio.multisim.config dsds
-    # TODO: Is it correct to start the second daemon here?
-    start ril-daemon1
+    enable ril-daemon1
 
 # SecEDS
 service TvoutService_C /system/bin/bintvoutservice

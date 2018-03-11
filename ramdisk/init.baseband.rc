@@ -63,7 +63,7 @@ service modemloader /system/bin/modemloader
     oneshot
 
 on property:ro.modemloader.done=1
-    start cpboot-daemon
+    enable cpboot-daemon
 
 service cpboot-daemon /system/bin/cbd -d -tss310 -bm -mm -P platform/13540000.dwmmc0/by-name/RADIO
     class main
