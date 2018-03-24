@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "41eff8ae_8a2345f4",
+        "filename": "sepolicy/wcnss_filter.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 7155
+      },
+      "writtenOn": "2018-03-24T08:07:47Z",
+      "side": 1,
+      "message": "Squash the BT changes from https://review.lineageos.org/#/c/210063/ here.",
+      "revId": "ae335e25704dff98d64b5a5bf636a6584cfaeaa1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
