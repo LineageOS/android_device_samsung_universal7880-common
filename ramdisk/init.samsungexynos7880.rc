@@ -507,7 +507,7 @@ on fs
     mkdir /data/validity 0770 system system
     mkdir /data/biometrics 0700 system system
 # FIXME: is this restorecon actually necessary?
-    restorecon -R /data/biometrics
+    restorecon_recursive /data/biometrics
 
 # Permissions for ION
     chmod 0660 /sys/class/ion_cma/ion_video_ext/isolated
@@ -769,7 +769,7 @@ on property:ro.securestorage.support=true
     mkdir /dev/.secure_storage
     chmod 0711 /dev/.secure_storage
     chown system system /dev/.secure_storage
-    restorecon -R /dev/.secure_storage
+    restorecon_recursive /dev/.secure_storage
     start secure_storage
 
 service prepare_param /system/bin/prepare_param.sh /dev/block/platform/13540000.dwmmc0/by-name/PARAM
