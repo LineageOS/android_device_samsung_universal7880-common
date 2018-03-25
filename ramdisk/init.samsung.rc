@@ -207,8 +207,8 @@ on post-fs-data
     mkdir /data/.fido 0700 system system
 	
 # [ SEC_SELINUX_PORTING COMMON
-    restorecon -R /efs
-    restorecon -R /carrier
+    restorecon_recursive /efs
+    restorecon_recursive /carrier
 # ] SEC_SELINUX_PORTING COMMON
 
 on boot
