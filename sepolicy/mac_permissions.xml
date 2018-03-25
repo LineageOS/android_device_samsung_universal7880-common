@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policy>
+  <!-- Mobicore Trustsonic TEE -->
+  <signer signature="@RELEASE" >
+    <package name="com.trustonic.teeauthservice" >
+      <seinfo value="mobicore" />
+    </package>
+  </signer>
+</policy>
