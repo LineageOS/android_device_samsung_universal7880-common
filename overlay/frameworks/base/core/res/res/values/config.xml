@@ -46,7 +46,6 @@
         <item>mobile_cas,24,0,3,60000,true</item>
         <item>mobile_xcap,27,0,2,60000,true</item>
         <item>mobile_ent1,28,0,2,-1,true</item>
-        <item>mobile_ent2,29,0,2,-1,true</item>
     </string-array>
 
     <!-- This string array should be overridden by the device to present a list of radio
@@ -90,6 +89,7 @@
     <integer-array translatable="false" name="config_tether_upstream_types">
         <item>0</item>
         <item>1</item>
+        <item>4</item>
         <item>5</item>
         <item>7</item>
         <item>9</item>
@@ -103,6 +103,9 @@
          don't support RIL_REQUEST_GET_RADIO_CAPABILITY
          format is UMTS|LTE|... -->
     <string translatable="false" name="config_radio_access_family">GSM | WCDMA | LTE</string>
+
+    <!-- Boolean indicating whether Hotspot 2.0/Passpoint and ANQP queries is enabled -->
+    <bool translatable="false" name="config_wifi_hotspot2_enabled">true</bool>
 
     <!-- ############################################################## -->
     <!-- ### HARDWARE KEYS                                              -->
