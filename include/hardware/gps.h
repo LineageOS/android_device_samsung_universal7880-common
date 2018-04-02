@@ -571,7 +571,7 @@ typedef struct {
     /** Azimuth of SV in degrees. */
     float   azimuth;
     /** SAMSUNG */
-    int     samsung;
+    uint64_t samsung;
 } GpsSvInfo;
 
 typedef struct {
