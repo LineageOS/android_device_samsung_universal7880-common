@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d0e538aa_5b1c347b",
+        "filename": "init/init_sec.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-04-02T06:58:14Z",
+      "side": 1,
+      "message": "This is wrong, you need to pass the vendor build fingerprint prop as the second arg, in this case ro.vendor.build.fingerprint.",
+      "range": {
+        "startLine": 81,
+        "startChar": 4,
+        "endLine": 81,
+        "endChar": 72
+      },
+      "revId": "f823a2666b8228faacf674c5920b8d9e7463cae5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
