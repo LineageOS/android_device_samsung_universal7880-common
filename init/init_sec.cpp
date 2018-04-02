@@ -73,10 +73,10 @@ void vendor_load_properties()
     LOG(INFO) << "Setting ro.build.description: %s", description.c_str();
     LOG(INFO) << "Setting ro.build.fingerprint: %s", fingerprint.c_str();
 
-    property_override("ro.product.model", model.c_str());
-    property_override("ro.product.device", device.c_str());
-    property_override("ro.product.name", name.c_str());
+    property_override_dual("ro.product.model", model.c_str());
+    property_override_dual("ro.product.device", device.c_str());
+    property_override_dual("ro.product.name", name.c_str());
     property_override("ro.build.product", device.c_str());
     property_override("ro.build.description", description.c_str());
-    property_override("ro.build.fingerprint", fingerprint.c_str());
+    property_override_dual("ro.build.fingerprint", fingerprint.c_str());
 }
