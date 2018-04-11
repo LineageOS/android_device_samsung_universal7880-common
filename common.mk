@@ -106,6 +106,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    keystore.exynos5 \
+    android.hardware.keymaster@3.0-impl
+
 # hardware/samsung/AdvancedDisplay (MDNIE)
 PRODUCT_PACKAGES += \
     AdvancedDisplay
