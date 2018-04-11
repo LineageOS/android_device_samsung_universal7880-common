@@ -454,6 +454,42 @@ int userial_set_port(char *p_conf_name, char *p_conf_value, int param)
 
 /*******************************************************************************
 **
+** Function        userial_vendor_set_hw_flow_control
+**
+** Description     Configure UART hardware flow control
+**
+** Returns         0 : Success
+**                 Otherwise : Fail
+**
+*******************************************************************************/
+int userial_vendor_set_hw_flow_control(userial_vendor_ioctl_op_t op)
+{
+    int ret = 0;
+
+    tcgetattr(vnd_userial.fd, &vnd_userial.termios);
+    switch(op)
+    {
+        case USERIAL_OP_FLOW_ON:
+            ALOGI("## %s: UART HW Flow Control On ", __FUNCTION__);
+            vnd_userial.termios.c_cflag |= 0x80000000;
+            break;
+
+        case USERIAL_OP_FLOW_OFF:
+            ALOGI("## %s: UART HW Flow Control Off ", __FUNCTION__);
+            vnd_userial.termios.c_cflag &= 0x7FFFFFFF;
+            break;
+
+        default:
+            break;
+    }
+    tcsetattr(vnd_userial.fd, 0, &vnd_userial.termios);
+
+    return 0;
+}
+
+
+/*******************************************************************************
+**
 ** Function        read_hci_event
 **
 ** Description     Read HCI event during vendor initialization
