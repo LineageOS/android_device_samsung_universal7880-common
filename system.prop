@@ -3,7 +3,7 @@ af.fast_track_multiplier=1
 audio_hal.force_voice_config=wide
 
 # Bluetooth
-ro.bt.bdaddr_path="/efs/bluetooth/bt_addr"
+ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
 
 # Bluetooth workaround:
 # The new CAF code defaults to MCT HAL
