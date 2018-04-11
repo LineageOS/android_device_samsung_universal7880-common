@@ -68,7 +68,6 @@ extern int chipset_ver;
 struct bt_qcom_struct *q = NULL;
 pthread_mutex_t q_lock = PTHREAD_MUTEX_INITIALIZER;
 
-int userial_clock_operation(int fd, int cmd);
 int ath3k_init(int fd, int speed, int init_speed, char *bdaddr, struct termios *ti);
 int userial_vendor_get_baud(void);
 int readTrpState();
@@ -906,9 +905,6 @@ userial_open:
                                     break;
                                 }
 
-                                /* Clock on */
-                                userial_clock_operation(fd, USERIAL_OP_CLK_ON);
-
                                 if(strcmp(emb_wp_mode, "true") == 0) {
                                     property_get("ro.bluetooth.wipower", wipower_status, false);
                                     if(strcmp(wipower_status, "true") == 0) {
@@ -1029,7 +1025,6 @@ userial_open:
                             }
 
                             if (fd >= 0) {
-                                userial_clock_operation(fd, USERIAL_OP_CLK_OFF);
                                  /*Close the UART port*/
                                  close(fd);
                             }

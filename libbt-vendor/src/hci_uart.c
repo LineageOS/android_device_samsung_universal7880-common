@@ -541,21 +541,3 @@ int read_hci_event(int fd, unsigned char* buf, int size)
     }
     return count;
 }
-
-int userial_clock_operation(int fd, int cmd)
-{
-    int ret = 0;
-
-    switch (cmd)
-    {
-        case USERIAL_OP_CLK_ON:
-        case USERIAL_OP_CLK_OFF:
-             ioctl(fd, cmd);
-             break;
-        case USERIAL_OP_CLK_STATE:
-             ret = ioctl(fd, cmd);
-             break;
-    }
-
-    return ret;
-}
