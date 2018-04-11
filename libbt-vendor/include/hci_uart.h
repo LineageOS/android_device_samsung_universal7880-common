@@ -23,7 +23,7 @@
 
 /* Variables to identify the platform */
 /*BT HS UART TTY DEVICE */
-#define BT_HS_UART_DEVICE "/dev/ttyHS0"
+#define BT_HS_UART_DEVICE "/dev/ttySAC0"
 
 /**** baud rates ****/
 #define USERIAL_BAUD_300        0
