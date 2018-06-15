@@ -210,6 +210,10 @@ PRODUCT_PACKAGES += \
 # System.prop
 TARGET_SYSTEM_PROP += device/samsung/universal7880-common/system.prop
 
+# DTB    
+PRODUCT_PACKAGES += \
+    dtbhtoolExynos
+
 # call Samsung LSI board support package
 ifneq ($(WITH_EXYNOS_BSP),)
 $(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
