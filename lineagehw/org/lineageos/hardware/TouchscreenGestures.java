@@ -14,11 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.hardware;
+package org.lineageos.hardware;
 
 import android.util.Log;
 
-import cyanogenmod.hardware.TouchscreenGesture;
+import lineageos.hardware.TouchscreenGesture;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -26,7 +26,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.cyanogenmod.internal.util.FileUtils;
+import org.lineageos.internal.util.FileUtils;
 
 /**
  * Touchscreen gestures API
