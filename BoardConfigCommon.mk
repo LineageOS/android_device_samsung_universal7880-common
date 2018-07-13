@@ -207,7 +207,6 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.samsungexynos7880
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)
 PRODUCT_COPY_FILES += device/samsung/universal7880-common/twrp/twrp.fstab:recovery/root/etc/twrp.fstab
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := /sys/class/backlight/panel/brightness
 TW_MAX_BRIGHTNESS := 255
@@ -221,6 +220,8 @@ TW_EXCLUDE_SUPERSU := true
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
+TW_USE_TOOLBOX=true
+TW_EXCLUDE_TWRPAPP := true
 endif
 
 # Seccomp filters
