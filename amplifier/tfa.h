@@ -41,7 +41,7 @@ typedef enum {
 typedef struct {
     volatile int a1;
     volatile unsigned char a2[500];
-} tfa_handle_t;
+} __attribute__((packed)) tfa_handle_t;
 
 /*
  * Vendor functions that we dlsym.
