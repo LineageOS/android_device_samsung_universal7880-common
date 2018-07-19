@@ -277,7 +277,7 @@ void stop_hci_filter() {
        char value[PROPERTY_VALUE_MAX] = {'\0'};
        int retval, filter_ctrl, i;
        char stop_val = STOP_WCNSS_FILTER;
-       int soc_type = BT_SOC_DEFAULT;
+       int soc_type = get_bt_soc_type();
 
        ALOGV("%s: Entry ", __func__);
 
@@ -285,7 +285,9 @@ void stop_hci_filter() {
        if (strcmp(value, "0") == 0) {
            ALOGI("%s: hci_filter has been stopped already", __func__);
        }
-       else {
+       if (soc_type == BT_SOC_ROME) {
+           property_set(BT_VND_FILTER_START, "false");
+       } else {
            filter_ctrl = connect_to_local_socket("wcnssfilter_ctrl");
            if (filter_ctrl < 0) {
                ALOGI("%s: Error while connecting to CTRL_SOCK, filter should stopped: %d",
