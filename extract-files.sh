@@ -54,4 +54,11 @@ setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
 extract "$MY_DIR"/proprietary-files-bsp.txt "$SRC"
 
+# Remove dependencies that are not used in lineage 
+BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
+
+for SEC_NFC_LIB in $(grep -lr "vendor\.samsung\.hardware\.nfc@1\.0\.so" $BLOB_ROOT); do
+    patchelf --remove-needed vendor.samsung.hardware.nfc@1.0.so "$SEC_NFC_LIB" || true
+done
+
 "$MY_DIR"/setup-makefiles.sh
