@@ -104,9 +104,14 @@ vendor/lib64/libMcRegistry.so:lib64/libMcRegistry.so
 
 # NFC
 etc/nfc/sec_s3nrn81_rfreg.bin
-lib/hw/nfc_nci.universal7880.so
-lib64/hw/nfc_nci.universal7880.so
+vendor/lib/hw/nfc_nci.default.so
+vendor/lib64/hw/nfc_nci.default.so
 vendor/firmware/nfc/sec_s3nrn81_firmware.bin
+vendor/bin/hw/vendor.samsung.hardware.nfc@1.0-service
+vendor/lib/vendor.samsung.hardware.nfc@1.0.so
+vendor/lib64/vendor.samsung.hardware.nfc@1.0.so
+vendor/lib/hw/vendor.samsung.hardware.nfc@1.0-impl.so
+vendor/lib64/hw/vendor.samsung.hardware.nfc@1.0-impl.so
 
 # OMX
 lib/omx/libOMX.Exynos.AVC.Encoder.so
