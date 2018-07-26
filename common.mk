@@ -176,7 +176,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-sec-hal.conf:system/etc/libnfc-sec-hal.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-sec.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/nfc/nfcee_access.xml:system/etc/nfcee_access.xml
+    $(LOCAL_PATH)/configs/nfc/nfcee_access.xml:system/etc/nfcee_access.xml \
+    $(LOCAL_PATH)/configs/init/vendor.samsung.hardware.nfc@1.0-service.rc:system/vendor/etc/init/vendor.samsung.hardware.nfc@1.0-service.rc \
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl \
