@@ -148,3 +148,10 @@
 
 /system/bin/cbd              u:object_r:cpboot-daemon_exec:s0
 /system/bin/gpsd             u:object_r:gpsd_exec:s0
+
+####################################
+# hals
+#
+
+# nfc
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.nfc@1\.0-service      u:object_r:hal_nfc_default_exec:s0
