@@ -61,4 +61,8 @@ for HIDL_BASE_LIB in $(grep -lr "android\.hidl\.base@1\.0\.so" $BLOB_ROOT); do
     patchelf --remove-needed android.hidl.base@1.0.so "$HIDL_BASE_LIB" || true
 done
 
+for SEC_NFC_LIB in $(grep -lr "vendor\.samsung\.hardware\.nfc@1\.0\.so" $BLOB_ROOT); do
+    patchelf --remove-needed vendor.samsung.hardware.nfc@1.0.so "$SEC_NFC_LIB" || true
+done
+
 "$MY_DIR"/setup-makefiles.sh
