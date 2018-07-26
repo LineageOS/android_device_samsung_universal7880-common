@@ -104,9 +104,9 @@ vendor/lib64/libMcRegistry.so:lib64/libMcRegistry.so
 
 # NFC
 etc/nfc/sec_s3nrn81_rfreg.bin
-lib/hw/nfc_nci.universal7880.so
-lib64/hw/nfc_nci.universal7880.so
 vendor/firmware/nfc/sec_s3nrn81_firmware.bin
+vendor/lib/hw/nfc_nci.default.so
+vendor/lib64/hw/nfc_nci.default.so
 
 # OMX
 lib/omx/libOMX.Exynos.AVC.Encoder.so
