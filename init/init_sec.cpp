@@ -65,13 +65,13 @@ void vendor_load_properties()
     description = name + "-user 7.0 NRD90M " + bl_model + bl_build + " release-keys";
     fingerprint = "samsung/" + name + "/" + device + ":7.0/NRD90M/" + bl_model + bl_build + ":user/release-keys";
 
-    LOG(INFO) << "Found bootloader: %s", bootloader.c_str();
-    LOG(INFO) << "Setting ro.product.model: %s", model.c_str();
-    LOG(INFO) << "Setting ro.product.device: %s", device.c_str();
-    LOG(INFO) << "Setting ro.product.name: %s", name.c_str();
-    LOG(INFO) << "Setting ro.build.product: %s", device.c_str();
-    LOG(INFO) << "Setting ro.build.description: %s", description.c_str();
-    LOG(INFO) << "Setting ro.build.fingerprint: %s", fingerprint.c_str();
+    LOG(INFO) << "Found bootloader: " << bootloader;
+    LOG(INFO) << "Setting ro.product.model: " << model;
+    LOG(INFO) << "Setting ro.product.device: " << device;
+    LOG(INFO) << "Setting ro.product.name: " << name;
+    LOG(INFO) << "Setting ro.build.product: " << device;
+    LOG(INFO) << "Setting ro.build.description: " << description;
+    LOG(INFO) << "Setting ro.build.fingerprint: " << fingerprint;
 
     property_override_dual("ro.product.model", "ro.vendor.product.model", model.c_str());
     property_override_dual("ro.product.device", "ro.vendor.product.device", device.c_str());
