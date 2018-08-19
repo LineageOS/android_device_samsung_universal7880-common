@@ -61,6 +61,12 @@ lib64/libwrappergps.so
 vendor/lib/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_mali.so
 
+# libril
+vendor/lib64/libril.so
+vendor/lib/libril.so
+vendor/lib64/vendor.samsung.hardware.radio@1.0.so
+vendor/lib/vendor.samsung.hardware.radio@1.0.so
+
 # Media
 vendor/firmware/fimc_is_lib.bin
 vendor/firmware/mfc_fw.bin
