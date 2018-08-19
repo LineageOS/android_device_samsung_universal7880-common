@@ -122,7 +122,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full
 
 PRODUCT_PACKAGES += \
-    libril \
+#   libril \
     libsecril-client \
     libsecril-client-sap \
     modemloader \
