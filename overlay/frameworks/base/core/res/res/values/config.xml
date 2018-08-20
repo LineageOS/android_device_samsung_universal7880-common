@@ -188,10 +188,14 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>15</item>
-        <item>150</item>
-        <item>1000</item>
-        <item>5000</item>
+        <item>9</item>
+        <item>30</item>
+        <item>100</item>
+        <item>325</item>
+        <item>1250</item>
+        <item>3500</item>
+        <item>10000</item>
+        <item>20000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -199,11 +203,15 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>10</item>
-        <item>80</item>
-        <item>162</item>
-        <item>190</item>
-        <item>255</item>
+        <!--     9 --> <item>18</item>
+        <!--    30 --> <item>30</item>
+        <!--   100 --> <item>59</item>
+        <!--   325 --> <item>74</item>
+        <!--  1250 --> <item>92</item>
+        <!--  3500 --> <item>118</item>
+        <!-- 10000 --> <item>155</item>
+        <!-- 20000 --> <item>222</item>
+                       <item>255</item>
     </integer-array>
 
     <!-- Operating voltage for bluetooth controller. 0 by default -->
@@ -220,7 +228,7 @@
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDim">56</integer>
+    <integer name="config_screenBrightnessDim">10</integer>
 
     <!-- Boolean to enable stk functionality on Samsung phones -->
     <bool name="config_samsung_stk">true</bool>
