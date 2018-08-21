@@ -47,13 +47,19 @@ lib64/libegis_fp_normal_sensor_test.so
 lib64/libsynaFpSensorTestNwd.so
 
 # GPS
-bin/gpsd
-etc/ca.pem
-lib64/hw/gps.default.so
-lib/libfloatingfeature.so
-lib64/libfloatingfeature.so
-lib/libwrappergps.so
-lib64/libwrappergps.so
+vendor/bin/hw/gpsd
+vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
+vendor/etc/gnss/ca.pem
+vendor/lib/hw/vendor.samsung.hardware.gnss@1.0-impl.so
+vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
+vendor/lib/libfloatingfeature.so
+vendor/lib64/libfloatingfeature.so
+vendor/lib/libsensorndkbridge.so
+vendor/lib64/libsensorndkbridge.so
+vendor/lib/vendor.samsung.hardware.gnss@1.0.so
+vendor/lib64/vendor.samsung.hardware.gnss@1.0.so
+vendor/lib/libwrappergps.so
+vendor/lib64/libwrappergps.so
 
 # Graphics
 # Vulcan and OpenCL are implemented in this file,
