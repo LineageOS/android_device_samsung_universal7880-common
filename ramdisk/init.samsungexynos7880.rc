@@ -744,10 +744,10 @@ on property:init.svc.bootanim=stopped
     chown system system /efs/FactoryApp/tkey_light15
 
 # GPS
-service gpsd /system/bin/gpsd
+service gpsd /vendor/bin/hw/gpsd
     class main
     user gps
-    group system inet wakelock
+    group system inet net_raw wakelock
     ioprio be 0
 
 # Secure Storage startup
