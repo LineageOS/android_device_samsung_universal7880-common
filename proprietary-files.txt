@@ -47,13 +47,13 @@ lib64/libegis_fp_normal_sensor_test.so
 lib64/libsynaFpSensorTestNwd.so
 
 # GPS
-bin/gpsd
-etc/ca.pem
-lib64/hw/gps.default.so
 lib/libfloatingfeature.so
 lib64/libfloatingfeature.so
-lib/libwrappergps.so
-lib64/libwrappergps.so
+vendor/bin/hw/gpsd
+vendor/etc/gnss/ca.pem
+vendor/lib64/hw/gps.default.so
+vendor/lib/libwrappergps.so
+vendor/lib64/libwrappergps.so
 
 # Graphics
 # Vulcan and OpenCL are implemented in this file,
