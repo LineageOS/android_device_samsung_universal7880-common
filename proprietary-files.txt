@@ -14,7 +14,7 @@
 
 # Audio amplifier
 lib/libtfa98xx.so
-etc/Tfa9896.cnt
+vendor/etc/Tfa9896.cnt
 
 # Bluetooth
 bin/wcnss_filter
@@ -118,18 +118,9 @@ lib64/omx/libOMX.Exynos.HEVC.Encoder.so
 lib/omx/libOMX.Exynos.VP9.Decoder.so
 lib64/omx/libOMX.Exynos.VP9.Decoder.so
 
-# Protobuf compat
-lib64/libprotobuf-cpp-fulN.so
-lib/libprotobuf-cpp-fulN.so
-lib64/libprotobuf-cpp-litN.so
-lib/libprotobuf-cpp-litN.so
-
 # Sensors
-bin/sensorhubservice
+lib/hw/sensors.universal7880.so
 lib64/hw/sensors.universal7880.so
-lib64/hw/sensorhubs.universal7880.so
-lib64/libsensorhub.so
-lib64/libsensorhubservice.so
 lib/libsensorlistener.so
 lib64/libsensorlistener.so
 
@@ -140,17 +131,7 @@ etc/firmware/otp30.bin
 etc/firmware/qwlan30.bin
 etc/firmware/qwlan30_ibss.bin
 etc/firmware/Data.msc
-etc/firmware/nvm_tlv.bin
-etc/firmware/nvm_tlv_1.3.bin
-etc/firmware/nvm_tlv_2.1.bin
-etc/firmware/nvm_tlv_3.0.bin
-etc/firmware/nvm_tlv_3.2.bin
 etc/firmware/nvm_tlv_tf_1.1.bin
-etc/firmware/rampatch_tlv.img
-etc/firmware/rampatch_tlv_1.3.tlv
-etc/firmware/rampatch_tlv_2.1.tlv
-etc/firmware/rampatch_tlv_3.0.tlv
-etc/firmware/rampatch_tlv_3.2.tlv
 etc/firmware/rampatch_tlv_tf_1.1.tlv
 etc/firmware/utf30.bin
 etc/firmware/utfbd30.bin
