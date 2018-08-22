@@ -41,10 +41,16 @@ vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # Fingerprint
-lib64/libbauthserver.so
-lib64/libbauthtzcommon.so
-lib64/libegis_fp_normal_sensor_test.so
-lib64/libsynaFpSensorTestNwd.so
+vendor/lib/libbauthserver.so
+vendor/lib64/libbauthserver.so
+vendor/lib/libbauthtzcommon.so
+vendor/lib64/libbauthtzcommon.so
+vendor/lib/libegis_fp_normal_sensor_test.so
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib/libgf_in_system_lib.so
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib/libsynaFpSensorTestNwd.so
+vendor/lib64/libsynaFpSensorTestNwd.so
 
 # GPS
 bin/gpsd
@@ -66,41 +72,40 @@ vendor/firmware/fimc_is_lib.bin
 vendor/firmware/mfc_fw.bin
 
 # Mobicore
-app/FFFFFFFF000000000000000000000001.drbin
-app/mcRegistry/00060308060501020000000000000000.tlbin
-app/mcRegistry/07010000000000000000000000000000.tlbin
-app/mcRegistry/07060000000000000000000000000000.tlbin
-app/mcRegistry/08130000000000000000000000000000.tlbin
-app/mcRegistry/ffffffff000000000000000000000004.tlbin
-app/mcRegistry/ffffffff000000000000000000000005.tlbin
-app/mcRegistry/ffffffff00000000000000000000000a.tlbin
-app/mcRegistry/ffffffff00000000000000000000000b.tlbin
-app/mcRegistry/ffffffff00000000000000000000000c.tlbin
-app/mcRegistry/ffffffff00000000000000000000000d.tlbin
-app/mcRegistry/ffffffff00000000000000000000000f.tlbin
-app/mcRegistry/ffffffff000000000000000000000012.tlbin
-app/mcRegistry/ffffffff000000000000000000000013.tlbin
-app/mcRegistry/ffffffff000000000000000000000016.tlbin
-app/mcRegistry/ffffffff000000000000000000000017.tlbin
-app/mcRegistry/ffffffff000000000000000000000019.tlbin
-app/mcRegistry/ffffffff00000000000000000000001f.tlbin
-app/mcRegistry/ffffffff00000000000000000000002e.tlbin
-app/mcRegistry/ffffffff000000000000000000000038.tlbin
-app/mcRegistry/ffffffff000000000000000000000041.tlbin
-app/mcRegistry/ffffffff000000000000000000000045.tlbin
-app/mcRegistry/ffffffffd00000000000000000000004.tlbin
-app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
-app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
-app/mcRegistry/ffffffffd00000000000000000000014.tlbin
-app/mcRegistry/ffffffffd00000000000000000000016.tlbin
-app/mcRegistry/ffffffffd00000000000000000000017.tlbin
-app/mcRegistry/fffffffff0000000000000000000001b.tlbin
-app/mcRegistry/fffffffff0000000000000000000001e.tlbin
-bin/mcDriverDaemon
-vendor/lib/libMcClient.so:lib/libMcClient.so
-vendor/lib64/libMcClient.so:lib64/libMcClient.so
-vendor/lib/libMcRegistry.so:lib/libMcRegistry.so
-vendor/lib64/libMcRegistry.so:lib64/libMcRegistry.so
+/app/mcRegistry/00060308060501020000000000000000.tlbin
+/app/mcRegistry/ffffffff00000000000000000000000c.tlbin
+/app/mcRegistry/ffffffff00000000000000000000000d.tlbin
+/app/mcRegistry/ffffffff000000000000000000000004.tlbin
+/app/mcRegistry/ffffffff000000000000000000000012.tlbin
+/app/mcRegistry/ffffffff000000000000000000000016.tlbin
+/app/mcRegistry/ffffffffd00000000000000000000004.tlbin
+/app/mcRegistry/ffffffffd00000000000000000000017.tlbin
+/app/mcRegistry/fffffffff0000000000000000000001b.tlbin
+vendor/app/mcRegistry/07010000000000000000000000000000.tlbin
+vendor/app/mcRegistry/07060000000000000000000000000000.tlbin
+vendor/app/mcRegistry/08130000000000000000000000000000.tlbin
+vendor/app/mcRegistry/ffffffff00000000000000000000000a.tlbin
+vendor/app/mcRegistry/ffffffff00000000000000000000000b.tlbin
+vendor/app/mcRegistry/ffffffff00000000000000000000000f.tlbin
+vendor/app/mcRegistry/ffffffff00000000000000000000002e.tlbin
+vendor/app/mcRegistry/ffffffff00000000000000000000002f.tlbin
+vendor/app/mcRegistry/ffffffff000000000000000000000005.tlbin
+vendor/app/mcRegistry/ffffffff000000000000000000000013.tlbin
+vendor/app/mcRegistry/ffffffff000000000000000000000017.tlbin
+vendor/app/mcRegistry/ffffffff000000000000000000000030.tlbin
+vendor/app/mcRegistry/ffffffff000000000000000000000038.tlbin
+vendor/app/mcRegistry/ffffffff000000000000000000000041.tlbin
+vendor/app/mcRegistry/ffffffff000000000000000000000045.tlbin
+vendor/app/mcRegistry/FFFFFFFF000000000000000000000001.drbin
+vendor/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
+vendor/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
+vendor/app/mcRegistry/ffffffffd00000000000000000000014.tlbin
+vendor/app/mcRegistry/ffffffffd00000000000000000000016.tlbin
+vendor/bin/mcDriverDaemon
+vendor/lib/libMcClient.so
+vendor/lib64/libMcClient.so
+vendor/lib/libMcRegistry.so
+vendor/lib64/libMcRegistry.so
 
 # NFC
 etc/nfc/sec_s3nrn81_rfreg.bin
