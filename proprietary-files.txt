@@ -56,6 +56,8 @@ lib/libwrappergps.so
 lib64/libwrappergps.so
 
 # Graphics
+lib64/hw/gralloc.exynos5.so
+lib/hw/gralloc.exynos5.so
 # Vulcan and OpenCL are implemented in this file,
 # so we create symlinks in setup-makefiles.sh.
 vendor/lib/egl/libGLES_mali.so
@@ -109,14 +111,32 @@ vendor/lib/hw/nfc_nci.default.so
 vendor/lib64/hw/nfc_nci.default.so
 
 # OMX
-lib/omx/libOMX.Exynos.AVC.Encoder.so
+lib64/libExynosOMX_Core.so
+lib/libExynosOMX_Core.so
+lib64/libExynosOMX_Resourcemanager.so
+lib/libExynosOMX_Resourcemanager.so
+lib64/libstagefrighthw.so
+lib/libstagefrighthw.so
+lib64/omx/libOMX.Exynos.AVC.Decoder.so
+lib/omx/libOMX.Exynos.AVC.Decoder.so
 lib64/omx/libOMX.Exynos.AVC.Encoder.so
-lib/omx/libOMX.Exynos.HEVC.Decoder.so
+lib/omx/libOMX.Exynos.AVC.Encoder.so
 lib64/omx/libOMX.Exynos.HEVC.Decoder.so
-lib/omx/libOMX.Exynos.HEVC.Encoder.so
+lib/omx/libOMX.Exynos.HEVC.Decoder.so
 lib64/omx/libOMX.Exynos.HEVC.Encoder.so
-lib/omx/libOMX.Exynos.VP9.Decoder.so
+lib/omx/libOMX.Exynos.HEVC.Encoder.so
+lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
+lib/omx/libOMX.Exynos.MPEG4.Decoder.so
+lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
+lib/omx/libOMX.Exynos.MPEG4.Encoder.so
+lib64/omx/libOMX.Exynos.VP8.Decoder.so
+lib/omx/libOMX.Exynos.VP8.Decoder.so
+lib64/omx/libOMX.Exynos.VP8.Encoder.so
+lib/omx/libOMX.Exynos.VP8.Encoder.so
 lib64/omx/libOMX.Exynos.VP9.Decoder.so
+lib/omx/libOMX.Exynos.VP9.Decoder.so
+lib64/omx/libOMX.Exynos.WMV.Decoder.so
+lib/omx/libOMX.Exynos.WMV.Decoder.so
 
 # Protobuf compat
 lib64/libprotobuf-cpp-fulN.so
