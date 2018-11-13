@@ -139,9 +139,6 @@
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">false</bool>
 
-    <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
-    <bool name="config_unplugTurnsOnScreen">true</bool>
-
     <!-- Flag indicating whether we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
@@ -176,7 +173,7 @@
     </integer-array>
 
     <!-- Operating voltage for bluetooth controller. 0 by default -->
-    <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
+    <integer name="config_bluetooth_operating_voltage_mv">4</integer>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
@@ -189,7 +186,7 @@
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDim">56</integer>
+    <integer name="config_screenBrightnessDim">57</integer>
 
     <!-- Doze (Ambient display) -->
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
