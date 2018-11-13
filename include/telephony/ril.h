@@ -1921,8 +1921,6 @@ typedef struct {
     int waitTime;
     /* true to enable the profile, 0 to disable, 1 to enable */
     int enabled;
-    char *roamingProtocol;
-    int imsType;
 } RIL_DataProfileInfo;
 
 typedef struct {
