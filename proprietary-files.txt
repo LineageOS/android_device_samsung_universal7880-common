@@ -150,4 +150,3 @@ etc/firmware/rampatch_tlv_tf_1.1.tlv
 etc/firmware/utf30.bin
 etc/firmware/utfbd30.bin
 etc/firmware/utfbd32.bin
-lib/modules/qca_cld/qca_cld_wlan.ko
