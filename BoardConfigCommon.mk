@@ -96,7 +96,9 @@ TARGET_POWERHAL_VARIANT := samsung
 TARGET_SEC_FP_HAL_VARIANT := bauth
 
 # Samsung Hardware
-BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw $(LOCAL_PATH)/lineagehw
+JAVA_SOURCE_OVERLAYS := \
+    org.lineageos.hardware|hardware/samsung/lineagehw|**/*.java \
+    org.lineageos.hardware|$(LOCAL_PATH)/lineagehw|**/*.java
 
 # Graphics
 USE_OPENGL_RENDERER := true
