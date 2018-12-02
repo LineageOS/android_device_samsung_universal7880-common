@@ -26,6 +26,7 @@ dalvik.vm.isa.arm.features=default
 # Graphics
 debug.hwc.skip_dma_types=0,2
 ro.opengles.version=196610
+debug.hwc.force_gpu=1
 
 # Nfc
 ro.nfc.port="I2C"
