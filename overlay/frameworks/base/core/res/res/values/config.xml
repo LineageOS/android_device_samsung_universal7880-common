@@ -221,4 +221,16 @@
 
     <!-- Enable double tap to wake gesture -->
     <bool name="config_supportDoubleTapWake">true</bool>
+    
+    <array name="shutdown_reboot_options" translatable="false">
+        <item>@string/reboot_reboot</item>
+        <item>@string/reboot_recovery</item>
+        <item>@string/reboot_download</item>
+    </array>
+
+    <string-array name="shutdown_reboot_actions" translatable="false">
+        <item></item>
+        <item>recovery</item>
+        <item>download</item>
+    </string-array>
 </resources>
