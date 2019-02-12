@@ -747,7 +747,7 @@ on property:init.svc.bootanim=stopped
 service gpsd /system/bin/gpsd
     class main
     user gps
-    group system inet wakelock
+    group system inet net_raw wakelock
     ioprio be 0
 
 # Secure Storage startup
