@@ -1,5 +1,5 @@
 type gpsd, domain;
-type gpsd_exec, exec_type, file_type;
+type gpsd_exec, exec_type, file_type, vendor_file_type;
 
 init_daemon_domain(gpsd);
 
@@ -21,10 +21,13 @@ type_transition gpsd gps_data_file:sock_file gps_socket;
 allow gpsd dnsproxyd_socket:sock_file write;
 allow gpsd fwmarkd_socket:sock_file write;
 allow gpsd gps_socket:sock_file create_file_perms;
-allow gpsd self:udp_socket { create bind connect read setopt write }; 
+allow gpsd self:udp_socket { create bind connect read getopt setopt write };
+allow gpsd self:tcp_socket { create bind connect read getopt setopt write };
+allow gpsd port:tcp_socket name_connect;
  
 # sysfs_gps
 allow gpsd sysfs_gps:file { open read getattr };
+allow gpsd system_file:dir { open read getattr };
 
 # /dev/ttySAC0
 allow gpsd bluetooth_device:chr_file { getattr setattr rw_file_perms };
