@@ -31,7 +31,7 @@ allow system_server wifi_efs_file:file r_file_perms;
 
 # mDNIE
 allow system_server sysfs_mdnie_writable:lnk_file rw_file_perms;
-allow system_server sysfs_mdnie_writable:dir rw_dir_perms;
+#allow system_server sysfs_mdnie_writable:dir rw_dir_perms;
 allow system_server sysfs_mdnie_writable:file rw_file_perms;
 
 # memtrack HAL
@@ -45,5 +45,7 @@ allow system_server sensor_factoryapp_efs_file:file r_file_perms;
 
 # /data/system/gps/xtraee.bin
 allow system_server gps_data_file:file create_file_perms;
+
+allow system_server sysfs_devices_system_cpu:file write;
 
 unix_socket_connect(system_server, property, gpsd)
