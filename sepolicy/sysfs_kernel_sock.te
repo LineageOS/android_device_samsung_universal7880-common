@@ -1,0 +1,1 @@
+allow sysfs_kernel_sock debugfs:filesystem associate;
