@@ -9,6 +9,14 @@ allow init emmcblk_device:blk_file rw_file_perms;
 
 allow init block_device:lnk_file { setattr };
 allow init tmpfs:lnk_file create_file_perms;
+#allow init sysfs_devices_system_cpu:file write;
+#allow init proc:file { setattr write open };
+#allow init socket_device:sock_file { unlink create setattr };
+#allow init sysfs_devices_system_cpu:file write;
+#allow init sysfs_multipdp_writable:file setattr;
+#allow init sysfs_bluetooth_writable:file setattr;
+#allow init sysfs_mdnie_writable:file setattr;
+
 
 # /sys/class/power_supply/battery and /sys/class/android_usb/android0
 allow init sysfs:dir w_dir_perms;
