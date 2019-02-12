@@ -21,3 +21,6 @@ allow kernel wifi_efs_file:file r_file_perms;
 
 # /data/misc/conn/.wifiver.info
 allow kernel wifi_data_file:file rw_file_perms;
+
+# stop the kernel spam
+dontaudit kernel self:capability { dac_override dac_read_search };
