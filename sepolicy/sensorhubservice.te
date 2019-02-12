@@ -12,3 +12,5 @@ allow sensorhubservice { input_device sensor_device }:chr_file rw_file_perms;
 
 # binder call
 allow sensorhubservice servicemanager:binder { call transfer };
+
+allow sensorhubservice sysfs:file { getattr open read };
