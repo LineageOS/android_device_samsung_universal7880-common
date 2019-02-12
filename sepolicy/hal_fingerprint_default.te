@@ -14,3 +14,7 @@ allow hal_fingerprint_default tee:unix_stream_socket connectto;
 # /data/biometrics/*
 allow hal_fingerprint_default fingerprintd_data_file:dir create_dir_perms;
 allow hal_fingerprint_default fingerprintd_data_file:file create_file_perms;
+
+# sysfs_virtual
+allow hal_fingerprint_default sysfs_virtual:dir { read open search };
+allow hal_fingerprint_default sysfs_virtual:file { read open };

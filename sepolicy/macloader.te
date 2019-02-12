@@ -5,7 +5,7 @@ type macloader_exec, exec_type, file_type;
 
 init_daemon_domain(macloader)
 
-allow macloader self:capability { chown dac_override fowner fsetid };
+allow macloader self:capability { chown fowner fsetid };
 allow macloader self:process execmem;
 
 # Write into /data
