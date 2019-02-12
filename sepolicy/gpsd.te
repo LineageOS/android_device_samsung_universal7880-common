@@ -24,6 +24,7 @@ allow gpsd gps_socket:sock_file create_file_perms;
 allow gpsd self:udp_socket { create bind connect read setopt write }; 
  
 # sysfs_gps
+allow gpsd system_file:dir { open read getattr };
 allow gpsd sysfs_gps:file { open read getattr };
 
 # /dev/ttySAC0
