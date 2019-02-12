@@ -1,23 +1,19 @@
 #### wifiloader
 #
-type wifiloader, domain;
-type wifiloader_exec, exec_type, file_type;
+unix_socket_connect(hal_wifi_default, property, init)
 
-init_daemon_domain(wifiloader)
-unix_socket_connect(wifiloader, property, init)
-
-allow wifiloader proc:file r_file_perms;
-allow wifiloader sysfs_wlan_fwpath:file setattr;
-allow wifiloader wifi_prop:property_service set;
-allow wifiloader wifi_data_file:file { open read write };
+allow hal_wifi_default proc:file r_file_perms;
+allow hal_wifi_default sysfs_wlan_fwpath:file setattr;
+allow hal_wifi_default wifi_prop:property_service set;
+allow hal_wifi_default wifi_data_file:file { open read write };
 
 # /efs
-allow wifiloader efs_file:dir search;
+allow hal_wifi_default efs_file:dir search;
 
 # /efs/wifi
-allow wifiloader wifi_efs_file:dir search;
-allow wifiloader wifi_efs_file:file { open read };
+allow hal_wifi_default wifi_efs_file:dir search;
+allow hal_wifi_default wifi_efs_file:file { open read };
 
 # load .ko modules
 allow kernel self:capability sys_module;
-allow wifiloader self:capability { chown dac_override sys_module };
+allow hal_wifi_default self:capability { chown dac_override sys_module };
