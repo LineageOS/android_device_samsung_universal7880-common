@@ -58,6 +58,36 @@ vendor/lib64/libwrappergps.so
 # Graphics
 lib64/hw/gralloc.exynos5.so
 lib/hw/gralloc.exynos5.so
+lib64/hw/hwcomposer.exynos5.so
+lib/hw/hwcomposer.exynos5.so
+lib64/hw/memtrack.exynos5.so
+lib/hw/memtrack.exynos5.so
+lib64/libexynosdisplay.so
+lib/libexynosdisplay.so
+lib64/libExynosHWCService.so
+lib/libExynosHWCService.so
+lib64/libexynosscaler.so
+lib/libexynosscaler.so
+lib64/libexynosgscaler.so
+lib/libexynosgscaler.so
+lib64/libexynosutils.so
+lib/libexynosutils.so
+lib64/libhdmi.so
+lib/libhdmi.so
+lib64/libhwcutils.so
+lib/libhwcutils.so
+lib64/libvirtualdisplay.so
+lib/libvirtualdisplay.so
+vendor/lib64/libcsc.so
+vendor/lib/libcsc.so
+vendor/lib64/libexynosv4l2.so
+vendor/lib/libexynosv4l2.so
+vendor/lib64/libhwc2on1adapter.so
+vendor/lib/libhwc2on1adapter.so
+vendor/lib64/libion_exynos.so
+vendor/lib/libion_exynos.so
+vendor/lib64/libmpp.so
+vendor/lib/libmpp.so
 # Vulcan and OpenCL are implemented in this file,
 # so we create symlinks in setup-makefiles.sh.
 vendor/lib/egl/libGLES_mali.so

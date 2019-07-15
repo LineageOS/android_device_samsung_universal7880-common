@@ -84,11 +84,9 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.renderscript@1.0-impl \
     gralloc.exynos5 \
-    libhwc2on1adapter \
     memtrack.exynos5
 
 PRODUCT_PACKAGES += \
-    libion \
     libfimg
 
 # Camera
