@@ -24,6 +24,7 @@ type sysfs_mipi, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_multipdp, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_sec, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_camera, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_charger, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_gps, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_brightness, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_input, fs_type, sysfs_type, mlstrustedobject;
