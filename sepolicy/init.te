@@ -42,7 +42,6 @@ allow init sysfs_input:file setattr;
 allow init sysfs_lcd:file { setattr open };
 allow init sysfs_svc:file setattr;
 allow init sysfs_modem:file { setattr open write };
-allow init sysfs_usb:file setattr;
 allow init sysfs_wlan_fwpath:file setattr;
 allow init sysfs_virtual:file { open setattr write };
 allow init sysfs_virtual:lnk_file read;

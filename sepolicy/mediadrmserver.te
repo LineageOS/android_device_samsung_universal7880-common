@@ -1,0 +1,2 @@
+allow mediadrmserver media_data_file:file { getattr open read create write };
+allow mediadrmserver media_data_file:dir { getattr write search add_name };
