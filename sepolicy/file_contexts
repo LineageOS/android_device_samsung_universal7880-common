@@ -119,6 +119,11 @@
 # camera
 /sys/devices/virtual/camera(/.*)?           u:object_r:sysfs_camera:s0
 
+# charger
+/sys/devices/battery/power_supply(/.*)                                     u:object_r:sysfs_charger:s0
+/sys/devices/13870000.i2c/i2c-7/7-003d/s2mu004-charger/power_supply(/.*)   u:object_r:sysfs_charger:s0
+/sys/devices/13830000.i2c/i2c-10/10-003b/power_supply(/.*)                 u:object_r:sysfs_charger:s0
+
 # CP device
 /dev/spi_boot_link              u:object_r:radio_device:s0
 
@@ -167,9 +172,6 @@
 
 # svc
 /sys/devices/svc(/.*)?    u:object_r:sysfs_svc:s0
-
-# usb
-/sys/devices/13600000.usb(/.*)?                     u:object_r:sysfs_usb:s0
 
 # virtual
 /sys/devices/virtual(/.*)?    u:object_r:sysfs_virtual:s0
