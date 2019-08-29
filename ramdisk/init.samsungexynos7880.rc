@@ -91,6 +91,14 @@ on post-fs-data
 # FM radio
     chown system audio /dev/radio0
     chmod 0660 /dev/radio0
+
+# for WIFI MAC address
+    mkdir /efs/wifi 0775 wifi root
+    chown wifi root /efs/wifi/.mac.info
+    chmod 0664 /efs/wifi/.mac.info
+    chown wifi root /efs/wifi/.mac.cob
+    chmod 0664 /efs/wifi/.mac.cob
+
 # Directory for GPS
     mkdir /data/system 0771 system system
     chown system system /data/system
