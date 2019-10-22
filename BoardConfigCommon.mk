@@ -16,6 +16,8 @@
 
 LOCAL_PATH := device/samsung/universal7880-common
 
+BUILD_BROKEN_DUP_RULES := true
+
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
