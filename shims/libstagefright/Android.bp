@@ -1,0 +1,37 @@
+cc_library_shared {
+    name: "libstagefright_shim",
+    proprietary: true,
+
+    srcs: [
+        "CameraSource.cpp",
+    ],
+
+    export_shared_lib_headers: [
+        "android.hardware.graphics.bufferqueue@1.0",
+        "android.hardware.graphics.bufferqueue@2.0",
+    ],
+
+    generated_headers: [
+        "android.hardware.graphics.bufferqueue@1.0_genc++_headers",
+        "android.hardware.graphics.bufferqueue@2.0_genc++_headers",
+    ],
+
+    shared_libs: [
+        "android.hardware.graphics.bufferqueue@1.0",
+        "android.hardware.graphics.bufferqueue@2.0",
+        "android.hidl.token@1.0-utils",
+        "libbase",
+        "libcamera_client",
+        "liblog",
+    ],
+
+    include_dirs: [
+        "frameworks/av/include",
+        "frameworks/native/include/media/hardware",
+        "frameworks/native/include/media/openmax",
+        "frameworks/native/libs/arect/include",
+        "frameworks/native/libs/nativebase/include",
+        "frameworks/native/libs/nativewindow/include",
+        "frameworks/av/media/ndk/include",
+    ],
+}
