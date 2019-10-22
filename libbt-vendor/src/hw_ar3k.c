@@ -1212,7 +1212,7 @@ int hci_send_cmd(int dd, uint16_t ogf, uint16_t ocf, uint8_t plen, void *param)
         ivn = 3;
     }
 
-    while (writev(dd, iv, ivn) < 0) {
+    while (write(dd, iv, ivn) < 0) {
         if (errno == EAGAIN || errno == EINTR)
             continue;
         return -1;
