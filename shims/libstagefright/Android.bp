@@ -1,0 +1,53 @@
+//
+// Copyright (C) 2019 The LineageOS Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+cc_library_shared {
+    name: "libstagefright_shim",
+    proprietary: true,
+
+    srcs: [
+        "CameraSource.cpp",
+    ],
+
+    export_shared_lib_headers: [
+        "android.hardware.graphics.bufferqueue@1.0",
+        "android.hardware.graphics.bufferqueue@2.0",
+    ],
+
+    generated_headers: [
+        "android.hardware.graphics.bufferqueue@1.0_genc++_headers",
+        "android.hardware.graphics.bufferqueue@2.0_genc++_headers",
+    ],
+
+    shared_libs: [
+        "android.hardware.graphics.bufferqueue@1.0",
+        "android.hardware.graphics.bufferqueue@2.0",
+        "android.hidl.token@1.0-utils",
+        "libbase",
+        "libcamera_client",
+        "liblog",
+    ],
+
+    include_dirs: [
+        "frameworks/av/include",
+        "frameworks/native/include/media/hardware",
+        "frameworks/native/include/media/openmax",
+        "frameworks/native/libs/arect/include",
+        "frameworks/native/libs/nativebase/include",
+        "frameworks/native/libs/nativewindow/include",
+        "frameworks/av/media/ndk/include",
+    ],
+}
