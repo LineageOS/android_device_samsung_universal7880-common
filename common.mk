@@ -19,7 +19,7 @@ LOCAL_PATH := device/samsung/universal7880-common
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Flat device tree for boot image
-PRODUCT_PACKAGES += \
+PRODUCT_HOST_PACKAGES += \
     dtbhtoolExynos
 
 # Ramdisk
