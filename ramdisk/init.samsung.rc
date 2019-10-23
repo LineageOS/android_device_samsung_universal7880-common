@@ -698,14 +698,6 @@ service mobicore /system/bin/mcDriverDaemon -r /system/app/FFFFFFFF0000000000000
     group system
     disabled
 
-# icd
-service icd /system/bin/icd
-    class main
-    user system
-    group system log
-    onrestart check_icd
-    oneshot
-
 # Sensorhub service
 service sensorhubservice /system/bin/sensorhubservice
     class main
