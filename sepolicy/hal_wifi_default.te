@@ -12,4 +12,7 @@ allow hal_wifi_default wifi_efs_file:dir search;
 allow hal_wifi_default wifi_efs_file:file { open read };
 
 # load .ko modules
-allow hal_wifi_default self:capability sys_module;
+allow hal_wifi_default self:capability { sys_module sys_resource };
+
+# set property
+allow hal_wifi_default vendor_default_prop:property_service set;
