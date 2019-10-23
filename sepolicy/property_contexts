@@ -3,6 +3,10 @@ persist.bluetooth_fw_ver    u:object_r:bluetooth_prop:s0
 ro.bluetooth.tty            u:object_r:bluetooth_prop:s0
 wc_transport.               u:object_r:bluetooth_prop:s0
 
+# cbd
+vendor.cbd.                    u:object_r:vendor_cbd_prop:s0
+persist.vendor.cbd.            u:object_r:vendor_cbd_prop:s0
+
 # modemloader
 hw.revision            u:object_r:modemloader_prop:s0
 ro.cbd.dt_revision     u:object_r:modemloader_prop:s0
@@ -12,8 +16,7 @@ ro.modemloader.done    u:object_r:modemloader_prop:s0
 # mobicore
 sys.mobicoredaemon.enable         u:object_r:tee_prop:s0
 
-# radio
-persist.ril.modem.board    u:object_r:radio_prop:s0
-persist.ril.ims.eutranParam u:object_r:radio_prop:s0
-persist.ril.ims.utranParam  u:object_r:radio_prop:s0
-persist.ril.interfaceconf.failed u:object_r:radio_prop:s0
+### radio
+ro.multisim.                   u:object_r:vendor_radio_prop:s0
+ro.vendor.multisim.            u:object_r:vendor_radio_prop:s0
+ro.vendor.radio.               u:object_r:vendor_radio_prop:s0
