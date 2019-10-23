@@ -1,0 +1,2 @@
+get_prop(crash_dump, hwservicemanager_prop)
+get_prop(crash_dump, wifi_prop)
