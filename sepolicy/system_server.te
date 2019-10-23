@@ -35,7 +35,6 @@ allow system_server sysfs_mdnie:file rw_file_perms;
 
 # memtrack HAL
 allow system_server debugfs:dir r_dir_perms;
-allow system_server debugfs:file r_file_perms;
 
 # sensor HAL
 allow system_server sensor_device:chr_file rw_file_perms;
