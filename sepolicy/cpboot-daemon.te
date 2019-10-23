@@ -1,6 +1,6 @@
 # modem daemon sec label
 type cpboot-daemon, domain;
-type cpboot-daemon_exec, exec_type, file_type;
+type cpboot-daemon_exec, exec_type, file_type, vendor_file_type;
 
 net_domain(cpboot-daemon)
 init_daemon_domain(cpboot-daemon)
@@ -9,8 +9,6 @@ set_prop(cpboot-daemon, modemloader_prop)
 
 allow cpboot-daemon self:capability { setuid setgid };
 
-# FIXME neverallow rule
-# allow cpboot-daemon self:capability mknod;
 allow cpboot-daemon kernel:system syslog_read;
 allow cpboot-daemon cgroup:dir create_dir_perms;
 
@@ -24,8 +22,6 @@ allow cpboot-daemon kmsg_device:chr_file rw_file_perms;
 allow cpboot-daemon mif_device:chr_file rw_file_perms;
 # /dev/mbin0
 allow cpboot-daemon emmcblk_device:blk_file r_file_perms;
-# /dev/spi_boot_link
-allow cpboot-daemon radio_device:chr_file rw_file_perms;
 # /dev/block/mmcblk0p13
 allow cpboot-daemon block_device:dir r_dir_perms;
 allow cpboot-daemon radio_block_device:blk_file r_file_perms;
@@ -34,7 +30,10 @@ allow cpboot-daemon radio_block_device:blk_file r_file_perms;
 allow cpboot-daemon sysfs_mipi:file rw_file_perms;
 
 # /efs
+allow cpboot-daemon efs_file:file read;
 allow cpboot-daemon efs_file:dir r_dir_perms;
+
+allow cpboot-daemon factoryprop_efs_file:file { open read };
 
 # /efs/nv_data.bin
 allow cpboot-daemon bin_nv_data_efs_file:file rw_file_perms;
@@ -46,6 +45,7 @@ allow cpboot-daemon sysfs:file r_file_perms;
 allow cpboot-daemon proc_cmdline:file r_file_perms;
 
 # set properties on boot
-set_prop(cpboot-daemon, cpboot-daemon_prop)
-set_prop(cpboot-daemon, radio_prop)
+set_prop(cpboot-daemon, vendor_cbd_prop)
 set_prop(cpboot-daemon, system_prop)
+
+allow cpboot-daemon vendor_shell_exec:file execute_no_trans;
