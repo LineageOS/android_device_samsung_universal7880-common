@@ -1,0 +1,4 @@
+allow hwservicemanager gpsd:dir search;
+allow hwservicemanager gpsd:file { read open };
+allow hwservicemanager gpsd:process getattr;
+allow hwservicemanager gpsd:binder transfer;
