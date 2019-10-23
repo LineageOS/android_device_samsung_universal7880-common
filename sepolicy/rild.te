@@ -4,7 +4,7 @@ allow rild self:capability { chown };
 # Allow additiional efs access
 allow rild bin_nv_data_efs_file:file create_file_perms;
 allow rild imei_efs_file:dir r_dir_perms;
-allow rild imei_efs_file:file r_file_perms;
+allow rild imei_efs_file:file rw_file_perms;
 allow rild app_efs_file:dir r_dir_perms;
 allow rild app_efs_file:file r_file_perms;
 
@@ -26,7 +26,7 @@ allow rild sysfs_multipdp:file rw_file_perms;
 # /proc/sys/net/ipv6/conf/*/accept_ra_defrtr
 allow rild proc_net:file rw_file_perms;
 
-allow rild gpsd:dir r_dir_perms;
+allow rild gpsd:dir search;
 allow rild gpsd:file r_file_perms;
 
 # rild reads /proc/pid/cmdline of mediaserver
@@ -48,8 +48,33 @@ allow rild mnt_user_file:lnk_file { r_file_perms };
 # Modem firmware download
 allow rild radio_block_device:blk_file r_file_perms;
 
+# prop
+set_prop(rild, vendor_cbd_prop)
+get_prop(rild, exported_radio_prop)
+
 # persist.ril.modem.board
 set_prop(modemloader, radio_prop)
 
 # /dev/knox_kap
 allow rild knox_device:chr_file r_file_perms;
+
+# proc
+allow rild proc_qtaguid_stat:file r_file_perms;
+
+# audio hal
+allow rild hal_audio_default:dir search;
+allow rild hal_audio_default:file r_file_perms;
+
+allow rild hal_radio_default:binder call;
+
+allow rild hal_sec_radio_hwservice:hwservice_manager add;
+#allow rild hal_sec_radio_channel_hwservice:hwservice_manager add;
+#allow rild hal_sec_radio_bridge_hwservice:hwservice_manager add;
+
+allow rild radio_data_file:dir { add_name open read remove_name write };
+allow rild radio_data_file:file { create getattr ioctl lock open read unlink write };
+
+allow rild radio_vendor_data_file:dir { add_name open read remove_name write search };
+allow rild radio_vendor_data_file:file { create getattr ioctl lock open read unlink write };
+
+allow rild mnt_vendor_file:dir search;

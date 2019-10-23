@@ -1,3 +1,13 @@
 allow netd self:capability sys_module;
 allow netd gpsd:fd use;
-allow netd gpsd:udp_socket { read write getopt setopt };
+allow netd gpsd:udp_socket rw_socket_perms;
+allow netd gpsd:tcp_socket rw_socket_perms;
+allow netd init:tcp_socket { read write };
+
+allow netd init:tcp_socket getopt;
+allow netd init:tcp_socket setopt;
+
+allow netd sysfs_virtual:dir search;
+allow netd sysfs_virtual:file rw_file_perms;
+
+allow netd device:file { read write open };
