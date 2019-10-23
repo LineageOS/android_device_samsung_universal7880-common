@@ -35,6 +35,7 @@
 /dev/block/mmcblk0p19        u:object_r:system_block_device:s0
 /dev/block/mmcblk0p20        u:object_r:cache_block_device:s0
 /dev/block/mmcblk0p25        u:object_r:userdata_block_device:s0
+/dev/block/mmcblk0p16        u:object_r:frp_block_device:s0
 
 /dev/rfkill                  u:object_r:rfkill_device:s0
 
@@ -56,6 +57,9 @@
 
 # Knox status
 /dev/knox_kap                u:object_r:knox_device:s0
+
+# adbroot and storaged
+/dev/stune(/.*)?		u:object_r:cgroup:s0
 
 ####################################
 # efs files
@@ -117,7 +121,8 @@
 /sys/devices/bluetooth/extldo                u:object_r:sysfs_bluetooth_writable:s0
 
 # brightness
-/sys/devices/[0-9]*\.dsim/backlight/panel/brightness      u:object_r:sysfs_brightness:s0
+/sys/devices/[0-9]*\.dsim/backlight/panel/brightness          u:object_r:sysfs_brightness:s0
+/sys/devices/[0-9]*\.dsim/backlight/panel/max_brightness      u:object_r:sysfs_brightness:s0
 
 # camera
 /sys/devices/virtual/camera(/.*)?           u:object_r:sysfs_camera:s0
@@ -138,8 +143,13 @@
 /sys/devices/soc0/revision     u:object_r:sysfs_gps:s0
 
 # input
-/sys/devices/13890000.i2c/i2c-9/9-0048/input/input1/enabled  u:object_r:sysfs_input:s0
-/sys/devices/i2c@20/i2c-6/6-0020/input/input0/enabled        u:object_r:sysfs_input:s0
+/sys/devices/i2c@20/i2c-6/6-0020/input/input0(/.*)?         u:object_r:sysfs_input:s0
+/sys/devices/13890000.i2c/i2c-9/9-0048/input/input1(/.*)?   u:object_r:sysfs_input:s0
+/sys/devices/13890000.i2c/i2c-9/9-0020/input/input1(/.*)?   u:object_r:sysfs_input:s0
+/sys/devices/10610000.hsi2c/i2c-0/0-a004/input/input2(/.*)? u:object_r:sysfs_input:s0
+/sys/devices/gpio_keys/input/input3(/.*)?                   u:object_r:sysfs_input:s0
+/sys/devices/hall/input/input4(/.*)?                        u:object_r:sysfs_input:s0
+/sys/devices/certify_hall/input/input5(/.*)?                u:object_r:sysfs_input:s0
 
 # lcd
 /sys/devices/[0-9]*\.dsim/lcd/panel/adaptive_control    u:object_r:sysfs_lcd:s0
@@ -179,6 +189,9 @@
 # virtual
 /sys/devices/virtual(/.*)?    u:object_r:sysfs_virtual:s0
 
+# iio
+/sys/devices/13930000\.spi/spi_master/spi2/spi2\.0/iio:device[0-9](/.*)?    u:object_r:sysfs_iio:s0
+/sys/bus/iio/devices(/.*)?                                                  u:object_r:sysfs_iio:s0
 
 ####################################
 # deamons
@@ -189,7 +202,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.samsung                     u:object_r:hal_lineage_touch_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.samsung-exynos        u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
 
-/system/bin/mcDriverDaemon   u:object_r:tee_exec:s0
+#/system/bin/mcDriverDaemon   u:object_r:tee_exec:s0
 /system/bin/macloader        u:object_r:macloader_exec:s0
 /system/bin/modemloader      u:object_r:modemloader_exec:s0
 /system/bin/sensorhubservice u:object_r:sensorhubservice_exec:s0
