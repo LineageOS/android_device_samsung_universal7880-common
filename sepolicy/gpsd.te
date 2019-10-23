@@ -1,10 +1,10 @@
 type gpsd, domain;
-type gpsd_exec, exec_type, file_type;
+type gpsd_exec, exec_type, file_type, vendor_file_type;
 
 init_daemon_domain(gpsd);
 
-# Automatically label files created in /data/system/gps as gps_data_file
-file_type_auto_trans(gpsd, system_data_file, gps_data_file)
+# Automatically label files created in /data/system/gps as gps_vendor_data_file
+file_type_auto_trans(gpsd, system_data_file, gps_vendor_data_file)
 
 # Allow rild and netd to connect to gpsd
 unix_socket_connect(gpsd, property, rild)
@@ -12,16 +12,30 @@ unix_socket_connect(gpsd, property, netd)
 
 allow gpsd system_server:unix_stream_socket { read write setopt };
 
+allow gpsd self:capability net_raw;
+
 binder_call(gpsd, system_server)
-binder_use(gpsd)
+binder_call(gpsd, system_suspend_server)
+binder_call(gpsd, hwservicemanager)
+
+get_prop(gpsd, vendor_radio_prop)
+get_prop(gpsd, exported_radio_prop)
+get_prop(gpsd, exported_config_prop)
+
+get_prop(gpsd, hwservicemanager_prop)
+hwbinder_use(gpsd)
+allow gpsd system_suspend_hwservice:hwservice_manager { find };
+allow gpsd fwk_sensor_hwservice:hwservice_manager { find };
 
 # Sockets
-type_transition gpsd gps_data_file:sock_file gps_socket;
+type_transition gpsd gps_vendor_data_file:sock_file gps_socket;
 
 allow gpsd dnsproxyd_socket:sock_file write;
 allow gpsd fwmarkd_socket:sock_file write;
 allow gpsd gps_socket:sock_file create_file_perms;
-allow gpsd self:udp_socket { create bind connect read setopt write }; 
+allow gpsd self:udp_socket { create bind connect read setopt write getopt };
+allow gpsd self:tcp_socket { create bind connect read setopt write getopt };
+allow gpsd port:tcp_socket name_connect;
  
 # sysfs_gps
 allow gpsd system_file:dir { open read getattr };
@@ -30,8 +44,8 @@ allow gpsd sysfs_gps:file { open read getattr };
 # /dev/ttySAC0
 allow gpsd bluetooth_device:chr_file { getattr setattr rw_file_perms };
 allow gpsd gps_device:chr_file { getattr setattr rw_file_perms };
-allow gpsd gps_data_file:dir { search write add_name remove_name rw_dir_perms };
-allow gpsd gps_data_file:fifo_file { unlink create setattr getattr rw_file_perms };
+allow gpsd gps_vendor_data_file:dir { search write add_name remove_name rw_dir_perms };
+allow gpsd gps_vendor_data_file:fifo_file { unlink create setattr getattr rw_file_perms };
 
 allow gpsd sysfs_wake_lock:file rw_file_perms;
 
@@ -39,3 +53,7 @@ allow gpsd sensorservice_service:service_manager { find };
 
 # /dev/umts_boot0
 allow gpsd mif_device:chr_file r_file_perms;
+
+allow gpsd gps_vendor_data_file:dir rw_dir_perms;
+allow gpsd gps_vendor_data_file:file create_file_perms;
+allow gpsd gps_vendor_data_file:fifo_file create_file_perms;
