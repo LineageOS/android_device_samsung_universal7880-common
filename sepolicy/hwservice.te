@@ -1,0 +1,1 @@
+type hal_sec_radio_hwservice, hwservice_manager_type;
