@@ -9,3 +9,5 @@ allow ueventd emmcblk_device:blk_file { relabelfrom relabelto create setattr unl
 # read/chown camera firmware
 allow ueventd sysfs_camera:file { relabelto getattr rw_file_perms };
 allow ueventd sysfs_camera:filesystem associate;
+
+allow ueventd self:capability sys_nice;
