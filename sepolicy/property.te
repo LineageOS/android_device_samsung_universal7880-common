@@ -1,8 +1,11 @@
-# CP-Boot Daemon
-type cpboot-daemon_prop, property_type;
-
 # modemloader
 type modemloader_prop, property_type;
 
 # mobicore (tee)
 type tee_prop, property_type;
+
+# CP-Boot Daemon
+type vendor_cbd_prop, property_type;
+
+# radio 
+type vendor_radio_prop, property_type;

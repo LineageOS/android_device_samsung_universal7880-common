@@ -1,0 +1,4 @@
+allow hal_vibrator_default sysfs_virtual:dir search;
+allow hal_vibrator_default sysfs_leds:dir search;
+
+allow hal_vibrator_default sysfs_virtual:file rw_file_perms;

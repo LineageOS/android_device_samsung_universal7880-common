@@ -1,3 +1,0 @@
-allow servicemanager sensorhubservice:dir search;
-allow servicemanager sensorhubservice:file { getattr open read };
-allow servicemanager sensorhubservice:process getattr;
