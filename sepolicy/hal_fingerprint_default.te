@@ -1,20 +1,25 @@
 # allow hal_fingerprint_default to communicate with various devices
-binder_call(system_app, hal_fingerprint_default);
+binder_call(system_app, hal_fingerprint_default)
 
 # kernel fp device
-allow hal_fingerprint_default fingerprint_device:chr_file rw_file_perms;
+allow hal_fingerprint_default fingerprint_device:chr_file { open read write ioctl };
 
 # secure memory device
-allow hal_fingerprint_default secmem_device:chr_file rw_file_perms;
+allow hal_fingerprint_default secmem_device:chr_file { open read write ioctl };
 
 # trust zone device
-allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
-allow hal_fingerprint_default tee:unix_stream_socket connectto;
+allow hal_fingerprint_default tee_device:chr_file { open read write ioctl };
+allow hal_fingerprint_default tee:unix_stream_socket { connectto };
 
 # /data/biometrics/*
-allow hal_fingerprint_default fingerprintd_data_file:dir create_dir_perms;
-allow hal_fingerprint_default fingerprintd_data_file:file create_file_perms;
+allow hal_fingerprint_default fingerprintd_data_file:dir { rmdir read write remove_name create open add_name search };
+allow hal_fingerprint_default fingerprintd_data_file:file { write create read rename open getattr unlink };
+
+# /data/vendor/biometrics/*
+allow hal_fingerprint_default fingerprintd_vendor_data_file:dir { rmdir read write remove_name create open add_name search };
+allow hal_fingerprint_default fingerprintd_vendor_data_file:file { write create read rename open getattr unlink };
 
 # sysfs_virtual
-allow hal_fingerprint_default sysfs_virtual:dir { read open search };
-allow hal_fingerprint_default sysfs_virtual:file { read open };
+allow hal_fingerprint_default sysfs_virtual:dir search;
+allow hal_fingerprint_default sysfs_virtual:file { open read };
+
