@@ -181,7 +181,8 @@
 # deamons
 #
 
-/system/bin/mcDriverDaemon   u:object_r:tee_exec:s0
+#TODO: don't label mcDriverDeamon tee_exec or move to /vendor
+#/system/bin/mcDriverDaemon   u:object_r:tee_exec:s0
 /system/bin/macloader        u:object_r:macloader_exec:s0
 /system/bin/modemloader      u:object_r:modemloader_exec:s0
 /system/bin/sensorhubservice u:object_r:sensorhubservice_exec:s0
