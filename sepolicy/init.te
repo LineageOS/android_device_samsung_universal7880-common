@@ -45,6 +45,11 @@ allow init sysfs_modem:file { setattr open write };
 allow init sysfs_wlan_fwpath:file setattr;
 allow init sysfs_virtual:file { open setattr write };
 allow init sysfs_virtual:lnk_file read;
+allow init sysfs_charger:file setattr;
+allow init sysfs_modem:file r_file_perms;
+allow init sysfs:file setattr;
 
 unix_socket_connect(init, property, rild)
 allow init socket_device:sock_file { unlink create setattr };
+
+allow init tee_device:chr_file { read write open ioctl getattr };
