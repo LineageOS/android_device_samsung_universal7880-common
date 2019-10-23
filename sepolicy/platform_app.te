@@ -1,0 +1,1 @@
+allow platform_app debugfs_mali:dir search;
