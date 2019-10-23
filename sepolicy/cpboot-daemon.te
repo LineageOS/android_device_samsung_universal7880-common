@@ -1,6 +1,6 @@
 # modem daemon sec label
-type cpboot-daemon, domain;
-type cpboot-daemon_exec, exec_type, file_type;
+type cpboot-daemon, coredomain, domain;
+type cpboot-daemon_exec, exec_type, system_file_type, file_type;
 
 net_domain(cpboot-daemon)
 init_daemon_domain(cpboot-daemon)
@@ -24,8 +24,6 @@ allow cpboot-daemon kmsg_device:chr_file rw_file_perms;
 allow cpboot-daemon mif_device:chr_file rw_file_perms;
 # /dev/mbin0
 allow cpboot-daemon emmcblk_device:blk_file r_file_perms;
-# /dev/spi_boot_link
-allow cpboot-daemon radio_device:chr_file rw_file_perms;
 # /dev/block/mmcblk0p13
 allow cpboot-daemon block_device:dir r_dir_perms;
 allow cpboot-daemon radio_block_device:blk_file r_file_perms;
