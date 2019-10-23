@@ -1,0 +1,24 @@
+# /efs/FactoryApp/
+allow hal_sensors_default app_efs_file:dir rw_dir_perms;
+allow hal_sensors_default app_efs_file:file { rw_file_perms setattr };
+
+# /efs
+allow hal_sensors_default efs_file:dir r_dir_perms;
+
+# sensor_device
+allow hal_sensors_default sensor_device:chr_file rw_file_perms;
+
+# iio_device
+allow hal_sensors_default iio_device:chr_file { open read };
+
+# sysfs_iio
+allow hal_sensors_default sysfs_iio:file { open read getattr write };
+allow hal_sensors_default sysfs_iio:dir { open read search };
+allow hal_sensors_default sysfs_iio:lnk_file read;
+
+allow hal_sensors_default sysfs:file { open read getattr write };
+
+# sysfs_virtual
+allow hal_sensors_default sysfs_virtual:dir r_dir_perms;
+allow hal_sensors_default sysfs_virtual:file rw_file_perms;
+
