@@ -1,0 +1,7 @@
+allow hal_power_default sysfs_devices_system_cpu:file write;
+
+allow hal_power_default sysfs_input:dir { open read search };
+allow hal_power_default sysfs_input:file { open read write };
+
+allow hal_power_default sysfs_virtual:dir { open read search };
+allow hal_power_default sysfs_virtual:file { open read write };
