@@ -14,6 +14,8 @@ type radio_factoryapp_efs_file, file_type;
 type sensor_efs_file, file_type;
 type sensor_factoryapp_efs_file, file_type;
 type wifi_efs_file, file_type;
+type mediadrm_vendor_data_file, file_type, data_file_type;
+
 # gps
 type gps_data_file, file_type, data_file_type, core_data_file_type;
 type gps_socket, file_type;
@@ -32,6 +34,7 @@ type sysfs_svc, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_lcd, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_modem, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_virtual, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_iio, fs_type, sysfs_type, mlstrustedobject;
 
 ### data types
 type display_vendor_data_file, file_type, data_file_type;
@@ -40,3 +43,7 @@ type display_vendor_data_file, file_type, data_file_type;
 type mobicore_data_file, file_type, data_file_type, core_data_file_type;
 
 allow sysfs_type tmpfs:filesystem associate;
+
+# debugfs types
+type debugfs_mali, fs_type, debugfs_type;
+type debugfs_ion, fs_type, debugfs_type;
