@@ -1,0 +1,4 @@
+vendor.samsung.hardware.radio::IRadio                            u:object_r:hal_sec_radio_hwservice:s0
+vendor.samsung.hardware.radio::ISecRadio                            u:object_r:hal_sec_radio_hwservice:s0
+vendor.samsung.hardware.radio.bridge::ISecBridge                 u:object_r:hal_sec_radio_bridge_hwservice:s0
+vendor.samsung.hardware.radio.channel::ISecChannel               u:object_r:hal_sec_radio_channel_hwservice:s0
