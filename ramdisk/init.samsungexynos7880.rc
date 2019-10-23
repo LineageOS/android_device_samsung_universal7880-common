@@ -592,13 +592,6 @@ service argos-daemon /system/bin/argosd
 # Copy DRM Key
     #copy /system/app/wv.keys /factory/wv.keys
 
-# Permission for DRM Key
-    chmod 0644 /factory/wv.keys
-
-# Permission for flashlight control for HAL3.3
-    chmod 0660 /sys/class/camera/flash/rear_flash
-    chown system camera /sys/class/camera/flash/rear_flash
-
 # MobiCore startup
 #service mobicore /system/bin/mcDriverDaemon -r /system/app/020a0000000000000000000000000000.drbin -r /system/app/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin
 #    user drmrpc
@@ -793,13 +786,6 @@ service redsocks /system/bin/redsocks -c /data/mptcp/redsocks.conf
     class main
     user system
     group system net_raw net_admin
-    disabled
-
-# Secure Storage startup
-service secure_storage /system/bin/secure_storage_daemon
-    class core
-    user system
-    group system
     disabled
 
 on property:ro.securestorage.support=true
