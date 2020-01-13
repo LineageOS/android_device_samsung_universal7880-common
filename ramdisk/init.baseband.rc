@@ -1,5 +1,4 @@
 on init
-    mkdir /efs 0771 radio system
     symlink /dev/block/platform/13540000.dwmmc0/by-name/RADIO /dev/mbin0
     restorecon /dev/mbin0
     write /sys/class/net/rmnet0/queues/rx-0/rps_cpus 6

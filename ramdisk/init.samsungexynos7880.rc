@@ -11,12 +11,10 @@ import init.target.rc
 import init.samsung.rc
 
 on early-init
-    mkdir /efs 0771 radio system
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 on init
     start watchdogd
-    mkdir /preload 0771 system system
 
     # See storage config details at http://source.android.com/tech/storage/
     mkdir /mnt/shell/emulated 0700 shell shell
