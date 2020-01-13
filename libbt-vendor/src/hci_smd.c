@@ -24,7 +24,7 @@
 
 #define LOG_TAG "bt_vendor"
 
-#include <utils/Log.h>
+#include <log/log.h>
 #include <termios.h>
 #include <fcntl.h>
 #include <errno.h>
