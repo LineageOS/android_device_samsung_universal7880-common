@@ -237,4 +237,8 @@
         <item>GPS_LOCK=0</item>
         <item>XTRA_SERVER_1=http://1.ssiloc.com:80/packed/A03</item>
     </string-array>
+
+    <!-- Whether to post reset runnable for all clients. Needed for some older
+        vendor fingerprint HAL implementations. -->
+    <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
 </resources>
