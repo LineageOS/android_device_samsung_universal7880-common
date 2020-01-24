@@ -106,11 +106,6 @@ TARGET_POWERHAL_VARIANT := samsung
 TARGET_SEC_FP_CALL_NOTIFY_ON_CANCEL := true
 TARGET_SEC_FP_USES_PERCENTAGE_SAMPLES := true
 
-# Samsung Hardware
-JAVA_SOURCE_OVERLAYS := \
-    org.lineageos.hardware|hardware/samsung/lineagehw|**/*.java \
-    org.lineageos.hardware|$(LOCAL_PATH)/lineagehw|**/*.java
-
 # Graphics
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
