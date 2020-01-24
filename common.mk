@@ -255,6 +255,10 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.samsung \
     libbauthtzcommon_shim
 
+# Touch features
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.samsung
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
