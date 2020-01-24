@@ -183,6 +183,7 @@
 
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.samsung u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.samsung                   u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.samsung                     u:object_r:hal_lineage_touch_default_exec:s0
 
 /system/bin/mcDriverDaemon   u:object_r:tee_exec:s0
 /system/bin/macloader        u:object_r:macloader_exec:s0
