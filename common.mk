@@ -248,8 +248,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl \
-    lights.universal7880
+    android.hardware.light@2.0-service.samsung
 
 # Fingerprint
 PRODUCT_PACKAGES += \
