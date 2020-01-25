@@ -114,7 +114,7 @@ app/mcRegistry/ffffffffd00000000000000000000016.tlbin
 app/mcRegistry/ffffffffd00000000000000000000017.tlbin
 app/mcRegistry/fffffffff0000000000000000000001b.tlbin
 app/mcRegistry/fffffffff0000000000000000000001e.tlbin
-bin/mcDriverDaemon
+vendor/bin/mcDriverDaemon
 vendor/lib/libMcClient.so:lib/libMcClient.so
 vendor/lib64/libMcClient.so:lib64/libMcClient.so
 vendor/lib/libMcRegistry.so:lib/libMcRegistry.so
