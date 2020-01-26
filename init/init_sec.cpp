@@ -79,4 +79,9 @@ void vendor_load_properties()
     property_override("ro.build.product", device.c_str());
     property_override("ro.build.description", description.c_str());
     property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", fingerprint.c_str());
+
+    if (bootloader.find("A520") != std::string::npos) {
+    android::init::property_set("ro.power_profile.override", "power_profile_a5");
+    property_override("ro.sf.lcd_density", "480");
+    }
 }
