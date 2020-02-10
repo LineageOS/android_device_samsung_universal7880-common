@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eb99a211_e49a686b",
+        "filename": "manifest.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2020-02-10T18:35:59Z",
+      "side": 0,
+      "message": "you need both android.hardware.power and vendor.lineage.power",
+      "range": {
+        "startLine": 152,
+        "startChar": 8,
+        "endLine": 152,
+        "endChar": 43
+      },
+      "revId": "1130d99b5a798327aa8f71cda608fff75797308e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
