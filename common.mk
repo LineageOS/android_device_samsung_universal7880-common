@@ -244,8 +244,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl \
-    power.universal7880
+    android.hardware.power@1.0-service.exynos
 
 # Lights
 PRODUCT_PACKAGES += \

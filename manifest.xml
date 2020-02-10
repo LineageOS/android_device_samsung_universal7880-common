@@ -149,11 +149,11 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.power</name>
-        <transport arch="32+64">passthrough</transport>
+        <name>vendor.lineage.power</name>
+        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IPower</name>
+            <name>ILineagePower</name>
             <instance>default</instance>
         </interface>
     </hal>
