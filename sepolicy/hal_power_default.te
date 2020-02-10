@@ -1,3 +1,7 @@
+# Allow reading of sysfs nodes to find input devices
+allow hal_power_default sysfs:dir r_dir_perms;
+allow hal_power_default sysfs:file r_file_perms;
+
 allow hal_power_default sysfs_devices_system_cpu:file write;
 
 allow hal_power_default sysfs_input:dir { open read search };
