@@ -192,9 +192,6 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 
-# DT2W
-TARGET_TAP_TO_WAKE_NODE := /sys/class/sec/tsp/dt2w_enable
-
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifeq ($(TARGET_BUILD_VARIANT),eng)
