@@ -649,7 +649,7 @@ service fuse_usb1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb1 /stor
     disabled
 
 # Bluetooth
-service start_hci_filter /system/bin/wcnss_filter
+service start_hci_filter /vendor/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth oem_2950  sdcard_rw
@@ -752,7 +752,7 @@ on property:init.svc.bootanim=stopped
     chown system system /efs/FactoryApp/tkey_light15
 
 # GPS
-service gpsd /system/bin/gpsd
+service gpsd /vendor/bin/gpsd
     class main
     user gps
     group system inet net_raw wakelock

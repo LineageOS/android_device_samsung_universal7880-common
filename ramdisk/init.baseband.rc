@@ -58,14 +58,14 @@ on property:ril.clatd.v4-rmnet7=up
     write /sys/class/net/v4-rmnet7/queues/rx-0/rps_cpus 2
 
 # Parse hardware revision (needs to happen before cbd starts)
-service modemloader /system/bin/modemloader
+service modemloader /vendor/bin/modemloader
     class core
     oneshot
 
 on property:ro.modemloader.done=1
     enable cpboot-daemon
 
-service cpboot-daemon /system/bin/cbd -d -tss310 -bm -mm -P platform/13540000.dwmmc0/by-name/RADIO
+service cpboot-daemon /vendor/bin/cbd -d -tss310 -bm -mm -P platform/13540000.dwmmc0/by-name/RADIO
     class main
     user root
     group radio cache inet misc audio sdcard_rw log sdcard_r shell

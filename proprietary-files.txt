@@ -3,7 +3,7 @@ lib/libtfa98xx.so
 etc/Tfa9896.cnt
 
 # Bluetooth
-bin/wcnss_filter
+bin/wcnss_filter:vendor/bin/wcnss_filter
 
 # Camera
 lib/hw/camera.exynos5.so:lib/hw/camera.vendor.exynos5.so
@@ -33,7 +33,7 @@ lib64/libegis_fp_normal_sensor_test.so
 lib64/libsynaFpSensorTestNwd.so
 
 # GPS
-bin/gpsd
+bin/gpsd:vendor/bin/gpsd
 etc/ca.pem
 lib64/hw/gps.default.so
 lib/libfloatingfeature.so
@@ -114,7 +114,7 @@ app/mcRegistry/ffffffffd00000000000000000000016.tlbin
 app/mcRegistry/ffffffffd00000000000000000000017.tlbin
 app/mcRegistry/fffffffff0000000000000000000001b.tlbin
 app/mcRegistry/fffffffff0000000000000000000001e.tlbin
-bin/mcDriverDaemon
+bin/mcDriverDaemon:vendor/bin/mcDriverDaemon
 vendor/lib/libMcClient.so:lib/libMcClient.so
 vendor/lib64/libMcClient.so:lib64/libMcClient.so
 vendor/lib/libMcRegistry.so:lib/libMcRegistry.so
@@ -161,7 +161,7 @@ lib64/libprotobuf-cpp-litN.so
 lib/libprotobuf-cpp-litN.so
 
 # Sensors
-bin/sensorhubservice
+bin/sensorhubservice:vendor/bin/sensorhubservice
 lib64/hw/sensors.universal7880.so
 lib64/hw/sensorhubs.universal7880.so
 lib64/libsensorhub.so

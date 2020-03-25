@@ -1,6 +1,6 @@
 # modem daemon sec label
 type cpboot-daemon, domain;
-type cpboot-daemon_exec, exec_type, file_type;
+type cpboot-daemon_exec, exec_type, file_type, vendor_file_type;
 
 net_domain(cpboot-daemon)
 init_daemon_domain(cpboot-daemon)
