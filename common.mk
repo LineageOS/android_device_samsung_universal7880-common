@@ -139,6 +139,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungServiceMode
 
+# Doze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
 # Versioned netutils
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
