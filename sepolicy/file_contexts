@@ -199,3 +199,4 @@
 
 /system/bin/cbd              u:object_r:cpboot-daemon_exec:s0
 /system/bin/gpsd             u:object_r:gpsd_exec:s0
+
