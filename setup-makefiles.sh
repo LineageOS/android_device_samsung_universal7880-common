@@ -40,16 +40,6 @@ write_headers "a5y17lte a7y17lte"
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
 
-# The BSP blobs - we put a conditional in case the BSP
-# is actually being built
-printf '\n%s\n' 'ifeq ($(WITH_EXYNOS_BSP),)' >> "$PRODUCTMK"
-printf '\n%s\n' 'ifeq ($(WITH_EXYNOS_BSP),)' >> "$ANDROIDMK"
-
-write_makefiles "$MY_DIR"/proprietary-files-bsp.txt
-
-printf '%s\n' 'endif' >> "$PRODUCTMK"
-printf '%s\n' 'endif' >> "$ANDROIDMK"
-
 ###################################################################################################
 # CUSTOM PART START                                                                               #
 ###################################################################################################

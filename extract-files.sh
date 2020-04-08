@@ -52,7 +52,6 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
-extract "$MY_DIR"/proprietary-files-bsp.txt "$SRC"
 
 # Remove dependencies that are not used in lineage 
 BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
