@@ -1,13 +1,13 @@
-# Audio amplifier
+# Audio amplifier - A520FXXU2BQH4 (N)
 lib/libtfa98xx.so
 etc/Tfa9896.cnt
 
-# Bluetooth
+# Bluetooth - A520FXXU2BQH4 (N)
 bin/wcnss_filter
 
-# Camera
-lib/hw/camera.exynos5.so:lib/hw/camera.vendor.exynos5.so
-lib64/hw/camera.exynos5.so:lib64/hw/camera.vendor.exynos5.so
+# Camera - A720FXXU3CRD3 (O)
+lib/hw/camera.vendor.exynos5.so
+lib64/hw/camera.vendor.exynos5.so
 lib/libexynoscamera.so
 lib64/libexynoscamera.so
 lib/libexynoscamera3.so
@@ -21,18 +21,18 @@ lib64/libhwjpeg.so
 vendor/firmware/setfile_3p8_front.bin
 vendor/firmware/setfile_3p8.bin
 
-# DRM
+# DRM - A520FXXU2BQH4 (N)
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
-# Fingerprint
+# Fingerprint - A520FXXU2BQH4 (N)
 lib64/libbauthserver.so
 lib64/libbauthtzcommon.so
 lib64/libegis_fp_normal_sensor_test.so
 lib64/libsynaFpSensorTestNwd.so
 
-# GPS
+# GPS - A520FXXU2BQH4 (N)
 bin/gpsd
 etc/ca.pem
 lib64/hw/gps.default.so
@@ -41,7 +41,7 @@ lib64/libfloatingfeature.so
 lib/libwrappergps.so
 lib64/libwrappergps.so
 
-# Graphics
+# Graphics - A720SKSU3ZSG1 (P)
 lib64/hw/gralloc.exynos5.so
 lib/hw/gralloc.exynos5.so
 lib64/hw/hwcomposer.exynos5.so
@@ -79,11 +79,11 @@ vendor/lib64/egl/libGLES_mali.so
 vendor/lib/hw/memtrack.universal7880.so
 vendor/lib64/hw/memtrack.universal7880.so
 
-# Media
+# Media - A720FXXU3CRD3 (O)
 vendor/firmware/fimc_is_lib.bin
 vendor/firmware/mfc_fw.bin
 
-# Mobicore
+# Mobicore - A520FXXU2BQH4 (N)
 app/FFFFFFFF000000000000000000000001.drbin
 app/mcRegistry/00060308060501020000000000000000.tlbin
 app/mcRegistry/07010000000000000000000000000000.tlbin
@@ -115,18 +115,18 @@ app/mcRegistry/ffffffffd00000000000000000000017.tlbin
 app/mcRegistry/fffffffff0000000000000000000001b.tlbin
 app/mcRegistry/fffffffff0000000000000000000001e.tlbin
 bin/mcDriverDaemon
-vendor/lib/libMcClient.so:lib/libMcClient.so
-vendor/lib64/libMcClient.so:lib64/libMcClient.so
-vendor/lib/libMcRegistry.so:lib/libMcRegistry.so
-vendor/lib64/libMcRegistry.so:lib64/libMcRegistry.so
+lib/libMcClient.so
+lib64/libMcClient.so
+lib/libMcRegistry.so
+lib64/libMcRegistry.so
 
-# NFC
+# NFC - A720FXXU3CRD3 (O)
 etc/nfc/sec_s3nrn81_rfreg.bin
 vendor/firmware/nfc/sec_s3nrn81_firmware.bin
 vendor/lib/hw/nfc_nci.default.so
 vendor/lib64/hw/nfc_nci.default.so
 
-# OMX
+# OMX - A720FXXU3CRD3 (O)
 lib64/libExynosOMX_Core.so
 lib/libExynosOMX_Core.so
 lib64/libExynosOMX_Resourcemanager.so
@@ -154,13 +154,13 @@ lib/omx/libOMX.Exynos.VP9.Decoder.so
 lib64/omx/libOMX.Exynos.WMV.Decoder.so
 lib/omx/libOMX.Exynos.WMV.Decoder.so
 
-# Protobuf compat
+# Protobuf compat - A520FXXU2BQH4 (N)
 lib64/libprotobuf-cpp-fulN.so
 lib/libprotobuf-cpp-fulN.so
 lib64/libprotobuf-cpp-litN.so
 lib/libprotobuf-cpp-litN.so
 
-# Sensors
+# Sensors - A520FXXU2BQH4 (N)
 bin/sensorhubservice
 lib64/hw/sensors.universal7880.so
 lib64/hw/sensorhubs.universal7880.so
@@ -169,7 +169,7 @@ lib64/libsensorhubservice.so
 lib/libsensorlistener.so
 lib64/libsensorlistener.so
 
-# Wifi
+# Wifi - A520FXXU2BQH4 (N)
 etc/firmware/bdwlan30.bin
 etc/firmware/bdwlan32.bin
 etc/firmware/otp30.bin
@@ -191,4 +191,6 @@ etc/firmware/rampatch_tlv_tf_1.1.tlv
 etc/firmware/utf30.bin
 etc/firmware/utfbd30.bin
 etc/firmware/utfbd32.bin
+
+# Wifi - qcacld-2.0 - A720FXXU3CRD3 (O)
 lib/modules/qca_cld/qca_cld_wlan.ko
