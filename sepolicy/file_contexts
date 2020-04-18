@@ -136,6 +136,7 @@
 
 # input
 /sys/devices/13890000.i2c/i2c-9/9-0048/input/input1/enabled  u:object_r:sysfs_input:s0
+/sys/devices/13890000.i2c/i2c-9/9-0020/input/input1/enabled  u:object_r:sysfs_input:s0
 /sys/devices/i2c@20/i2c-6/6-0020/input/input0/enabled        u:object_r:sysfs_input:s0
 
 # lcd
