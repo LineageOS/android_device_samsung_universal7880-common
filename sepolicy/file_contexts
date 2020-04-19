@@ -130,6 +130,15 @@
 # cbd
 /sys/devices/10f24000.mipi-lli/lli_control  u:object_r:sysfs_mipi:s0
 
+# clocks
+/sys/devices/17000010.devfreq_mif(/.*)?                 u:object_r:sysfs_devfreq:s0
+/sys/devices/17000020.devfreq_int(/.*)?                 u:object_r:sysfs_devfreq:s0
+/sys/devices/17000030.devfreq_disp(/.*)?                u:object_r:sysfs_devfreq:s0
+/sys/devices/17000040.devfreq_cam(/.*)?                 u:object_r:sysfs_devfreq:s0
+
+# cpu
+/sys/power/cpuhotplug(/.*)?                             u:object_r:sysfs_hotplug:s0
+
 # gps
 /sys/devices/soc0/machine      u:object_r:sysfs_gps:s0
 /sys/devices/soc0/revision     u:object_r:sysfs_gps:s0
@@ -170,9 +179,13 @@
 
 # sec
 /sys/class/sec(/.*)?           -- u:object_r:sysfs_sec:s0
+/sys/devices/system/sec_os_ctrl/migrate_os      u:object_r:sysfs_sec:s0
 
 # svc
 /sys/devices/svc(/.*)?    u:object_r:sysfs_svc:s0
+
+# usb
+/sys/devices/[0-9]*\.usb(/.*)?              u:object_r:sysfs_usbms:s0
 
 # virtual
 /sys/devices/virtual(/.*)?    u:object_r:sysfs_virtual:s0

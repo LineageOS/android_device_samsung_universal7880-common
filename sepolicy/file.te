@@ -32,6 +32,9 @@ type sysfs_svc, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_lcd, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_modem, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_virtual, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_devfreq, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_usbms, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_hotplug, fs_type, sysfs_type, mlstrustedobject;
 
 # file
 type mobicore_data_file, file_type, data_file_type, core_data_file_type;
