@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c5000ce0_f1c15ad8",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 16128
+      },
+      "writtenOn": "2020-04-20T17:50:52Z",
+      "side": 0,
+      "message": "Do not remove this line. Most likely it\u0027s the correct input path on a7y17lte. Add yours alongside.",
+      "revId": "a675c590a39d6b4b25236501ead24a0eb7da75dd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
