@@ -18,6 +18,21 @@
 #ifndef SAMSUNG_POWER_H
 #define SAMSUNG_POWER_H
 
+/*
+ * Board specific defines
+ *
+ */
+
+#define ALLOW_NONINTERACTIVE_SCREENON 1
+
+/*
+ * Board specific nodes
+ *
+ * If your kernel exposes these controls in another place, you can either
+ * symlink to the locations given here, or override this header in your
+ * device tree.
+ */
+
 static const std::vector<std::string> cpuSysfsPaths = {
     "/sys/devices/system/cpu/cpu0",
     "/sys/devices/system/cpu/cpu4"
