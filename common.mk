@@ -297,6 +297,9 @@ PRODUCT_PACKAGES += \
 # System.prop
 TARGET_SYSTEM_PROP += device/samsung/universal7880-common/system.prop
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
 # call Samsung LSI board support package
 #$(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
 #$(call inherit-product, hardware/samsung_slsi/exynos7880/exynos7880.mk)
