@@ -114,23 +114,14 @@
 # cbd modem block
 /dev/block/mmcblk0p5     0400  radio   system
 
-# for DM tools
-/dev/umts_dm0             0660   radio      radio
-/dev/umts_router          0660   radio      radio
-
-# SIPC RIL
-/dev/umts_boot0         0666    radio       radio
-/dev/umts_ipc0          0660    radio       radio
-/dev/umts_rfs0          0660    radio       radio
-
 # Modem Interface
-/dev/block/platform/13540000.dwmmc0/by-name/RADIO 0660   system     radio
-/dev/block/platform/13540000.dwmmc0/by-name/CP_DEBUG  0660   radio      system
-### FIXME: this is needed by GPS
-/dev/umts*                0666   system     radio
-### FIXME END
+/dev/block/platform/13540000.dwmmc0/by-name/RADIO       0660   system     radio
+/dev/block/platform/13540000.dwmmc0/by-name/CP_DEBUG    0660    radio   system
+/dev/umts*                0660   system     radio
 /dev/umts_csd             0660   system     loop_radio
 /dev/smd4                 0660   system     radio
+/dev/ramdump_memshare     0660   system     radio
+/dev/umts_ciq*            0660   system     bridge_rw
 
 # Google FRP solution
 /dev/block/platform/13540000.dwmmc0/by-name/PERSISTENT    0660    system    system
