@@ -118,17 +118,9 @@ PRODUCT_PACKAGES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.0 \
-    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio@1.3-radio-service.samsung \
     libxml2 \
     libprotobuf-cpp-full
-
-PRODUCT_PACKAGES += \
-    libril \
-    libsecril-client \
-    libsecril-client-sap \
-    modemloader \
-    rild
 
 PRODUCT_PACKAGES += \
     SamsungServiceMode
