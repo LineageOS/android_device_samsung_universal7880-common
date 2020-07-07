@@ -4,40 +4,34 @@
 # This is a common source of Android security bugs.
 #
 
-service ril-daemon /vendor/bin/hw/rild -c 1 -l /system/lib64/libsec-ril.so
+service ril-daemon /vendor/bin/hw/rild -l ${vendor.sec.rild.libpath}
     class main
-    socket rild stream 660 system radio
+    user radio
+    group radio cache inet misc audio sdcard_r sdcard_rw log vpn system readproc wakelock
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW SYS_ADMIN CHOWN SYS_TIME
     socket sap_uim_socket1 stream 660 bluetooth bluetooth
-    socket rild-debug stream 660 system radio
+    onrestart restart cpboot-daemon
+    onrestart restart DIAG-daemon
+
+service ril-daemon1 /vendor/bin/hw/rild -c 2 -l ${vendor.sec.rild.libpath2}
+    class main
     user radio
     group radio cache inet misc audio sdcard_r sdcard_rw log vpn system readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW SYS_ADMIN CHOWN SYS_TIME
     onrestart restart cpboot-daemon
+    onrestart restart DIAG-daemon
 
-service ril-daemon1 /vendor/bin/hw/rild -c 2 -l /system/lib64/libsec-ril-dsds.so
-    class main
-    socket rild2 stream 660 system radio
-    socket rild-debug2 stream 660 system radio
-    user radio
-    group radio cache inet misc audio sdcard_r sdcard_rw log vpn system readproc wakelock
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW SYS_ADMIN CHOWN SYS_TIME
-    disabled
-    onrestart restart cpboot-daemon
+on post-fs-data
+    mkdir /data/vendor/secradio 0770 radio radio
 
-on property:persist.sys.cpboot=disable
-    stop ril-daemon
-    stop cpboot-daemon
+on property:ro.vendor.multisim.simslotcount=1
+    stop ril-daemon1
 
-service SMD-daemon /system/bin/smdexe
-    class main
-    user root
-    group system radio inet net_raw
+on property:hwservicemanager.ready=false
+    restart ril-daemon
 
-# DIAG
-service DIAG-daemon /system/bin/diagexe
-    class main
-    user root
-    group system radio inet net_raw
+on property:hwservicemanager.ready=false && property:ro.vendor.multisim.simslotcount=2
+    restart ril-daemon1
 
 on early-boot
 # Assign TCP buffer thresholds to be ceiling value of technology maximums
