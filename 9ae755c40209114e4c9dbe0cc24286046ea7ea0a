@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d90a300d_a89f075a",
+        "filename": "config.fs",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2020-07-07T18:44:03Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be radio instead of system like it is here https://github.com/LineageOS/android_device_samsung_universal7880-common/blob/lineage-17.1/ramdisk/init.baseband.rc#L2 ?",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 17
+      },
+      "revId": "9ae755c40209114e4c9dbe0cc24286046ea7ea0a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
