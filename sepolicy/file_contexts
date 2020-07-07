@@ -209,6 +209,6 @@
 /system/bin/wcnss_filter     u:object_r:wcnss_filter_exec:s0
 
 /(vendor|system/vendor)/bin/modemloader      u:object_r:modemloader_exec:s0
+/(vendor|system/vendor)/bin/cbd              u:object_r:cpboot-daemon_exec:s0
 
-/system/bin/cbd              u:object_r:cpboot-daemon_exec:s0
 /system/bin/gpsd             u:object_r:gpsd_exec:s0
