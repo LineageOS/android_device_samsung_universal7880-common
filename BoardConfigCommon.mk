@@ -183,6 +183,7 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WIFI_DRIVER_MODULE_NAME := wlan
 WIFI_DRIVER_MODULE_PATH := /system/lib/modules/qca_cld/qca_cld_wlan.ko
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+WPA_SUPPLICANT_USE_HIDL := true
 
 # Wifi loader
 BOARD_HAVE_SAMSUNG_WIFI := true
