@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "34ede261_12c0ac4f",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2020-07-14T18:00:15Z",
+      "side": 1,
+      "message": "Need to figure out whether this is needed or not",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 35
+      },
+      "revId": "d3567b0e00b880b63c0dc80bdeb00089a092ee27",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
