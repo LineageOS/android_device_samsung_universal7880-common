@@ -126,6 +126,10 @@ vendor/firmware/nfc/sec_s3nrn81_firmware.bin
 vendor/lib/hw/nfc_nci.default.so
 vendor/lib64/hw/nfc_nci.default.so
 
+# libsecnativefeature - A720SKSU3ZSG1 (P)
+lib/libsecnativefeature.so
+lib64/libsecnativefeature.so
+
 # OMX - A720FXXU3CRD3 (O)
 lib64/libExynosOMX_Core.so
 lib/libExynosOMX_Core.so
@@ -160,28 +164,27 @@ lib/libprotobuf-cpp-fulN.so
 lib64/libprotobuf-cpp-litN.so
 lib/libprotobuf-cpp-litN.so
 
-# RIL - A720SKSU3ZSG1 (P)
-lib/libsecnativefeature.so
-lib64/libsecnativefeature.so
+# RIL - G960FXXU8DTC5 (Q)
 vendor/bin/cbd
 vendor/bin/hw/rild
 vendor/lib/libril.so
-vendor/lib/libsec-ril.so
 vendor/lib/libsec-ril-dsds.so
+vendor/lib/libsec-ril.so
+vendor/lib/libsec_semRil.so
+vendor/lib/libvkmanager_vendor.so
 vendor/lib/libvndsecril-client.so
-vendor/lib/vendor.samsung.hardware.radio.channel@1.0_vendor.so
-vendor/lib/vendor.samsung.hardware.radio.secbridge@1.0_vendor.so
-vendor/lib/vendor.samsung.hardware.radio.sechook@1.0_vendor.so
-vendor/lib/vendor.samsung.hardware.radio@1.2_vendor.so
+vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
+vendor/lib/vendor.samsung.hardware.radio@2.0.so
 vendor/lib64/libril.so
-vendor/lib64/libsec-ril.so
 vendor/lib64/libsec-ril-dsds.so
+vendor/lib64/libsec-ril.so
+vendor/lib64/libsec_semRil.so
+vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/libvndsecril-client.so
-vendor/lib64/vendor.samsung.hardware.radio.channel@1.0_vendor.so
-vendor/lib64/vendor.samsung.hardware.radio.secbridge@1.0_vendor.so
-vendor/lib64/vendor.samsung.hardware.radio.sechook@1.0_vendor.so
-vendor/lib64/vendor.samsung.hardware.radio@1.2_vendor.so
-vendor/lib64/vendor.samsung.hardware.radio.configsvc@1.0_vendor.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 
 # Sensors - A520FXXU2BQH4 (N)
 bin/sensorhubservice
