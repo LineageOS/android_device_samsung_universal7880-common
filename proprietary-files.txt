@@ -160,32 +160,22 @@ lib/libprotobuf-cpp-fulN.so
 lib64/libprotobuf-cpp-litN.so
 lib/libprotobuf-cpp-litN.so
 
-# RIL - A720SKSU3ZSG1 (P)
-lib/libsecnativefeature.so
+# RIL - A600FJXU5CTE1 (Q)
 lib64/libsecnativefeature.so
 vendor/bin/cbd
 vendor/bin/hw/rild
-vendor/bin/hw/vendor.samsung.hardware.radio.configsvc@1.0-service
-vendor/etc/init/vendor.samsung.hardware.radio.configsvc@1.0-service.rc
-vendor/lib/libril.so
-vendor/lib/libsec-ril.so
-vendor/lib/libsecril-client.so
-vendor/lib/libsec-ril-dsds.so
-vendor/lib/libvndsecril-client.so
-vendor/lib/vendor.samsung.hardware.radio.channel@1.0_vendor.so
-vendor/lib/vendor.samsung.hardware.radio.secbridge@1.0_vendor.so
-vendor/lib/vendor.samsung.hardware.radio.sechook@1.0_vendor.so
-vendor/lib/vendor.samsung.hardware.radio@1.2_vendor.so
+vendor/lib64/libreference-ril.so
 vendor/lib64/libril.so
+vendor/lib64/librilutils.so
 vendor/lib64/libsec-ril.so
-vendor/lib64/libsecril-client.so
 vendor/lib64/libsec-ril-dsds.so
+vendor/lib64/libsec_semRil.so
+vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/libvndsecril-client.so
-vendor/lib64/vendor.samsung.hardware.radio.channel@1.0_vendor.so
-vendor/lib64/vendor.samsung.hardware.radio.secbridge@1.0_vendor.so
-vendor/lib64/vendor.samsung.hardware.radio.sechook@1.0_vendor.so
-vendor/lib64/vendor.samsung.hardware.radio@1.2_vendor.so
-vendor/lib64/vendor.samsung.hardware.radio.configsvc@1.0_vendor.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 
 # Sensors - A520FXXU2BQH4 (N)
 bin/sensorhubservice
