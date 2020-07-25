@@ -122,11 +122,11 @@ app/mcRegistry/ffffffffd00000000000000000000016.tlbin
 app/mcRegistry/ffffffffd00000000000000000000017.tlbin
 app/mcRegistry/fffffffff0000000000000000000001b.tlbin
 app/mcRegistry/fffffffff0000000000000000000001e.tlbin
-bin/mcDriverDaemon
 lib/libMcClient.so
 lib64/libMcClient.so
 lib/libMcRegistry.so
 lib64/libMcRegistry.so
+vendor/bin/mcDriverDaemon
 
 # NFC - A720FXXU3CRD3 (O)
 etc/nfc/sec_s3nrn81_rfreg.bin
