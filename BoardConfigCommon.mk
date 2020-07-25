@@ -102,11 +102,6 @@ QCOM_BT_USE_SMD_TTY := true
 TARGET_AUDIOHAL_VARIANT := samsung
 TARGET_POWERHAL_VARIANT := samsung
 
-# Fingerprint
-TARGET_SEC_FP_CALL_NOTIFY_ON_CANCEL := true
-TARGET_SEC_FP_CALL_CANCEL_ON_ENROLL_COMPLETION := true
-TARGET_SEC_FP_USES_PERCENTAGE_SAMPLES := true
-
 # Graphics
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
@@ -240,7 +235,8 @@ BOARD_SEPOLICY_DIRS += device/samsung/universal7880-common/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /system/lib64/libbauthserver.so|libbauthtzcommon_shim.so \
+    /vendor/lib/libbauthserver.so|libbauthtzcommon_shim.so \
+    /vendor/lib64/libbauthserver.so|libbauthtzcommon_shim.so \
     /system/lib/libcamera_client.so|libcamera_client_shim.so \
     /system/lib/libexynoscamera.so|libexynoscamera_shim.so \
     /system/lib64/libstagefright.so|libstagefright_shim.so \
