@@ -168,33 +168,13 @@ on post-fs-data
     chown system system /dev/socket/vaultkeeper
     chmod 0770 /dev/socket/vaultkeeper
 
-# [ SEC_MM_DRM
-    # DRM directory creation
-    mkdir /system/etc/security/.drm 0775
-    chown root root /system/etc/security/.drm
-    chmod 0775 /system/etc/security/.drm
+    # create directory for DRM plug-ins - give drm the read/write access to
+    # the following directory.
+    mkdir /data/drm 0770 drm drm
 
-    # Added for Playready DRM Support
-    #mkdir /data/data/.drm 0775
-    #chown drm system /data/data/.drm
-    #chmod 0775 /data/data/.drm
-    #mkdir /data/data/.drm/.playready 0775
-    #chown drm system /data/data/.drm/.playready
-    #chmod 0775 /data/data/.drm/.playready
-
-    # Added for Playready DCM DRM Support
-    #mkdir /data/.dcmdrm 0775
-    #chown drm system /data/.dcmdrm
-    #chmod 0775 /data/.dcmdrm
-    #mkdir /data/.dcmdrm/.playready 0775
-    #chown drm system /data/.dcmdrm/.playready
-    #chmod 0775 /data/.dcmdrm/.playready
-
-    # Added drm folder to copy drm plugins
-    mkdir /system/lib/drm 0775
-    chown root root /system/lib/drm
-    chmod 0775 /system/lib/drm
-# ]
+    # create directory for MediaDrm plug-ins - give drm the read/write access to
+    # the following directory.
+    mkdir /data/mediadrm 0770 mediadrm mediadrm
 
     # FIDO
     mkdir /data/.fido 0700 system system
