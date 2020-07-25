@@ -26,11 +26,17 @@ vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
-# Fingerprint - A520FXXU2BQH4 (N)
-lib64/libbauthserver.so
-lib64/libbauthtzcommon.so
-lib64/libegis_fp_normal_sensor_test.so
-lib64/libsynaFpSensorTestNwd.so
+# Fingerprint - A720SKSU3ZSG1 (P)
+vendor/lib/libbauthserver.so
+vendor/lib/libbauthtzcommon.so
+vendor/lib/libegis_fp_normal_sensor_test.so
+vendor/lib/libsynaFpSensorTestNwd.so
+vendor/lib/libgf_in_system_lib.so
+vendor/lib64/libbauthserver.so
+vendor/lib64/libbauthtzcommon.so
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib64/libsynaFpSensorTestNwd.so
+vendor/lib64/libgf_in_system_lib.so
 
 # GPS - A520FXXU2BQH4 (N)
 bin/gpsd
@@ -114,7 +120,7 @@ app/mcRegistry/ffffffffd00000000000000000000016.tlbin
 app/mcRegistry/ffffffffd00000000000000000000017.tlbin
 app/mcRegistry/fffffffff0000000000000000000001b.tlbin
 app/mcRegistry/fffffffff0000000000000000000001e.tlbin
-bin/mcDriverDaemon
+/bin/mcDriverDaemon
 lib/libMcClient.so
 lib64/libMcClient.so
 lib/libMcRegistry.so
