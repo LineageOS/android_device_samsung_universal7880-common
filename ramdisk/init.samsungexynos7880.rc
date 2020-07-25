@@ -427,10 +427,14 @@ on boot
     chown system radio /sys/class/sensors/irled_remote/irled_send
     chown system radio /sys/class/sensors/irled_remote/irled_send_result
 # Fingerprint_sensor
+    chmod 0660 /dev/esfp0
+    chown system system /dev/esfp0
+
     chown system radio /sys/class/fingerprint/fingerprint/type_check
     chown system radio /sys/class/fingerprint/fingerprint/name
     chown system radio /sys/class/fingerprint/fingerprint/vendor
     chown system radio /sys/class/fingerprint/fingerprint/adm
+    chown system radio /sys/class/fingerprint/fingerprint/bfs_values
 
 # sem_daemon permission
     chown system system /efs/sec_efs/ssp_data
@@ -512,12 +516,15 @@ on fs
     setprop ro.crypto.fuse_sdcard true
     chown radio system /efs
 
-# Fingerprint
+    # Fingerprint
     mkdir /dev/validity 0770 system system
     mkdir /data/validity 0770 system system
+
+    # Biometrics
     mkdir /data/biometrics 0700 system system
-# FIXME: is this restorecon actually necessary?
-    restorecon_recursive /data/biometrics
+    restorecon /data/biometrics
+    mkdir /data/vendor/biometrics 0700 system system
+    restorecon /data/vendor/biometrics
 
 # Permissions for ION
     chmod 0660 /sys/class/ion_cma/ion_video_ext/isolated
@@ -609,10 +616,10 @@ service rpmbd /system/bin/rpmbd
      class main
 
 # SENSOR FRAMEWORK : starts fingerprintService
-service vcsFPService /system/bin/vcsFPService
-    class late_start
-    user system
-    group system
+#service vcsFPService /system/bin/vcsFPService
+#    class late_start
+#    user system
+#    group system
 
 # Modem boot daemon
 #    service cpboot-daemon /sbin/cbd -d -tss310 -bm -mm -P mmcblk0p14
