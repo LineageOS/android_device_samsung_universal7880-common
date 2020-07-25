@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Rectangular parameters (config_deviceCoverType == 3) -->
+    <dimen name="rectangular_window_top">0px</dimen>
+    <dimen name="rectangular_window_left">60px</dimen>
+    <dimen name="rectangular_window_width">960px</dimen>
+    <dimen name="rectangular_window_height">960px</dimen>
+</resources>
