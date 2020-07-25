@@ -123,6 +123,12 @@ on post-fs-data
     restorecon /dev/icd
     restorecon /dev/icdr
 
+    # Fingerprint
+    mkdir /data/biometrics 0700 system system
+    restorecon /data/biometrics
+    mkdir /data/vendor/biometrics 0700 system system
+    restorecon /data/vendor/biometrics
+
     # mobicore
     export MC_AUTH_TOKEN_PATH /efs
     mkdir /efs/TEE  0770 radio system
