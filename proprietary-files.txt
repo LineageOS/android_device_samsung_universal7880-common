@@ -181,6 +181,7 @@ vendor/bin/hw/rild
 vendor/lib/libril.so
 vendor/lib/libsec-ril-dsds.so
 vendor/lib/libsec-ril.so
+vendor/lib/libsecril-client.so
 vendor/lib/libsec_semRil.so
 vendor/lib/libvkmanager_vendor.so
 vendor/lib/libvndsecril-client.so
@@ -190,6 +191,7 @@ vendor/lib/vendor.samsung.hardware.radio@2.0.so
 vendor/lib64/libril.so
 vendor/lib64/libsec-ril-dsds.so
 vendor/lib64/libsec-ril.so
+vendor/lib64/libsecril-client.so
 vendor/lib64/libsec_semRil.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/libvndsecril-client.so
