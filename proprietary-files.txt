@@ -1,3 +1,7 @@
+# AptX - from crosshatch - QP1A.190711.020
+product/lib64/libaptXHD_encoder.so
+product/lib64/libaptX_encoder.so
+
 # Audio amplifier - A520FXXU2BQH4 (N)
 lib/libtfa98xx.so
 etc/Tfa9896.cnt
