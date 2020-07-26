@@ -176,6 +176,8 @@ lib64/libprotobuf-cpp-litN.so
 lib/libprotobuf-cpp-litN.so
 
 # RIL - G965FXXS9DTD7 (Q)
+lib/libsecril-client.so
+lib64/libsecril-client.so
 vendor/bin/cbd
 vendor/bin/hw/rild
 vendor/lib/libril.so
