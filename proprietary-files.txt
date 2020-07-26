@@ -189,6 +189,9 @@ vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 
+# RIL (libsecril-client) - N976BXXU1BTA1 (Q)
+lib/libsecril-client.so
+
 # Sensors - A520FXXU2BQH4 (N)
 bin/sensorhubservice
 lib64/hw/sensors.universal7880.so
