@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "40dd6d05_51610588",
+        "filename": "common.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2020-07-26T19:42:46Z",
+      "side": 1,
+      "message": "Non existent",
+      "range": {
+        "startLine": 211,
+        "startChar": 0,
+        "endLine": 211,
+        "endChar": 47
+      },
+      "revId": "7e9fd520500ef34bf6c31094ffe36adea6c2dd1d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cb4a4130_f98482e2",
+        "filename": "common.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2020-07-26T19:42:46Z",
+      "side": 1,
+      "message": "Non existent",
+      "range": {
+        "startLine": 213,
+        "startChar": 4,
+        "endLine": 213,
+        "endChar": 47
+      },
+      "revId": "7e9fd520500ef34bf6c31094ffe36adea6c2dd1d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
