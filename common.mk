@@ -231,7 +231,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps/gps.cfg:system/etc/gps.cfg \
+    $(LOCAL_PATH)/configs/gps/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg \
     $(LOCAL_PATH)/configs/gps/gps_debug.conf:system/etc/gps_debug.conf \
 
 # Keys
