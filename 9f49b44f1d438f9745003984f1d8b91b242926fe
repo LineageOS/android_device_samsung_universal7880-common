@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7d497e7f_285ae054",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2020-07-27T07:24:10Z",
+      "side": 1,
+      "message": "s/8890/7880/",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 13
+      },
+      "revId": "9f49b44f1d438f9745003984f1d8b91b242926fe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "171c4780_b5d210a3",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2020-07-27T07:24:10Z",
+      "side": 1,
+      "message": "you dont have aptxhd support in your stock rom (we arent allowed to add aptxhd in this case)",
+      "revId": "9f49b44f1d438f9745003984f1d8b91b242926fe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
