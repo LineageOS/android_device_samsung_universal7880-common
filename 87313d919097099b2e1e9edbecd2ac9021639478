@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "78dc1294_329de5c8",
+        "filename": "common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2020-07-27T15:54:59Z",
+      "side": 1,
+      "message": "/vendor/etc/gnss",
+      "range": {
+        "startLine": 234,
+        "startChar": 38,
+        "endLine": 234,
+        "endChar": 44
+      },
+      "revId": "87313d919097099b2e1e9edbecd2ac9021639478",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "40b39429_767c1f40",
+        "filename": "common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2020-07-27T15:54:59Z",
+      "side": 1,
+      "message": "/system",
+      "range": {
+        "startLine": 235,
+        "startChar": 45,
+        "endLine": 235,
+        "endChar": 71
+      },
+      "revId": "87313d919097099b2e1e9edbecd2ac9021639478",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "404a85a0_2ad2c354",
+        "filename": "configs/gps/gps_debug.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2020-07-27T15:54:59Z",
+      "side": 1,
+      "message": "This should rather be in CarrierConfig overlay",
+      "range": {
+        "startLine": 1,
+        "startChar": 38,
+        "endLine": 1,
+        "endChar": 82
+      },
+      "revId": "87313d919097099b2e1e9edbecd2ac9021639478",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
