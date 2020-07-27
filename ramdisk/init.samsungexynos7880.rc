@@ -125,6 +125,28 @@ on post-fs-data
     mkdir /data/vendor/biometrics 0770 system system
     restorecon_recursive /data/vendor/biometrics
 
+# Directory for GPS
+    chmod 0666 /dev/gnss_ipc
+    chown system system /dev/gnss_ipc
+    mkdir /data/vendor 0771 system system
+    chown system system /data/vendor
+    mkdir /data/vendor/gps 0771 system system
+    chown system system /data/vendor/gps
+    mkdir /data/vendor/gps/sgee 0771 system system
+    chown system system /data/vendor/gps/sgee
+
+# GPS daemon
+service gpsd /vendor/bin/hw/gpsd -c /vendor/etc/gnss/gps.cfg
+    class main
+    user gps
+    group system inet net_raw wakelock
+    capabilities BLOCK_SUSPEND
+    ioprio be 0
+
+# Permissions for gnss
+    chmod 0666 /dev/gnss_ipc
+    chown system system /dev/gnss_ipc
+
 on boot
 # SSWAP
     write /proc/sys/vm/swappiness 130
@@ -745,13 +767,6 @@ on property:init.svc.bootanim=stopped
     chown system system /efs/FactoryApp/tkey_light13
     chown system system /efs/FactoryApp/tkey_light14
     chown system system /efs/FactoryApp/tkey_light15
-
-# GPS
-service gpsd /system/bin/gpsd
-    class main
-    user gps
-    group system inet net_raw wakelock
-    ioprio be 0
 
 # Secure Storage startup
 service secure_storage /system/bin/secure_storage_daemon
