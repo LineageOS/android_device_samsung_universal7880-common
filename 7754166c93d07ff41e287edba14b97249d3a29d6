@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0eb9884a_ecc4b2ad",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 18
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2020-07-27T20:37:00Z",
+      "side": 1,
+      "message": "Not needed, we are not using macloader",
+      "range": {
+        "startLine": 216,
+        "startChar": 0,
+        "endLine": 216,
+        "endChar": 73
+      },
+      "revId": "7754166c93d07ff41e287edba14b97249d3a29d6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
