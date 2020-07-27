@@ -68,6 +68,30 @@
       "revId": "87313d919097099b2e1e9edbecd2ac9021639478",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dd20f94c_0554c9fc",
+        "filename": "configs/gps/gps_debug.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2020-07-27T17:19:16Z",
+      "side": 1,
+      "message": "CarrierConfig does not support xtra servers so it has to stay in the .conf",
+      "parentUuid": "404a85a0_2ad2c354",
+      "range": {
+        "startLine": 1,
+        "startChar": 38,
+        "endLine": 1,
+        "endChar": 82
+      },
+      "revId": "87313d919097099b2e1e9edbecd2ac9021639478",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
