@@ -46,14 +46,14 @@ vendor/lib64/libgf_in_system_lib.so
 vendor/lib64/libqfp_sensortest.so
 vendor/lib64/libsynaFpSensorTestNwd.so
 
-# GPS - A520FXXU2BQH4 (N)
-bin/gpsd
-etc/ca.pem
-lib64/hw/gps.default.so
+# GPS - A720SKSU3ZSG1 (P)
 lib/libfloatingfeature.so
 lib64/libfloatingfeature.so
-lib/libwrappergps.so
-lib64/libwrappergps.so
+vendor/bin/hw/gpsd
+vendor/etc/gnss/ca.pem
+vendor/lib64/hw/gps.default.so
+vendor/lib/libwrappergps.so
+vendor/lib64/libwrappergps.so
 
 # Graphics - A720SKSU3ZSG1 (P)
 lib64/hw/gralloc.exynos5.so
