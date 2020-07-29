@@ -1,38 +1,40 @@
+# The default firmware for the blobs that are not pinned is SM-A720S stock pie
+
 # AptX - from crosshatch - QP1A.190711.020
-product/lib64/libaptX_encoder.so
+product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Audio amplifier - A520FXXU2BQH4 (N)
-lib/libtfa98xx.so
-etc/Tfa9896.cnt
+lib/libtfa98xx.so|f7056a28f652e04efd595ab590928ef709f180dd
+etc/Tfa9896.cnt|4383ee71f09af3e4e579470684ebdb932e504af3
 
 # Bluetooth - A520FXXU2BQH4 (N)
-bin/wcnss_filter
+bin/wcnss_filter|902eb6b53d329b21c2a4829f24fa8d36c09baca5
 
 # Camera - A720FXXU3CRD3 (O)
-lib/hw/camera.vendor.exynos5.so
-lib64/hw/camera.vendor.exynos5.so
-lib/libexynoscamera.so
-lib64/libexynoscamera.so
-lib/libexynoscamera3.so
-lib64/libexynoscamera3.so
-lib/libuniapi.so
-lib64/libuniapi.so
-lib/libuniplugin.so
-lib64/libuniplugin.so
-lib/libhwjpeg.so
-lib64/libhwjpeg.so
-vendor/firmware/setfile_3p8_front.bin
-vendor/firmware/setfile_3p8.bin
+lib/hw/camera.vendor.exynos5.so|8bd670afc18f3fc0bf30b1b8884f49077cd99dea
+lib64/hw/camera.vendor.exynos5.so|700c275277113f6633fb23894268ee673319c039
+lib/libexynoscamera.so|89546805b3653fca5b839c5f9444e21cb3c5c472
+lib64/libexynoscamera.so|e3f076c4f1a1467b321ebc97309313e6b4fb12d9
+lib/libexynoscamera3.so|5a810d52fb29760e1a774af685f8e3ea0803b42e
+lib64/libexynoscamera3.so|5cd18476e6035eccdb55ef85242b1df10b95a0b4
+lib/libuniapi.so|709c957f92206e4348b654c786b68dbaa58e32cd
+lib64/libuniapi.so|52cf362a6abe81f99c08ccb4ca946f803931dab3
+lib/libuniplugin.so|4ffd309894438a841393b71cdb3b7387991d52a7
+lib64/libuniplugin.so|0fd157c61f5d2ad448b5eb1af9f46ca898787db2
+lib/libhwjpeg.so|cb54481b59c1fb2f301c20daf7f115caef6d3ed4
+lib64/libhwjpeg.so|f157d76b14412d51eb45819a77f0ba726a365a3f
+vendor/firmware/setfile_3p8_front.bin|69ff242187e82472e153fbed21b406594fe348ae
+vendor/firmware/setfile_3p8.bin|e0c2f51dc7780a7b908dba888566d92d7bb3d62a
 
-# DRM - A720SKSU3ZSG1 (P)
+# DRM
 vendor/lib/liboemcrypto.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
-# DRM (Widevine HIDL) - A720SKSU3ZSG1 (P)
+# DRM (Widevine HIDL)
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 vendor/lib/libwvhidl.so
 
-# Fingerprint - A720SKSU3ZSG1 (P)
+# Fingerprint
 vendor/lib/libbauthserver.so
 vendor/lib/libbauthtzcommon.so
 vendor/lib/libegis_fp_normal_sensor_test.so
@@ -46,7 +48,7 @@ vendor/lib64/libgf_in_system_lib.so
 vendor/lib64/libqfp_sensortest.so
 vendor/lib64/libsynaFpSensorTestNwd.so
 
-# GPS - A720SKSU3ZSG1 (P)
+# GPS
 lib/libfloatingfeature.so
 lib64/libfloatingfeature.so
 vendor/bin/hw/gpsd
@@ -55,7 +57,7 @@ vendor/lib64/hw/gps.default.so
 vendor/lib/libwrappergps.so
 vendor/lib64/libwrappergps.so
 
-# Graphics - A720SKSU3ZSG1 (P)
+# Graphics
 lib64/hw/gralloc.exynos5.so
 lib/hw/gralloc.exynos5.so
 lib64/hw/hwcomposer.exynos5.so
@@ -94,142 +96,142 @@ vendor/lib/hw/memtrack.universal7880.so
 vendor/lib64/hw/memtrack.universal7880.so
 
 # Media - A720FXXU3CRD3 (O)
-vendor/firmware/fimc_is_lib.bin
-vendor/firmware/mfc_fw.bin
+vendor/firmware/fimc_is_lib.bin|92e4f687f69c1f96ad22f1200e46f597daea1518
+vendor/firmware/mfc_fw.bin|450f972293bbd8cfae566ebccb836328617713d3
 
 # Mobicore - A520FXXU2BQH4 (N)
-app/FFFFFFFF000000000000000000000001.drbin
-app/mcRegistry/00060308060501020000000000000000.tlbin
-app/mcRegistry/07010000000000000000000000000000.tlbin
-app/mcRegistry/07060000000000000000000000000000.tlbin
-app/mcRegistry/08130000000000000000000000000000.tlbin
-app/mcRegistry/ffffffff000000000000000000000004.tlbin
-app/mcRegistry/ffffffff000000000000000000000005.tlbin
-app/mcRegistry/ffffffff00000000000000000000000a.tlbin
-app/mcRegistry/ffffffff00000000000000000000000b.tlbin
-app/mcRegistry/ffffffff00000000000000000000000c.tlbin
-app/mcRegistry/ffffffff00000000000000000000000d.tlbin
-app/mcRegistry/ffffffff00000000000000000000000f.tlbin
-app/mcRegistry/ffffffff000000000000000000000012.tlbin
-app/mcRegistry/ffffffff000000000000000000000013.tlbin
-app/mcRegistry/ffffffff000000000000000000000016.tlbin
-app/mcRegistry/ffffffff000000000000000000000017.tlbin
-app/mcRegistry/ffffffff000000000000000000000019.tlbin
-app/mcRegistry/ffffffff00000000000000000000001f.tlbin
-app/mcRegistry/ffffffff00000000000000000000002e.tlbin
-app/mcRegistry/ffffffff000000000000000000000038.tlbin
-app/mcRegistry/ffffffff000000000000000000000041.tlbin
-app/mcRegistry/ffffffff000000000000000000000045.tlbin
-app/mcRegistry/ffffffffd00000000000000000000004.tlbin
-app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
-app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
-app/mcRegistry/ffffffffd00000000000000000000014.tlbin
-app/mcRegistry/ffffffffd00000000000000000000016.tlbin
-app/mcRegistry/ffffffffd00000000000000000000017.tlbin
-app/mcRegistry/fffffffff0000000000000000000001b.tlbin
-app/mcRegistry/fffffffff0000000000000000000001e.tlbin
-lib/libMcClient.so
-lib64/libMcClient.so
-lib/libMcRegistry.so
-lib64/libMcRegistry.so
-vendor/bin/mcDriverDaemon
+app/FFFFFFFF000000000000000000000001.drbin|d366aa7e7cbc668c1b5dcdc6319670df2f9718ad
+app/mcRegistry/00060308060501020000000000000000.tlbin|9aa468a1d388d385bb1d286f77da7b72b986cafa
+app/mcRegistry/07010000000000000000000000000000.tlbin|f7542652b3aeee6d30078e8e50e3f6caf1b743a6
+app/mcRegistry/07060000000000000000000000000000.tlbin|a0debb49a0e29c8aa4f568f224569a75725adf7c
+app/mcRegistry/08130000000000000000000000000000.tlbin|cae26ccb7c41ea6e6d4ee98cd800dfb03d36a270
+app/mcRegistry/ffffffff000000000000000000000004.tlbin|f8c8c041b81b0947317f0dbd886bf43e914eb162
+app/mcRegistry/ffffffff000000000000000000000005.tlbin|19c6d5169ba7006f11ded0eda623744075eca9c2
+app/mcRegistry/ffffffff00000000000000000000000a.tlbin|655a4e781adb47101ae1ccc9d68ab9613b2feebf
+app/mcRegistry/ffffffff00000000000000000000000b.tlbin|2c8b82f51df9c4d8ccda3aa9911d7e1073dcc358
+app/mcRegistry/ffffffff00000000000000000000000c.tlbin|c1a1f97e18f73cdb64eb900ecca5ff2a2f75e7e0
+app/mcRegistry/ffffffff00000000000000000000000d.tlbin|a0eee6b1cd68023750892572e32682d30c476257
+app/mcRegistry/ffffffff00000000000000000000000f.tlbin|b64090981b13384cb5a09830b70ec46d57ec45f6
+app/mcRegistry/ffffffff000000000000000000000012.tlbin|9d1b73405deef2f43b740edbab3f7b9ab6355a57
+app/mcRegistry/ffffffff000000000000000000000013.tlbin|9b777de13a8148b9401f9fe8baeb6fd23c83657d
+app/mcRegistry/ffffffff000000000000000000000016.tlbin|d53de689dcb2bd71fc7304a11cfc6cb913736ec0
+app/mcRegistry/ffffffff000000000000000000000017.tlbin|36d656316148e4db86fe51263e96026397d960b5
+app/mcRegistry/ffffffff000000000000000000000019.tlbin|3be7cbd174524b217439f87efb445b57eb81abc8
+app/mcRegistry/ffffffff00000000000000000000001f.tlbin|c9fbd678a424e90c6617639af7a696e899f713e1
+app/mcRegistry/ffffffff00000000000000000000002e.tlbin|1cecfffdde1aed41545175ffa4f66ccb2a1b17f4
+app/mcRegistry/ffffffff000000000000000000000038.tlbin|9d2c3cf1e5cf3e75f91722a4f6c1e2fa6c93953c
+app/mcRegistry/ffffffff000000000000000000000041.tlbin|b9094cbca6a08218b195e6c1c1f8540ea49c6dbb
+app/mcRegistry/ffffffff000000000000000000000045.tlbin|6c71fd507dc45f5edd53d5a36172e4da57cd5e6a
+app/mcRegistry/ffffffffd00000000000000000000004.tlbin|e570f3a11062cab374dd5e37ed543ca7ce1241b6
+app/mcRegistry/ffffffffd0000000000000000000000a.tlbin|7d753f9278f4004154d3d0571427a3c49aa820df
+app/mcRegistry/ffffffffd0000000000000000000000e.tlbin|76e893eeec3af4fe9668b18eead391a987398ca5
+app/mcRegistry/ffffffffd00000000000000000000014.tlbin|405ca4761855d329af27979ff151bded6fab589d
+app/mcRegistry/ffffffffd00000000000000000000016.tlbin|232b95ed234fe06e01c733163ff293a84aed3a04
+app/mcRegistry/ffffffffd00000000000000000000017.tlbin|8ba687a46a730fc6cddc278fd026d7dc6ccd2423
+app/mcRegistry/fffffffff0000000000000000000001b.tlbin|51a8cd51b2fe34fda93c28cb93bff44d2e79df2b
+app/mcRegistry/fffffffff0000000000000000000001e.tlbin|a93d1d975ca6ea8e251fe65390eee19a32131f45
+lib/libMcClient.so|fff2aa3654971ed66616d64f6460f2311b5ceaef
+lib64/libMcClient.so|eefde40caf8ab515a6476153840b36ee015c87a3
+lib/libMcRegistry.so|aa1564e6e365e161ed5cde19359b81987ef5d251
+lib64/libMcRegistry.so|f5ebafcba894b8c0a73405730355cfc488b6c90a
+vendor/bin/mcDriverDaemon|c3585c32290410656a36ce1c1ad3a978d71b476b
 
 # NFC - A720FXXU3CRD3 (O)
-etc/nfc/sec_s3nrn81_rfreg.bin
-vendor/firmware/nfc/sec_s3nrn81_firmware.bin
-vendor/lib/hw/nfc_nci.default.so
-vendor/lib64/hw/nfc_nci.default.so
+etc/nfc/sec_s3nrn81_rfreg.bin|3ce6d4ea87bae1cfb1262a24becaed15436fbcd7
+vendor/firmware/nfc/sec_s3nrn81_firmware.bin|b40f216f648a3d7e2ec8631c5a2fbb80a73947d2
+vendor/lib/hw/nfc_nci.default.so|205043f49794c409d758e6f64e731d9e2dbaea5c
+vendor/lib64/hw/nfc_nci.default.so|5cd00e53c755ce96e3ce2fbba7354b986bb870bc
 
-# libsecnativefeature - A720SKSU3ZSG1 (P)
+# libsecnativefeature
 lib/libsecnativefeature.so
 lib64/libsecnativefeature.so
 
 # OMX - A720FXXU3CRD3 (O)
-lib64/libExynosOMX_Core.so
-lib/libExynosOMX_Core.so
-lib64/libExynosOMX_Resourcemanager.so
-lib/libExynosOMX_Resourcemanager.so
-lib64/libstagefrighthw.so
-lib/libstagefrighthw.so
-lib64/omx/libOMX.Exynos.AVC.Decoder.so
-lib/omx/libOMX.Exynos.AVC.Decoder.so
-lib64/omx/libOMX.Exynos.AVC.Encoder.so
-lib/omx/libOMX.Exynos.AVC.Encoder.so
-lib64/omx/libOMX.Exynos.HEVC.Decoder.so
-lib/omx/libOMX.Exynos.HEVC.Decoder.so
-lib64/omx/libOMX.Exynos.HEVC.Encoder.so
-lib/omx/libOMX.Exynos.HEVC.Encoder.so
-lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
-lib/omx/libOMX.Exynos.MPEG4.Decoder.so
-lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
-lib/omx/libOMX.Exynos.MPEG4.Encoder.so
-lib64/omx/libOMX.Exynos.VP8.Decoder.so
-lib/omx/libOMX.Exynos.VP8.Decoder.so
-lib64/omx/libOMX.Exynos.VP8.Encoder.so
-lib/omx/libOMX.Exynos.VP8.Encoder.so
-lib64/omx/libOMX.Exynos.VP9.Decoder.so
-lib/omx/libOMX.Exynos.VP9.Decoder.so
-lib64/omx/libOMX.Exynos.WMV.Decoder.so
-lib/omx/libOMX.Exynos.WMV.Decoder.so
+lib64/libExynosOMX_Core.so|1930d402bb3b0851c54ad692b40bc827472735b6
+lib/libExynosOMX_Core.so|aeddeb6126ab94001dc320e2f6efb1ea0135e48a
+lib64/libExynosOMX_Resourcemanager.so|29cec59bd003ea9c8c4b73f34f04ec9f4811dd2b
+lib/libExynosOMX_Resourcemanager.so|2afe11085a9c50c9509a97706c3750a13897fded
+lib64/libstagefrighthw.so|e918e05466722eed9edf9b33e54dbc902620eecb
+lib/libstagefrighthw.so|701bff0d53a2c82f8191b3a1ef89ce6532ee48e2
+lib64/omx/libOMX.Exynos.AVC.Decoder.so|21e83eabf22cc04b172f7c2888668413464a7524
+lib/omx/libOMX.Exynos.AVC.Decoder.so|1bc5eefd61e3a392ee0f23b912ed62a7f48b86f6
+lib64/omx/libOMX.Exynos.AVC.Encoder.so|858ae17cfaa84c1a63ed83df68a60a9322681086
+lib/omx/libOMX.Exynos.AVC.Encoder.so|8401b0f7a319eeb702f25c693c87cdb413deebf8
+lib64/omx/libOMX.Exynos.HEVC.Decoder.so|3609e3f708764328538805f170c33ad2e13f9643
+lib/omx/libOMX.Exynos.HEVC.Decoder.so|9a1ec5deaf15ff4b4a78e78fd9dfe04db2dd301a
+lib64/omx/libOMX.Exynos.HEVC.Encoder.so|0957d1455877b0c8e5bacead29cb366ffeec8953
+lib/omx/libOMX.Exynos.HEVC.Encoder.so|1b2567ccdcf73fc3ba2758ada5ded57651be8071
+lib64/omx/libOMX.Exynos.MPEG4.Decoder.so|328675bdef6a54fd6dd1ad978082ca65cb331ad7
+lib/omx/libOMX.Exynos.MPEG4.Decoder.so|9f67f1a496fc7f5fc441b4f876b12ec66c6db2db
+lib64/omx/libOMX.Exynos.MPEG4.Encoder.so|446cfd67692f8976e4c253ed886082fa648b8565
+lib/omx/libOMX.Exynos.MPEG4.Encoder.so|d90f661b176d78906e6141336ea22603d856a8d9
+lib64/omx/libOMX.Exynos.VP8.Decoder.so|b6f07a921f39774258fe11375d5887941f71079e
+lib/omx/libOMX.Exynos.VP8.Decoder.so|4119493a2bb4a0f32b9508473421c81d0a147bf4
+lib64/omx/libOMX.Exynos.VP8.Encoder.so|cb7d966e5b0bad80f2550f056a6964034c242875
+lib/omx/libOMX.Exynos.VP8.Encoder.so|6e8b46b814349d04f4741732dab3b9d40996b0ee
+lib64/omx/libOMX.Exynos.VP9.Decoder.so|8e57a480f9f5849f5e7626e9ae19be90882420eb
+lib/omx/libOMX.Exynos.VP9.Decoder.so|b1b6fe1f5c886dec3a28da1c03a8699f215f1df3
+lib64/omx/libOMX.Exynos.WMV.Decoder.so|c577270be20e9f8a4e474ac58b83fef7eea1d72c
+lib/omx/libOMX.Exynos.WMV.Decoder.so|bb13f7a5ece979b055cdcc189549af5fea008dbe
 
 # Protobuf compat - A520FXXU2BQH4 (N)
-lib64/libprotobuf-cpp-fulN.so
-lib/libprotobuf-cpp-fulN.so
-lib64/libprotobuf-cpp-litN.so
-lib/libprotobuf-cpp-litN.so
+lib64/libprotobuf-cpp-fulN.so|8d64fd14167d145a5cba985f375ccb89b2ad58d5
+lib/libprotobuf-cpp-fulN.so|2d83260039a5b8c77ca86c3e8697e24d8d579efe
+lib64/libprotobuf-cpp-litN.so|517f428b203348bb864c7a475efbdba058565f25
+lib/libprotobuf-cpp-litN.so|823a7b35c017de097aa5e8407c62dd06df723645
 
 # RIL - G965FXXS9DTD7 (Q)
-vendor/bin/cbd
-vendor/bin/hw/rild
-vendor/lib/libril.so
-vendor/lib/libsecril-client.so
-vendor/lib/libsec-ril-dsds.so
-vendor/lib/libsec-ril.so
-vendor/lib/libsec_semRil.so
-vendor/lib/libvkmanager_vendor.so
-vendor/lib/libvndsecril-client.so
-vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
-vendor/lib/vendor.samsung.hardware.radio@2.0.so
-vendor/lib64/libril.so
-vendor/lib64/libsecril-client.so
-vendor/lib64/libsec-ril-dsds.so
-vendor/lib64/libsec-ril.so
-vendor/lib64/libsec_semRil.so
-vendor/lib64/libvkmanager_vendor.so
-vendor/lib64/libvndsecril-client.so
-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio@2.0.so
+vendor/bin/cbd|c2e2aeb6a6e43246b70b61099015e9c591b36e83
+vendor/bin/hw/rild|245f25500160c84e82b6a2bd4f683c6de3855c62
+vendor/lib/libril.so|2ec5cf60095fc75fe5f62476582ccffdf656d78b
+vendor/lib/libsecril-client.so|4f9c59b0a5e40af38402a3f2cb79f12eb023c207
+vendor/lib/libsec-ril-dsds.so|dd4eabff5bbfb4b58bee8b5aabb63d4d6699724e
+vendor/lib/libsec-ril.so|043666614e8e2bbeb23dafcaf19b4ceaec98adb0
+vendor/lib/libsec_semRil.so|586561e7ea50c9fbe9beebc05f4001fc06843981
+vendor/lib/libvkmanager_vendor.so|a107fcc6f93707f3dcc3c4922069a28399e4f0a8
+vendor/lib/libvndsecril-client.so|4f9c59b0a5e40af38402a3f2cb79f12eb023c207
+vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so|0773244743a3d0a69ea5f24daf98d2e77a4a23df
+vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so|8c0670df1103803723e176ffc74d301ea90cd6a1
+vendor/lib/vendor.samsung.hardware.radio@2.0.so|b1e8788b5925405e29e8d0515f1f061e46202bf6
+vendor/lib64/libril.so|fbb6239e903e1d85ca25b0a1995ce4c35d07f86a
+vendor/lib64/libsecril-client.so|d2a5ac7bd37748659aa36dc9880dca4a8ea80353
+vendor/lib64/libsec-ril-dsds.so|2e686a08f8e4ca810904197da58f353cbea1dd22
+vendor/lib64/libsec-ril.so|8609f1eb5b5b3647bbaad085c5b6f1c36d50e224
+vendor/lib64/libsec_semRil.so|06829a5d3b30049f535b481a448e07585d455702
+vendor/lib64/libvkmanager_vendor.so|f874a844e9c0dea59104bd00bbb1f663abba02fa
+vendor/lib64/libvndsecril-client.so|d2a5ac7bd37748659aa36dc9880dca4a8ea80353
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so|9a252e8f68669a51a477e5d5c58e87471faff260
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so|79295a294408976c751aaf0c05b120ecdcdbe095
+vendor/lib64/vendor.samsung.hardware.radio@2.0.so|ab8fc2a827261521e4d5899972d4773cc1314561
 
 # Sensors - A720FXXU4CRG4 (O)
-lib/hw/sensors.universal7880.so
-lib64/hw/sensors.universal7880.so
-lib/libsensorlistener.so
-lib64/libsensorlistener.so
+lib/hw/sensors.universal7880.so|44105bbbc4f3b82dc8c2ec797da63e5b32b1c2eb
+lib64/hw/sensors.universal7880.so|1bad7ca9722ccdb4ed06b3e5524f7ed558b7fd45
+lib/libsensorlistener.so|da184002850ac1e4f7f78b6b95849b00fa2e60fb
+lib64/libsensorlistener.so|1122ddf0c025516e7e0d2d537acee74f93c78945
 
 # Wifi - A520FXXU2BQH4 (N)
-etc/firmware/bdwlan30.bin
-etc/firmware/bdwlan32.bin
-etc/firmware/otp30.bin
-etc/firmware/qwlan30.bin
-etc/firmware/qwlan30_ibss.bin
-etc/firmware/Data.msc
-etc/firmware/nvm_tlv.bin
-etc/firmware/nvm_tlv_1.3.bin
-etc/firmware/nvm_tlv_2.1.bin
-etc/firmware/nvm_tlv_3.0.bin
-etc/firmware/nvm_tlv_3.2.bin
-etc/firmware/nvm_tlv_tf_1.1.bin
-etc/firmware/rampatch_tlv.img
-etc/firmware/rampatch_tlv_1.3.tlv
-etc/firmware/rampatch_tlv_2.1.tlv
-etc/firmware/rampatch_tlv_3.0.tlv
-etc/firmware/rampatch_tlv_3.2.tlv
-etc/firmware/rampatch_tlv_tf_1.1.tlv
-etc/firmware/utf30.bin
-etc/firmware/utfbd30.bin
-etc/firmware/utfbd32.bin
+etc/firmware/bdwlan30.bin|64875a78f952e17f5d835bfe78e7b20c4c23b7b5
+etc/firmware/bdwlan32.bin|643a919ab575c6b48da619d67bf1594bee73ee56
+etc/firmware/otp30.bin|61b90ab084fbd938ac285bf480722134434f1d73
+etc/firmware/qwlan30.bin|9915628f8077edaeaa2cd3fc85443f134c24c522
+etc/firmware/qwlan30_ibss.bin|832734ed8ae903a1ff52ae80d9841aaaafcdf8d8
+etc/firmware/Data.msc|544e4c0a704de3549d970f4839881bfcf223301f
+etc/firmware/nvm_tlv.bin|78d937d7939300be7a23d9281cf082827697d4c2
+etc/firmware/nvm_tlv_1.3.bin|a5856eaf0ef9537772f1f07a287d4bc666483728
+etc/firmware/nvm_tlv_2.1.bin|c4dddea2ae08f625feb0fc5c75137dec0a58e46d
+etc/firmware/nvm_tlv_3.0.bin|d527cfa764514c60588753c3f637a266d96a4f8c
+etc/firmware/nvm_tlv_3.2.bin|912a9054eed291d27a081569953bffca5192f856
+etc/firmware/nvm_tlv_tf_1.1.bin|813485052efa576b5cefefecc1fac924ec3d27b2
+etc/firmware/rampatch_tlv.img|0503c6452f9eb843c751d107feed370de8a75f71
+etc/firmware/rampatch_tlv_1.3.tlv|1da2a06f5dc5d8d2489c35a695a6c3db6575110b
+etc/firmware/rampatch_tlv_2.1.tlv|c41b39fd632ea9e434316d91f1f4d2bceef70021
+etc/firmware/rampatch_tlv_3.0.tlv|5f8120ea99ec8462f5ee21a29e0b290a031524c0
+etc/firmware/rampatch_tlv_3.2.tlv|548fc82253931f351676dcfe23824d18d6cd7fbe
+etc/firmware/rampatch_tlv_tf_1.1.tlv|32ec2e81872b6651b9dfeb1e460513aa42898933
+etc/firmware/utf30.bin|793420d620f1003fd34858a4cbb380f11c0cff0b
+etc/firmware/utfbd30.bin|64875a78f952e17f5d835bfe78e7b20c4c23b7b5
+etc/firmware/utfbd32.bin|643a919ab575c6b48da619d67bf1594bee73ee56
 
 # Wifi - qcacld-2.0 - A720FXXU3CRD3 (O)
-lib/modules/qca_cld/qca_cld_wlan.ko
+lib/modules/qca_cld/qca_cld_wlan.ko|de7872bdfcb507e04eb767669c5201a6734d8622
