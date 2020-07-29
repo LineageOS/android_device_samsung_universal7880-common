@@ -202,12 +202,9 @@ vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 
-# Sensors - A520FXXU2BQH4 (N)
-bin/sensorhubservice
+# Sensors - A720FXXU4CRG4 (O)
+lib/hw/sensors.universal7880.so
 lib64/hw/sensors.universal7880.so
-lib64/hw/sensorhubs.universal7880.so
-lib64/libsensorhub.so
-lib64/libsensorhubservice.so
 lib/libsensorlistener.so
 lib64/libsensorlistener.so
 
