@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "258e578a_e9c45c0a",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 8
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2020-07-29T15:26:17Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be bin/mcDriverDaemon:vendor/bin/mcDriverDaemon because mcDriverDaemon is in system/bin on stock Nougat?",
+      "range": {
+        "startLine": 129,
+        "startChar": 0,
+        "endLine": 129,
+        "endChar": 25
+      },
+      "revId": "cc075a0629d8345e9dca16fd3c9595da3997ef4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
