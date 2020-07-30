@@ -77,7 +77,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.gnss</name>
-        <transport arch="32+64">passthrough</transport>
+        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IGnss</name>
@@ -109,7 +109,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
-        <transport arch="32+64">passthrough</transport>
+        <transport>hwbinder</transport>
         <version>3.0</version>
         <interface>
             <name>IKeymasterDevice</name>
@@ -230,7 +230,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
-        <transport arch="32+64">passthrough</transport>
+        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>ISensors</name>
@@ -248,7 +248,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.vibrator</name>
-        <transport arch="32+64">passthrough</transport>
+        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IVibrator</name>

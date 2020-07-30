@@ -115,7 +115,8 @@ PRODUCT_COPY_FILES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     keystore.exynos5 \
-    android.hardware.keymaster@3.0-impl
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
 
 # hardware/samsung/AdvancedDisplay (MDNIE)
 PRODUCT_PACKAGES += \
@@ -228,7 +229,8 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl
+    android.hardware.gnss@1.0-impl \
+    android.hardware.gnss@1.0-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg \
@@ -278,7 +280,12 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
-    android.hardware.vibrator@1.0-impl
+    android.hardware.sensors@1.0-service
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
 
 # Offmode charger
 PRODUCT_PACKAGES += \
