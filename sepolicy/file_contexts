@@ -114,7 +114,7 @@
 # camera
 /data/camera/ISP_CV          u:object_r:camera_data_file:s0
 
-####################################
+####################################f,
 # sysfs files
 /sys/class/power_supply/battery/music -- u:object_r:sysfs:s0
 /sys/class/devfreq/exynos5-busfreq-mif(/.*)? -- u:object_r:sysfs:s0
