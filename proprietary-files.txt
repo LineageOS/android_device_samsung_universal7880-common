@@ -165,12 +165,6 @@ lib/omx/libOMX.Exynos.VP9.Decoder.so|b1b6fe1f5c886dec3a28da1c03a8699f215f1df3
 lib64/omx/libOMX.Exynos.WMV.Decoder.so|c577270be20e9f8a4e474ac58b83fef7eea1d72c
 lib/omx/libOMX.Exynos.WMV.Decoder.so|bb13f7a5ece979b055cdcc189549af5fea008dbe
 
-# Protobuf compat - A520FXXU2BQH4 (N)
-lib64/libprotobuf-cpp-fulN.so|8d64fd14167d145a5cba985f375ccb89b2ad58d5
-lib/libprotobuf-cpp-fulN.so|2d83260039a5b8c77ca86c3e8697e24d8d579efe
-lib64/libprotobuf-cpp-litN.so|517f428b203348bb864c7a475efbdba058565f25
-lib/libprotobuf-cpp-litN.so|823a7b35c017de097aa5e8407c62dd06df723645
-
 # RIL - G965FXXS9DTD7 (Q)
 lib/libsecril-client.so|4f9c59b0a5e40af38402a3f2cb79f12eb023c207
 lib64/libsecril-client.so|d2a5ac7bd37748659aa36dc9880dca4a8ea80353
