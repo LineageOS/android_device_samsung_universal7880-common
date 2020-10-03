@@ -13,10 +13,6 @@ allow init tmpfs:lnk_file create_file_perms;
 # /sys/class/power_supply/battery and /sys/class/android_usb/android0
 allow init proc:file { getattr setattr read write open };
 
-# Shim libs
-allow init cameraserver:process noatsecure;
-allow init hal_fingerprint_default:process noatsecure;
-
 # /data
 allow init sdcardd_exec:file r_file_perms;
 
