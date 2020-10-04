@@ -57,8 +57,5 @@ ro.sys.sdcardfs=false
 # Wifi
 wifi.interface=wlan0
 
-# read DS/SS property
-import /efs/factory.prop
-
 # boot device
 #ro.boot.bootdevice=13540000.dwmmc0
