@@ -113,6 +113,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/init/android.hardware.drm@1.1-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.widevine.rc
 
+# FastCharge
+PRODUCT_PACKAGES += \
+    vendor.lineage.fastcharge@1.0-service.samsung
+
 # Keymaster
 PRODUCT_PACKAGES += \
     keystore.exynos5 \
