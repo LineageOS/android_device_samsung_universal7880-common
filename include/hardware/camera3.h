@@ -18,7 +18,7 @@
 #define ANDROID_INCLUDE_CAMERA3_H
 
 #include <system/camera_metadata.h>
-#include "camera_common.h"
+#include <hardware/camera_common.h>
 
 /**
  * Camera device HAL 3.6[ CAMERA_DEVICE_API_VERSION_3_6 ]
@@ -1659,6 +1659,9 @@ typedef struct camera3_stream {
      */
     uint32_t usage;
 
+    /* unknown samsung addition */
+    char unknown1[4];
+
     /**
      * The maximum number of buffers the HAL device may need to have dequeued at
      * the same time. The HAL device may not have more buffers in-flight from
@@ -1758,6 +1761,8 @@ typedef struct camera3_stream {
     /* reserved for future use */
     void *reserved[6];
 
+    /* unknown samsung addition */
+    char unknown2[0x14];
 } camera3_stream_t;
 
 /**
