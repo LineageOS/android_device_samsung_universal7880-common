@@ -1,0 +1,3 @@
+# hal_lineage_fastcharge_default.te
+allow hal_lineage_fastcharge_default sysfs:dir search;
+allow hal_lineage_fastcharge_default sysfs:file rw_file_perms;
