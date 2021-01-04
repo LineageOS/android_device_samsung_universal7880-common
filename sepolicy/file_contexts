@@ -205,6 +205,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.0-service\.exynos                    u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.samsung                     u:object_r:hal_lineage_touch_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.samsung-exynos        u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@1\.0-service\.samsung                u:object_r:hal_lineage_fastcharge_default_exec:s0
 
 # hidl services
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey                    u:object_r:hal_drm_clearkey_exec:s0
