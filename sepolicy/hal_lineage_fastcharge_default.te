@@ -2,3 +2,6 @@
 
 allow hal_lineage_fastcharge_default sysfs_virtual:dir search;
 allow hal_lineage_fastcharge_default sysfs_virtual:file rw_file_perms;
+
+get_prop(hal_lineage_fastcharge, sec_fastcharge_prop)
+set_prop(hal_lineage_fastcharge, sec_fastcharge_prop)

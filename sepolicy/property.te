@@ -4,6 +4,9 @@ type modemloader_prop, property_type;
 # mobicore (tee)
 type tee_prop, property_type;
 
+# Fastcharge HAL
+type sec_fastcharge_prop, property_type;
+
 # CP-Boot Daemon
 type vendor_cbd_prop, property_type;
 
