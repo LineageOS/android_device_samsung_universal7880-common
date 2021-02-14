@@ -1,6 +1,10 @@
 on fs
     setprop sys.usb.ffs.aio_compat 1
-    
+
+    wait /dev/block/platform/13540000.dwmmc0
+    symlink /dev/block/platform/13540000.dwmmc0 /dev/block/bootdevice
+    symlink /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM /dev/block/platform/13540000.dwmmc0/by-name/system
+
 on post-fs-data
     # avoid USB crash
     setprop persist.adb.nonblocking_ffs 0
