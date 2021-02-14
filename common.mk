@@ -31,6 +31,7 @@ PRODUCT_PACKAGES += \
     init.samsung.rc \
     init.samsungexynos7880.rc \
     init.samsungexynos7880.usb.rc \
+    init.recovery.samsungexynos7880.rc \
     init.wifi.rc \
     ueventd.samsungexynos7880.rc
 

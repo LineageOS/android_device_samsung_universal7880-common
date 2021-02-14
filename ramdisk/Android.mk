@@ -49,6 +49,14 @@ LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE       := init.recovery.samsungexynos7880.rc
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := BOOT
+LOCAL_SRC_FILES    := init.recovery.samsungexynos7880.rc
+LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE       := init.samsungexynos7880.usb.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := BOOT
