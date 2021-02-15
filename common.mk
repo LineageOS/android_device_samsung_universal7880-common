@@ -32,7 +32,7 @@ PRODUCT_PACKAGES += \
     init.samsungexynos7880.rc \
     init.samsungexynos7880.usb.rc \
     init.recovery.samsungexynos7880.rc \
-    init.wifi.rc \
+    wifi.rc \
     ueventd.samsungexynos7880.rc
 
 # Permissions
@@ -153,10 +153,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-# Custom wifi service
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/init/android.hardware.wifi@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service.rc
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0 \

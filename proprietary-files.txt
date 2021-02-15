@@ -195,28 +195,20 @@ lib64/hw/sensors.universal7880.so|1bad7ca9722ccdb4ed06b3e5524f7ed558b7fd45
 lib/libsensorlistener.so|da184002850ac1e4f7f78b6b95849b00fa2e60fb
 lib64/libsensorlistener.so|1122ddf0c025516e7e0d2d537acee74f93c78945
 
-# Wifi - A520FXXU2BQH4 (N)
-etc/firmware/bdwlan30.bin|64875a78f952e17f5d835bfe78e7b20c4c23b7b5
-etc/firmware/bdwlan32.bin|643a919ab575c6b48da619d67bf1594bee73ee56
-etc/firmware/otp30.bin|61b90ab084fbd938ac285bf480722134434f1d73
-etc/firmware/qwlan30.bin|9915628f8077edaeaa2cd3fc85443f134c24c522
-etc/firmware/qwlan30_ibss.bin|832734ed8ae903a1ff52ae80d9841aaaafcdf8d8
-etc/firmware/Data.msc|544e4c0a704de3549d970f4839881bfcf223301f
-etc/firmware/nvm_tlv.bin|78d937d7939300be7a23d9281cf082827697d4c2
-etc/firmware/nvm_tlv_1.3.bin|a5856eaf0ef9537772f1f07a287d4bc666483728
-etc/firmware/nvm_tlv_2.1.bin|c4dddea2ae08f625feb0fc5c75137dec0a58e46d
-etc/firmware/nvm_tlv_3.0.bin|d527cfa764514c60588753c3f637a266d96a4f8c
-etc/firmware/nvm_tlv_3.2.bin|912a9054eed291d27a081569953bffca5192f856
-etc/firmware/nvm_tlv_tf_1.1.bin|813485052efa576b5cefefecc1fac924ec3d27b2
-etc/firmware/rampatch_tlv.img|0503c6452f9eb843c751d107feed370de8a75f71
-etc/firmware/rampatch_tlv_1.3.tlv|1da2a06f5dc5d8d2489c35a695a6c3db6575110b
-etc/firmware/rampatch_tlv_2.1.tlv|c41b39fd632ea9e434316d91f1f4d2bceef70021
-etc/firmware/rampatch_tlv_3.0.tlv|5f8120ea99ec8462f5ee21a29e0b290a031524c0
-etc/firmware/rampatch_tlv_3.2.tlv|548fc82253931f351676dcfe23824d18d6cd7fbe
-etc/firmware/rampatch_tlv_tf_1.1.tlv|32ec2e81872b6651b9dfeb1e460513aa42898933
-etc/firmware/utf30.bin|793420d620f1003fd34858a4cbb380f11c0cff0b
-etc/firmware/utfbd30.bin|64875a78f952e17f5d835bfe78e7b20c4c23b7b5
-etc/firmware/utfbd32.bin|643a919ab575c6b48da619d67bf1594bee73ee56
-
-# Wifi - qcacld-2.0 - A720FXXU3CRD3 (O)
-lib/modules/qca_cld/qca_cld_wlan.ko|de7872bdfcb507e04eb767669c5201a6734d8622
+# Wifi and bluetooth firmware
+etc/firmware/bdwlan30.bin
+etc/firmware/bdwlan32.bin
+etc/firmware/Data.msc
+etc/firmware/nvm_tlv_tf_1.1.bin
+etc/firmware/otp30.bin
+etc/firmware/qwlan30.bin
+etc/firmware/qwlan30_ibss.bin
+etc/firmware/rampatch_tlv_tf_1.1.tlv
+etc/firmware/utf30.bin
+etc/firmware/utfbd30.bin
+etc/firmware/utfbd32.bin
+# a5y17lte config is set to load a different firmware, which is not
+# present in A720S stock rom. We need to pull these from A520F oreo.
+# A520FXXUBCSG1
+etc/firmware/bdwlan30_OLD.bin|c3d5b46d0193fbd931dbfe8403662768
+etc/firmware/utfbd30_OLD.bin|c3d5b46d0193fbd931dbfe8403662768
