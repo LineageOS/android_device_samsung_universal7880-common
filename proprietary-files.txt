@@ -217,6 +217,3 @@ etc/firmware/rampatch_tlv_tf_1.1.tlv|32ec2e81872b6651b9dfeb1e460513aa42898933
 etc/firmware/utf30.bin|793420d620f1003fd34858a4cbb380f11c0cff0b
 etc/firmware/utfbd30.bin|64875a78f952e17f5d835bfe78e7b20c4c23b7b5
 etc/firmware/utfbd32.bin|643a919ab575c6b48da619d67bf1594bee73ee56
-
-# Wifi - qcacld-2.0 - A720FXXU3CRD3 (O)
-lib/modules/qca_cld/qca_cld_wlan.ko|de7872bdfcb507e04eb767669c5201a6734d8622
