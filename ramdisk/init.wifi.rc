@@ -7,6 +7,7 @@ on post-fs-data
     mkdir /data/vendor/log/wifi 0770 wifi system
 
     # for fwpath
+    chown wifi root /sys/module/wlan/parameters/fwpath
     chmod 0666 /sys/module/wlan/parameters/fwpath
 
     chown wifi root /sys/wifi/wifiver
@@ -41,12 +42,15 @@ on post-fs-data
     chown wifi root /data/vendor/conn/.memdump.info
     chmod 0660 /data/vendor/conn/.memdump.info
 
+    # Create directory for hostapd
+    mkdir /data/hostapd 0770 system wifi
+
     # for WIFI hotspot
     chown wifi root /data/vendor/conn/.softap.info
     chmod 0664 /data/vendor/conn/.softap.info
     chown system wifi /vendor/etc/wifi/indoorchannel.info
     chmod 0664 /vendor/etc/wifi/indoorchannel.info
-
+    
     # for WIFI MAC
     chown wifi root /sys/wifi/mac_addr
     chmod 0660 /sys/wifi/mac_addr
