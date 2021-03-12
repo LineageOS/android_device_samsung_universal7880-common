@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
     init.samsungexynos7880.rc \
     init.samsungexynos7880.usb.rc \
     init.recovery.samsungexynos7880.rc \
+    mobicore.rc \
     wifi.rc \
     ueventd.samsungexynos7880.rc
 
