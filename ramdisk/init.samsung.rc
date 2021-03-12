@@ -92,10 +92,6 @@ on init
     chmod 0600 /sys/module/sec_fd_detect/parameters/sys_pid
     chmod 0600 /sys/module/sec_fd_detect/parameters/upload_mode
 
-on post-fs
-    # mobicore
-    setprop sys.mobicoredaemon.enable stopped
-
 on post-fs-data
 # [ SEC_SELINUX_PORTING_COMMON
     # Reload SE Android Policy
@@ -122,13 +118,6 @@ on post-fs-data
     chown system system /dev/tzic
     restorecon /dev/icd
     restorecon /dev/icdr
-
-    # mobicore
-    export MC_AUTH_TOKEN_PATH /efs
-    mkdir /efs/TEE  0770 radio system
-    chmod 0660 /dev/t-base-tui
-    chown system system /dev/t-base-tui
-    start mobicore
 
     chmod 0775 /data/misc/radio
 
@@ -736,10 +725,6 @@ on boot
     chown system system /sys/class/sec/sddata/sd_data
     chmod 444 /sys/class/sec/sddata/sd_data
 
-on nonencrypted
-    # mobicore
-    mkdir /data/misc/mcRegistry 0775 system system
-
 on charger
     chmod 0664 /sys/class/power_supply/battery/batt_temp_table
     chown system radio /sys/class/power_supply/battery/batt_temp_table
@@ -768,10 +753,6 @@ on charger
     chmod 0400 /efs/Battery/battery_data.dat
     write /sys/class/power_supply/battery/batt_update_data "/efs/Battery/battery_data.dat"
 
-on property:vold.decrypt=trigger_restart_framework
-    # mobicore
-    mkdir /data/misc/mcRegistry 0775 system system
-
 #service drm /system/bin/drmserver
 #    class main
 #    user drm
@@ -787,11 +768,4 @@ service scs /system/bin/scs
     user system
     group system
     oneshot
-    disabled
-
-# MobiCore startup
-service mobicore /vendor/bin/mcDriverDaemon -r /vendor/app/mcRegistry/FFFFFFFF000000000000000000000001.drbin -r /vendor/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin -r /vendor/app/mcRegistry/ffffffffd00000000000000000000016.tlbin -r /vendor/app/mcRegistry/ffffffffd0000000000000000000001c.tlbin -r /vendor/app/mcRegistry/ffffffffd00000000000000000000045.drbin
-    class core
-    user system
-    group system
     disabled
