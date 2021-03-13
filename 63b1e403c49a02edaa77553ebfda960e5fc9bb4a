@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "577aeb3e_4f7a45e3",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 10
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2021-03-13T00:55:31Z",
+      "side": 0,
+      "message": "Where did this went? Should also be listed under BT firmware as it is being loaded by bt-vendor, not by the WiFi driver",
+      "range": {
+        "startLine": 205,
+        "startChar": 0,
+        "endLine": 216,
+        "endChar": 77
+      },
+      "revId": "63b1e403c49a02edaa77553ebfda960e5fc9bb4a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
