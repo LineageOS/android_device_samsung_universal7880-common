@@ -222,11 +222,11 @@ vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so|9a252e8f68669a51a477e5d
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so|79295a294408976c751aaf0c05b120ecdcdbe095
 vendor/lib64/vendor.samsung.hardware.radio@2.0.so|ab8fc2a827261521e4d5899972d4773cc1314561
 
-# Sensors - A720FXXU4CRG4 (O)
-lib/hw/sensors.universal7880.so|44105bbbc4f3b82dc8c2ec797da63e5b32b1c2eb
-lib64/hw/sensors.universal7880.so|1bad7ca9722ccdb4ed06b3e5524f7ed558b7fd45
-lib/libsensorlistener.so|da184002850ac1e4f7f78b6b95849b00fa2e60fb
-lib64/libsensorlistener.so|1122ddf0c025516e7e0d2d537acee74f93c78945
+# Sensors
+lib/libsensorlistener.so
+lib64/libsensorlistener.so
+vendor/lib/hw/sensors.universal7880.so
+vendor/lib64/hw/sensors.universal7880.so
 
 # Wifi and bluetooth firmware
 etc/firmware/bdwlan30.bin
