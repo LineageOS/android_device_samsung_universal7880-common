@@ -12,3 +12,6 @@ type vendor_cbd_prop, property_type;
 
 # radio 
 type vendor_radio_prop, property_type;
+
+# NFC
+type vendor_nfc_prop, property_type;
