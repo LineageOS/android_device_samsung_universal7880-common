@@ -121,21 +121,26 @@ on post-fs-data
 
     chmod 0775 /data/misc/radio
 
-    # NFC
-    mkdir /data/nfc 0700 nfc nfc
-    mkdir /data/nfc/param 0700 nfc nfc
-    mkdir /data/bcmnfc 0700 nfc nfc
-    mkdir /data/bcmnfc/param 0700 nfc nfc
-    
+    # NFC: create data/nfc for nv storage
+    mkdir /data/nfc 0770 nfc nfc
+    mkdir /data/nfc/param 0770 nfc nfc
+
+    # NFC: create /efs/sec_efs/nfc and /efs/nfc for nv storage
+    mkdir /efs/sec_efs/nfc 0700 nfc nfc
+    mkdir /efs/nfc 0700 nfc nfc
+
+    # NFC KEY
+    mkdir /data/vendor/nfc 0770 nfc nfc
+    mkdir /data/nfc_log 0750 nfc system
+    copy /vendor/etc/nfc_key /data/nfc/Key
+    chmod 660 /data/nfc/Key
+    chown nfc nfc /data/nfc/Key
+
     # Magnetic sensor YAS539 lib
     mkdir /data/vendor/yas_lib 0770 system system
 
     # Samsung Pay
     #mkdir /efs/pfw_data 0760 spay spay
-
-    # MST/NFC Switch
-    #chown spay system /dev/mst_ctrl
-    chmod 0660 /dev/mst_ctrl
 
 	#MST Factory Test
     chown system system /sys/class/mstldo/mst_drv/transmit
@@ -218,20 +223,6 @@ on boot
     chown system radio /sys/class/sec/switch/otg_test
     chown system radio /sys/class/sec/switch/apo_factory
 
-	# NFC_NXP
-    setprop ro.nfc.port "I2C"
-    chmod 0660 /dev/pn547
-    chown nfc nfc /dev/pn547
-    chown nfc /dev/pn547
-
-    # NFC_BROADCOM
-    chmod 0600 /dev/bcm2079x
-    chown nfc nfc /dev/bcm2079x
-
-    # NFC_SLSI
-    chmod 0660 /dev/sec-nfc
-    chown nfc nfc /dev/sec-nfc
-
     # GPIO DVS
     chown radio system /sys/class/secgpio_check/secgpio_check_all/gpioinit_check
     chown radio system /sys/class/secgpio_check/secgpio_check_all/gpiosleep_check
@@ -313,6 +304,7 @@ on boot
    chown system radio /sys/class/power_supply/battery/wc_enable
    chown system nfc /sys/class/power_supply/battery/wc_control
    chown system nfc /sys/class/power_supply/battery/wc_control_cnt
+   chown system nfc /sys/class/power_supply/battery/led_cover
    chown system radio /sys/class/power_supply/battery/update
    chown system radio /sys/class/power_supply/battery/batt_wdt_control
    chown system radio /sys/class/power_supply/battery/factory_mode_relieve

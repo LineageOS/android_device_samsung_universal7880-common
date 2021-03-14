@@ -10,5 +10,8 @@ type sec_fastcharge_prop, property_type;
 # CP-Boot Daemon
 type vendor_cbd_prop, property_type;
 
-# radio 
+# radio
 type vendor_radio_prop, property_type;
+
+# NFC
+type vendor_nfc_prop, property_type;
