@@ -7,6 +7,14 @@ wc_transport.               u:object_r:bluetooth_prop:s0
 vendor.cbd.                    u:object_r:vendor_cbd_prop:s0
 persist.vendor.cbd.            u:object_r:vendor_cbd_prop:s0
 
+# Fastcharge HAL
+persist.vendor.sec.fastchg_enabled     u:object_r:sec_fastcharge_prop:s0
+
+# NFC
+persist.nfc.log.index            u:object_r:vendor_nfc_prop:s0
+vendor.nfc.fw.                   u:object_r:vendor_nfc_prop:s0 
+persist.vendor.nfc.log.index     u:object_r:vendor_nfc_prop:s0
+
 # modemloader
 hw.revision            u:object_r:modemloader_prop:s0
 ro.cbd.dt_revision     u:object_r:modemloader_prop:s0
