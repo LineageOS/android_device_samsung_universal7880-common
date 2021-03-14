@@ -242,9 +242,9 @@ TARGET_LD_SHIM_LIBS := \
     /vendor/lib/libbauthserver.so|libbauthtzcommon_shim.so \
     /vendor/lib64/libbauthserver.so|libbauthtzcommon_shim.so \
     /system/lib/libcamera_client.so|libcamera_client_shim.so \
+    /system/lib64/libcamera_client.so|libcamera_client_shim.so \
     /system/lib/libexynoscamera.so|libexynoscamera_shim.so \
-    /system/lib64/libstagefright.so|libstagefright_shim.so \
-    /system/lib/libstagefright.so|libstagefright_shim.so
+    /system/lib64/libexynoscamera.so|libexynoscamera_shim.so
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
