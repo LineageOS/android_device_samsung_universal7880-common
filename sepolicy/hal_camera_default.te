@@ -1,6 +1,9 @@
-# vndbinder
-allow hal_camera_default vndbinder_device:chr_file rw_file_perms;
-
 # sysfs
 allow hal_camera_default { sysfs_virtual sysfs_camera}:dir search;
-allow hal_camera_default sysfs_camera:file { read open getattr };
+allow hal_camera_default sysfs_camera:file rw_file_perms;
+
+allow hal_camera_default hal_graphics_mapper_hwservice:hwservice_manager find;
+
+allow hal_camera_default media_rw_data_file:dir search;
+
+vndbinder_use(hal_camera_default)

@@ -70,6 +70,7 @@ on post-fs-data
     chown system radio /sys/class/camera/rear/rear_companionfw_full
     chown system radio /sys/class/camera/rear/rear_calcheck
     chown system radio /sys/class/camera/rear/isp_core
+    chown cameraserver cameraserver /sys/class/camera/rear/ssrm_camera_info
     chown system radio /sys/class/camera/rear/fw_update
     chown system radio /sys/class/camera/rear/companion_ic_check
     chown system radio /sys/class/camera/rear/rear_moduleid
