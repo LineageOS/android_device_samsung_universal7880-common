@@ -10,21 +10,54 @@ etc/Tfa9896.cnt|4383ee71f09af3e4e579470684ebdb932e504af3
 # Bluetooth - A520FXXU2BQH4 (N)
 bin/wcnss_filter|902eb6b53d329b21c2a4829f24fa8d36c09baca5
 
-# Camera - A720FXXU3CRD3 (O)
-lib/hw/camera.vendor.exynos5.so|8bd670afc18f3fc0bf30b1b8884f49077cd99dea
-lib64/hw/camera.vendor.exynos5.so|700c275277113f6633fb23894268ee673319c039
-lib/libexynoscamera.so|89546805b3653fca5b839c5f9444e21cb3c5c472
-lib64/libexynoscamera.so|e3f076c4f1a1467b321ebc97309313e6b4fb12d9
-lib/libexynoscamera3.so|5a810d52fb29760e1a774af685f8e3ea0803b42e
-lib64/libexynoscamera3.so|5cd18476e6035eccdb55ef85242b1df10b95a0b4
-lib/libuniapi.so|709c957f92206e4348b654c786b68dbaa58e32cd
-lib64/libuniapi.so|52cf362a6abe81f99c08ccb4ca946f803931dab3
-lib/libuniplugin.so|4ffd309894438a841393b71cdb3b7387991d52a7
-lib64/libuniplugin.so|0fd157c61f5d2ad448b5eb1af9f46ca898787db2
-lib/libhwjpeg.so|cb54481b59c1fb2f301c20daf7f115caef6d3ed4
-lib64/libhwjpeg.so|f157d76b14412d51eb45819a77f0ba726a365a3f
-vendor/firmware/setfile_3p8_front.bin|69ff242187e82472e153fbed21b406594fe348ae
-vendor/firmware/setfile_3p8.bin|e0c2f51dc7780a7b908dba888566d92d7bb3d62a
+# Camera
+lib/hw/camera.exynos5.so
+lib64/hw/camera.exynos5.so
+lib/libexynoscamera.so
+lib64/libexynoscamera.so
+lib/libexynoscamera3.so
+lib64/libexynoscamera3.so
+lib/libhwjpeg.so
+lib64/libhwjpeg.so
+lib/libuniapi.so
+lib64/libuniapi.so
+lib/libuniplugin.so
+lib64/libuniplugin.so
+vendor/firmware/setfile_3p8_front.bin
+vendor/firmware/setfile_3p8.bin
+
+# Camera (HIDL)
+lib/vendor.samsung.hardware.camera.device@1.0.so
+lib/vendor.samsung.hardware.camera.device@3.2.so
+lib/vendor.samsung.hardware.camera.device@3.3.so
+lib/vendor.samsung.hardware.camera.device@3.4.so
+lib64/vendor.samsung.hardware.camera.device@1.0.so
+lib64/vendor.samsung.hardware.camera.device@3.2.so
+lib64/vendor.samsung.hardware.camera.device@3.3.so
+lib64/vendor.samsung.hardware.camera.device@3.4.so
+lib/vendor.samsung.hardware.camera.provider@2.4.so
+lib/vendor.samsung.hardware.camera.provider@2.5.so
+lib64/vendor.samsung.hardware.camera.provider@2.4.so
+vendor/lib/hw/vendor.samsung.hardware.camera.provider@2.4-impl.so
+vendor/lib64/hw/vendor.samsung.hardware.camera.provider@2.4-impl.so
+vendor/lib/camera.device@1.0-impl.so
+vendor/lib/camera.device@3.2-impl.so
+vendor/lib/camera.device@3.3-impl.so
+vendor/lib/camera.device@3.4-impl.so
+vendor/lib64/camera.device@1.0-impl.so
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/camera.device@3.4-impl.so
+vendor/lib/vendor.samsung.camera.device@1.0-impl.so
+vendor/lib/vendor.samsung.camera.device@3.2-impl.so
+vendor/lib/vendor.samsung.camera.device@3.3-impl.so
+vendor/lib/vendor.samsung.camera.device@3.4-impl.so
+vendor/lib64/vendor.samsung.camera.device@1.0-impl.so
+vendor/lib64/vendor.samsung.camera.device@3.2-impl.so
+vendor/lib64/vendor.samsung.camera.device@3.3-impl.so
+vendor/lib64/vendor.samsung.camera.device@3.4-impl.so
+# from G960FXXS7CTA1 (Q)
+vendor/bin/hw/vendor.samsung.hardware.camera.provider@2.4-service|6b0a79b7f804b9368b90160722d9e8ae970f4bf5
 
 # DRM
 vendor/lib/liboemcrypto.so
@@ -95,9 +128,9 @@ vendor/lib64/egl/libGLES_mali.so
 vendor/lib/hw/memtrack.universal7880.so
 vendor/lib64/hw/memtrack.universal7880.so
 
-# Media - A720FXXU3CRD3 (O)
-vendor/firmware/fimc_is_lib.bin|92e4f687f69c1f96ad22f1200e46f597daea1518
-vendor/firmware/mfc_fw.bin|450f972293bbd8cfae566ebccb836328617713d3
+# Media
+vendor/firmware/fimc_is_lib.bin
+vendor/firmware/mfc_fw.bin
 
 # Mobicore
 vendor/app/mcRegistry/07010000000000000000000000000000.tlbin
@@ -137,33 +170,33 @@ vendor/lib64/hw/nfc_nci.default.so|5cd00e53c755ce96e3ce2fbba7354b986bb870bc
 lib/libsecnativefeature.so
 lib64/libsecnativefeature.so
 
-# OMX - A720FXXU3CRD3 (O)
-lib64/libExynosOMX_Core.so|1930d402bb3b0851c54ad692b40bc827472735b6
-lib/libExynosOMX_Core.so|aeddeb6126ab94001dc320e2f6efb1ea0135e48a
-lib64/libExynosOMX_Resourcemanager.so|29cec59bd003ea9c8c4b73f34f04ec9f4811dd2b
-lib/libExynosOMX_Resourcemanager.so|2afe11085a9c50c9509a97706c3750a13897fded
-lib64/libstagefrighthw.so|e918e05466722eed9edf9b33e54dbc902620eecb
-lib/libstagefrighthw.so|701bff0d53a2c82f8191b3a1ef89ce6532ee48e2
-lib64/omx/libOMX.Exynos.AVC.Decoder.so|21e83eabf22cc04b172f7c2888668413464a7524
-lib/omx/libOMX.Exynos.AVC.Decoder.so|1bc5eefd61e3a392ee0f23b912ed62a7f48b86f6
-lib64/omx/libOMX.Exynos.AVC.Encoder.so|858ae17cfaa84c1a63ed83df68a60a9322681086
-lib/omx/libOMX.Exynos.AVC.Encoder.so|8401b0f7a319eeb702f25c693c87cdb413deebf8
-lib64/omx/libOMX.Exynos.HEVC.Decoder.so|3609e3f708764328538805f170c33ad2e13f9643
-lib/omx/libOMX.Exynos.HEVC.Decoder.so|9a1ec5deaf15ff4b4a78e78fd9dfe04db2dd301a
-lib64/omx/libOMX.Exynos.HEVC.Encoder.so|0957d1455877b0c8e5bacead29cb366ffeec8953
-lib/omx/libOMX.Exynos.HEVC.Encoder.so|1b2567ccdcf73fc3ba2758ada5ded57651be8071
-lib64/omx/libOMX.Exynos.MPEG4.Decoder.so|328675bdef6a54fd6dd1ad978082ca65cb331ad7
-lib/omx/libOMX.Exynos.MPEG4.Decoder.so|9f67f1a496fc7f5fc441b4f876b12ec66c6db2db
-lib64/omx/libOMX.Exynos.MPEG4.Encoder.so|446cfd67692f8976e4c253ed886082fa648b8565
-lib/omx/libOMX.Exynos.MPEG4.Encoder.so|d90f661b176d78906e6141336ea22603d856a8d9
-lib64/omx/libOMX.Exynos.VP8.Decoder.so|b6f07a921f39774258fe11375d5887941f71079e
-lib/omx/libOMX.Exynos.VP8.Decoder.so|4119493a2bb4a0f32b9508473421c81d0a147bf4
-lib64/omx/libOMX.Exynos.VP8.Encoder.so|cb7d966e5b0bad80f2550f056a6964034c242875
-lib/omx/libOMX.Exynos.VP8.Encoder.so|6e8b46b814349d04f4741732dab3b9d40996b0ee
-lib64/omx/libOMX.Exynos.VP9.Decoder.so|8e57a480f9f5849f5e7626e9ae19be90882420eb
-lib/omx/libOMX.Exynos.VP9.Decoder.so|b1b6fe1f5c886dec3a28da1c03a8699f215f1df3
-lib64/omx/libOMX.Exynos.WMV.Decoder.so|c577270be20e9f8a4e474ac58b83fef7eea1d72c
-lib/omx/libOMX.Exynos.WMV.Decoder.so|bb13f7a5ece979b055cdcc189549af5fea008dbe
+# OMX
+lib64/libExynosOMX_Core.so
+lib/libExynosOMX_Core.so
+lib64/libExynosOMX_Resourcemanager.so
+lib/libExynosOMX_Resourcemanager.so
+lib64/libstagefrighthw.so
+lib/libstagefrighthw.so
+lib64/omx/libOMX.Exynos.AVC.Decoder.so
+lib/omx/libOMX.Exynos.AVC.Decoder.so
+lib64/omx/libOMX.Exynos.AVC.Encoder.so
+lib/omx/libOMX.Exynos.AVC.Encoder.so
+lib64/omx/libOMX.Exynos.HEVC.Decoder.so
+lib/omx/libOMX.Exynos.HEVC.Decoder.so
+lib64/omx/libOMX.Exynos.HEVC.Encoder.so
+lib/omx/libOMX.Exynos.HEVC.Encoder.so
+lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
+lib/omx/libOMX.Exynos.MPEG4.Decoder.so
+lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
+lib/omx/libOMX.Exynos.MPEG4.Encoder.so
+lib64/omx/libOMX.Exynos.VP8.Decoder.so
+lib/omx/libOMX.Exynos.VP8.Decoder.so
+lib64/omx/libOMX.Exynos.VP8.Encoder.so
+lib/omx/libOMX.Exynos.VP8.Encoder.so
+lib64/omx/libOMX.Exynos.VP9.Decoder.so
+lib/omx/libOMX.Exynos.VP9.Decoder.so
+lib64/omx/libOMX.Exynos.WMV.Decoder.so
+lib/omx/libOMX.Exynos.WMV.Decoder.so
 
 # RIL - G965FXXS9DTD7 (Q)
 lib/libsecril-client.so|4f9c59b0a5e40af38402a3f2cb79f12eb023c207
