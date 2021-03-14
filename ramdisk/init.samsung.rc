@@ -126,6 +126,9 @@ on post-fs-data
     mkdir /data/nfc/param 0700 nfc nfc
     mkdir /data/bcmnfc 0700 nfc nfc
     mkdir /data/bcmnfc/param 0700 nfc nfc
+    
+    # Magnetic sensor YAS539 lib
+    mkdir /data/vendor/yas_lib 0770 system system
 
     # Samsung Pay
     #mkdir /efs/pfw_data 0760 spay spay
