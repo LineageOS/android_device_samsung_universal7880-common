@@ -100,6 +100,10 @@ on post-fs-data
     chown system audio /dev/radio0
     chmod 0660 /dev/radio0
 
+# MST/NFC Switch
+    chown spay system /dev/mst_ctrl
+    chmod 0660 /dev/mst_ctrl
+
 # for WIFI MAC address
     mkdir /efs/wifi 0775 wifi root
     chown wifi root /efs/wifi/.mac.info
