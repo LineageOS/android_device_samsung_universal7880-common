@@ -200,8 +200,6 @@ lib64/omx/libOMX.Exynos.WMV.Decoder.so
 lib/omx/libOMX.Exynos.WMV.Decoder.so
 
 # RIL - G965FXXS9DTD7 (Q)
-lib/libsecril-client.so|4f9c59b0a5e40af38402a3f2cb79f12eb023c207
-lib64/libsecril-client.so|d2a5ac7bd37748659aa36dc9880dca4a8ea80353
 vendor/bin/cbd|c2e2aeb6a6e43246b70b61099015e9c591b36e83
 vendor/bin/hw/rild|245f25500160c84e82b6a2bd4f683c6de3855c62
 vendor/lib/libril.so|2ec5cf60095fc75fe5f62476582ccffdf656d78b
