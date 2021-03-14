@@ -94,13 +94,16 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
-    camera.exynos5 \
+    camera.device@3.3-impl \
+    camera.device@3.4-impl \
     libexynoscamera_shim \
-    libcamera_client_shim \
-    libstagefright_shim
+    libcamera_client_shim
+
+# Camera service
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init/vendor.samsung.hardware.camera.provider@2.4-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider@2.4-service.rc
 
 # DRM
 PRODUCT_PACKAGES += \
