@@ -160,11 +160,12 @@ vendor/lib/libMcRegistry.so
 vendor/lib64/libMcRegistry.so
 vendor/bin/mcDriverDaemon
 
-# NFC - A720FXXU3CRD3 (O)
-etc/nfc/sec_s3nrn81_rfreg.bin|3ce6d4ea87bae1cfb1262a24becaed15436fbcd7
-vendor/firmware/nfc/sec_s3nrn81_firmware.bin|b40f216f648a3d7e2ec8631c5a2fbb80a73947d2
-vendor/lib/hw/nfc_nci.default.so|205043f49794c409d758e6f64e731d9e2dbaea5c
-vendor/lib64/hw/nfc_nci.default.so|5cd00e53c755ce96e3ce2fbba7354b986bb870bc
+# NFC
+etc/nfc_key
+lib64/vendor.samsung.hardware.nfc@1.1.so
+vendor/bin/hw/sec.android.hardware.nfc@1.1-service
+vendor/firmware/nfc/sec_s3nrn81_firmware.bin
+vendor/lib64/nfc_nci_sec.so
 
 # libsecnativefeature
 lib/libsecnativefeature.so
