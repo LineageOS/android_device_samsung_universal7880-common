@@ -142,12 +142,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungServiceMode
 
-# IPv6
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes \
-    libebtc
-
 # Versioned netutils
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
