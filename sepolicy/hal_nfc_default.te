@@ -1,0 +1,13 @@
+# hal_nfc_default.te
+
+allow hal_nfc_default {
+    nfc_data_file
+    nfc_vendor_data_file
+}:dir w_dir_perms;
+
+allow hal_nfc_default {
+    nfc_data_file
+    nfc_vendor_data_file
+}:file create_file_perms;
+
+set_prop(hal_nfc_default, vendor_nfc_prop)
