@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5b57b4fe_c772e988",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 8
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2021-03-15T07:07:44Z",
+      "side": 1,
+      "message": "This is being auto-built from source",
+      "range": {
+        "startLine": 165,
+        "startChar": 0,
+        "endLine": 166,
+        "endChar": 33
+      },
+      "revId": "71e37d71a25017a471fd02dd2bf83caab24c58e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
