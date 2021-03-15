@@ -2,8 +2,6 @@ allow hal_bluetooth_default bluetooth_device:chr_file { read write open ioctl };
 
 allow hal_bluetooth_default bluetooth_data_file:dir rw_dir_perms;
 
-allow hal_bluetooth_default wcnss_filter:unix_stream_socket connectto;
-
 allow hal_bluetooth_default efs_file:dir search;
 
 allow hal_bluetooth_default bluetooth_data_file:file create_file_perms;
