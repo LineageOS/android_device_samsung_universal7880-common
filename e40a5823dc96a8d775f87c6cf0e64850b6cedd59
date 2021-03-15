@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "272bb73b_d599d7ee",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 10
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2021-03-15T06:44:39Z",
+      "side": 1,
+      "message": "Those are already being built from source",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 38
+      },
+      "revId": "e40a5823dc96a8d775f87c6cf0e64850b6cedd59",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ddecb82e_36695ba0",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 10
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 25276
+      },
+      "writtenOn": "2021-03-15T06:44:39Z",
+      "side": 1,
+      "message": "This here is from Pie. Samsung uses vendor.samsung.hardware.camera.provider@3.0-service on Q",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 24
+      },
+      "revId": "e40a5823dc96a8d775f87c6cf0e64850b6cedd59",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
