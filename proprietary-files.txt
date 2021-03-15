@@ -7,8 +7,18 @@ product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 lib/libtfa98xx.so
 vendor/etc/Tfa9896.cnt
 
-# Bluetooth - A520FXXU2BQH4 (N)
-bin/wcnss_filter|902eb6b53d329b21c2a4829f24fa8d36c09baca5
+# Bluetooth and ANT
+lib/libantradio.so
+lib64/libantradio.so
+lib/com.qualcomm.qti.ant@1.0.so
+lib64/com.qualcomm.qti.ant@1.0.so
+lib/vendor.samsung.hardware.bluetooth@1.0.so
+lib64/vendor.samsung.hardware.bluetooth@1.0.so
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
 # Camera
 lib/hw/camera.exynos5.so
