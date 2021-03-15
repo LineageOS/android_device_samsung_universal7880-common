@@ -3,9 +3,9 @@
 # AptX - from crosshatch - QP1A.190711.020
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
-# Audio amplifier - A520FXXU2BQH4 (N)
-lib/libtfa98xx.so|f7056a28f652e04efd595ab590928ef709f180dd
-etc/Tfa9896.cnt|4383ee71f09af3e4e579470684ebdb932e504af3
+# Audio amplifier
+lib/libtfa98xx.so
+vendor/etc/Tfa9896.cnt
 
 # Bluetooth - A520FXXU2BQH4 (N)
 bin/wcnss_filter|902eb6b53d329b21c2a4829f24fa8d36c09baca5
