@@ -7,7 +7,7 @@ ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
 
 # Bluetooth workaround:
 # The new CAF code defaults to MCT HAL
-qcom.bluetooth.soc=rome
+vendor.qcom.bluetooth.soc=rome
 
 # Dalvik/Art
 dalvik.vm.dex2oat-filter=speed
