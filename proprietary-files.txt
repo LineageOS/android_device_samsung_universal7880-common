@@ -181,33 +181,33 @@ vendor/lib64/nfc_nci_sec.so
 lib/libsecnativefeature.so
 lib64/libsecnativefeature.so
 
-# OMX - A720FXXU3CRD3 (O)
-lib64/libExynosOMX_Core.so|1930d402bb3b0851c54ad692b40bc827472735b6
-lib/libExynosOMX_Core.so|aeddeb6126ab94001dc320e2f6efb1ea0135e48a
-lib64/libExynosOMX_Resourcemanager.so|29cec59bd003ea9c8c4b73f34f04ec9f4811dd2b
-lib/libExynosOMX_Resourcemanager.so|2afe11085a9c50c9509a97706c3750a13897fded
-lib64/libstagefrighthw.so|e918e05466722eed9edf9b33e54dbc902620eecb
-lib/libstagefrighthw.so|701bff0d53a2c82f8191b3a1ef89ce6532ee48e2
-lib64/omx/libOMX.Exynos.AVC.Decoder.so|21e83eabf22cc04b172f7c2888668413464a7524
-lib/omx/libOMX.Exynos.AVC.Decoder.so|1bc5eefd61e3a392ee0f23b912ed62a7f48b86f6
-lib64/omx/libOMX.Exynos.AVC.Encoder.so|858ae17cfaa84c1a63ed83df68a60a9322681086
-lib/omx/libOMX.Exynos.AVC.Encoder.so|8401b0f7a319eeb702f25c693c87cdb413deebf8
-lib64/omx/libOMX.Exynos.HEVC.Decoder.so|3609e3f708764328538805f170c33ad2e13f9643
-lib/omx/libOMX.Exynos.HEVC.Decoder.so|9a1ec5deaf15ff4b4a78e78fd9dfe04db2dd301a
-lib64/omx/libOMX.Exynos.HEVC.Encoder.so|0957d1455877b0c8e5bacead29cb366ffeec8953
-lib/omx/libOMX.Exynos.HEVC.Encoder.so|1b2567ccdcf73fc3ba2758ada5ded57651be8071
-lib64/omx/libOMX.Exynos.MPEG4.Decoder.so|328675bdef6a54fd6dd1ad978082ca65cb331ad7
-lib/omx/libOMX.Exynos.MPEG4.Decoder.so|9f67f1a496fc7f5fc441b4f876b12ec66c6db2db
-lib64/omx/libOMX.Exynos.MPEG4.Encoder.so|446cfd67692f8976e4c253ed886082fa648b8565
-lib/omx/libOMX.Exynos.MPEG4.Encoder.so|d90f661b176d78906e6141336ea22603d856a8d9
-lib64/omx/libOMX.Exynos.VP8.Decoder.so|b6f07a921f39774258fe11375d5887941f71079e
-lib/omx/libOMX.Exynos.VP8.Decoder.so|4119493a2bb4a0f32b9508473421c81d0a147bf4
-lib64/omx/libOMX.Exynos.VP8.Encoder.so|cb7d966e5b0bad80f2550f056a6964034c242875
-lib/omx/libOMX.Exynos.VP8.Encoder.so|6e8b46b814349d04f4741732dab3b9d40996b0ee
-lib64/omx/libOMX.Exynos.VP9.Decoder.so|8e57a480f9f5849f5e7626e9ae19be90882420eb
-lib/omx/libOMX.Exynos.VP9.Decoder.so|b1b6fe1f5c886dec3a28da1c03a8699f215f1df3
-lib64/omx/libOMX.Exynos.WMV.Decoder.so|c577270be20e9f8a4e474ac58b83fef7eea1d72c
-lib/omx/libOMX.Exynos.WMV.Decoder.so|bb13f7a5ece979b055cdcc189549af5fea008dbe
+# OMX
+lib64/libExynosOMX_Core.so
+lib/libExynosOMX_Core.so
+lib64/libExynosOMX_Resourcemanager.so
+lib/libExynosOMX_Resourcemanager.so
+lib64/libstagefrighthw.so
+lib/libstagefrighthw.so
+lib64/omx/libOMX.Exynos.AVC.Decoder.so
+lib/omx/libOMX.Exynos.AVC.Decoder.so
+lib64/omx/libOMX.Exynos.AVC.Encoder.so
+lib/omx/libOMX.Exynos.AVC.Encoder.so
+lib64/omx/libOMX.Exynos.HEVC.Decoder.so
+lib/omx/libOMX.Exynos.HEVC.Decoder.so
+lib64/omx/libOMX.Exynos.HEVC.Encoder.so
+lib/omx/libOMX.Exynos.HEVC.Encoder.so
+lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
+lib/omx/libOMX.Exynos.MPEG4.Decoder.so
+lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
+lib/omx/libOMX.Exynos.MPEG4.Encoder.so
+lib64/omx/libOMX.Exynos.VP8.Decoder.so
+lib/omx/libOMX.Exynos.VP8.Decoder.so
+lib64/omx/libOMX.Exynos.VP8.Encoder.so
+lib/omx/libOMX.Exynos.VP8.Encoder.so
+lib64/omx/libOMX.Exynos.VP9.Decoder.so
+lib/omx/libOMX.Exynos.VP9.Decoder.so
+lib64/omx/libOMX.Exynos.WMV.Decoder.so
+lib/omx/libOMX.Exynos.WMV.Decoder.so
 
 # RIL - G965FXXS9DTD7 (Q)
 lib/libsecril-client.so|4f9c59b0a5e40af38402a3f2cb79f12eb023c207
