@@ -218,8 +218,8 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio.service \
     android.hardware.audio@5.0-impl \
-    android.hardware.audio@2.0-service \
     android.hardware.audio.effect@5.0-impl \
     android.hardware.audio.common-util \
     android.hardware.audio.common@2.0-util \
