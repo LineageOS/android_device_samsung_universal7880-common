@@ -238,7 +238,7 @@ endif
 BOARD_SECCOMP_POLICY += device/samsung/universal7880-common/seccomp
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/samsung/universal7880-common/sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += device/samsung/universal7880-common/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
