@@ -26,7 +26,7 @@ PRODUCT_HOST_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.samsungexynos7880 \
     init.baseband.rc \
-    init.rilchip.rc \
+    init.vendor.rilchip.rc \
     init.power.rc \
     init.samsung.rc \
     init.samsungexynos7880.rc \
