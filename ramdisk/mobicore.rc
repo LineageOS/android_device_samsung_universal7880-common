@@ -2,11 +2,9 @@ on post-fs
     setprop sys.mobicoredaemon.enable stopped
 
 on nonencrypted
-    mkdir /data/vendor/mcRegistry 0775 system system
     mkdir /data/misc/mcRegistry 0775 system system
 
 on property:vold.decrypt=trigger_restart_framework
-    mkdir /data/vendor/mcRegistry 0775 system system
     mkdir /data/misc/mcRegistry 0775 system system
 
 on post-fs
