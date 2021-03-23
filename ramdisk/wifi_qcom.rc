@@ -1,5 +1,6 @@
 on post-fs-data
     # for fwpath
+<<<<<<< HEAD
     chown wifi wifi /sys/module/wlan/parameters/fwpath
     chmod 0644 /sys/module/wlan/parameters/fwpath
 
@@ -7,6 +8,14 @@ on post-fs-data
     chmod 0640 /sys/wifi/wifiver
     chown wifi wifi /sys/wifi/softap
     chmod 0640 /sys/wifi/softap
+=======
+    chmod 0666 /sys/module/wlan/parameters/fwpath
+
+    chown wifi root /sys/wifi/wifiver
+    chmod 0660 /sys/wifi/wifiver
+    chown wifi root /sys/wifi/softap
+    chmod 0660 /sys/wifi/softap
+>>>>>>> 5390de3... [WIP] universal7880: Update init files from A720S P firmware
 
     # for WIFI Antenna
     write /data/vendor/conn/.wificable.info E
@@ -16,6 +25,7 @@ on post-fs-data
     chmod 0664 /sys/wifi/wificable
 
     # for WIFI TRP/TIS
+<<<<<<< HEAD
     chown wifi wifi /data/vendor/conn/.psm.info
     chmod 0644 /data/vendor/conn/.psm.info
     chown wifi wifi /sys/wifi/pm
@@ -24,3 +34,13 @@ on post-fs-data
     # for WIFI Antenna Selection
     chown wifi wifi /data/vendor/conn/.ant.info
     chmod 0644 /data/vendor/conn/.ant.info
+=======
+    chown wifi root /data/vendor/conn/.psm.info
+    chmod 0664 /data/vendor/conn/.psm.info
+    chown wifi root /sys/wifi/pm
+    chmod 0660 /sys/wifi/pm
+
+    # for WIFI Antenna Selection
+    chown wifi root /data/vendor/conn/.ant.info
+    chmod 0664 /data/vendor/conn/.ant.info
+>>>>>>> 5390de3... [WIP] universal7880: Update init files from A720S P firmware

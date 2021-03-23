@@ -1,14 +1,19 @@
 # Wi-Fi init file
 on post-fs-data
+<<<<<<< HEAD
     mkdir /data/vendor 0771 root system
     mkdir /data/vendor/log 0771 root system
     mkdir /data/vendor/conn 0771 wifi wifi
+=======
+    mkdir /data/vendor/conn 0771 wifi root
+>>>>>>> 5390de3... [WIP] universal7880: Update init files from A720S P firmware
     mkdir /data/vendor/wifi 0771 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
     mkdir /data/vendor/log/wifi 0770 wifi system
 
     # for WIFI TRP/TIS
+<<<<<<< HEAD
     chown wifi wifi /data/vendor/conn/.psm.info
     chmod 0640 /data/vendor/conn/.psm.info
 
@@ -19,22 +24,34 @@ on post-fs-data
     # for WIFI Version
     chown wifi wifi /data/vendor/conn/.wifiver.info
     chmod 0644 /data/vendor/conn/.wifiver.info
+=======
+    chown wifi root /data/vendor/conn/.psm.info
+    chmod 0660 /data/vendor/conn/.psm.info
+
+    # for WIFI Antenna Selection
+    chown wifi root /data/vendor/conn/.ant.info
+    chmod 0660 /data/vendor/conn/.ant.info
+
+    # for WIFI Version
+    chown wifi root /data/vendor/conn/.wifiver.info
+    chmod 0664 /data/vendor/conn/.wifiver.info
+>>>>>>> 5390de3... [WIP] universal7880: Update init files from A720S P firmware
 
     # for WIFI MEMDUMP
     # The default value of below memdump file is set in SecProductFeature
     #write /data/vendor/conn/.memdump.info 2
-    chown wifi wifi /data/vendor/conn/.memdump.info
-    chmod 0640 /data/vendor/conn/.memdump.info
+    chown wifi root /data/vendor/conn/.memdump.info
+    chmod 0660 /data/vendor/conn/.memdump.info
 
     # for WIFI hotspot
-    chown wifi wifi /data/vendor/conn/.softap.info
-    chmod 0644 /data/vendor/conn/.softap.info
+    chown wifi root /data/vendor/conn/.softap.info
+    chmod 0664 /data/vendor/conn/.softap.info
     chown system wifi /vendor/etc/wifi/indoorchannel.info
     chmod 0664 /vendor/etc/wifi/indoorchannel.info
 
     # for WIFI MAC
-    chown wifi wifi /sys/wifi/mac_addr
-    chmod 0640 /sys/wifi/mac_addr
+    chown wifi root /sys/wifi/mac_addr
+    chmod 0660 /sys/wifi/mac_addr
 
 on boot
     setprop wifi.interface wlan0
