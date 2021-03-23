@@ -25,11 +25,11 @@ LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.rilchip.rc
+LOCAL_MODULE       := init.vendor.rilchip.rc
 LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := BOOT
-LOCAL_SRC_FILES    := init.rilchip.rc
-LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := init.vendor.rilchip.rc
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -85,6 +85,14 @@ LOCAL_MODULE       := wifi.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := wifi.rc
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := wifi_qcom.rc
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := wifi_qcom.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/
 include $(BUILD_PREBUILT)
 
