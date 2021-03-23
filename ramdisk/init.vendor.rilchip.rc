@@ -32,9 +32,3 @@ on property:hwservicemanager.ready=false
 
 on property:hwservicemanager.ready=false && property:ro.vendor.multisim.simslotcount=2
     restart ril-daemon1
-
-on early-boot
-# Assign TCP buffer thresholds to be ceiling value of technology maximums
-# Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max 2097152
-    write /proc/sys/net/core/wmem_max 2097152
