@@ -1,4 +1,5 @@
 on init
+    mkdir /efs 0771 radio system
     symlink /dev/block/platform/13540000.dwmmc0/by-name/RADIO /dev/mbin0
     restorecon /dev/mbin0
 
@@ -78,3 +79,4 @@ on property:ro.multisim.simslotcount=1
 
 on property:ro.multisim.simslotcount=2
     setprop persist.radio.multisim.config dsds
+
