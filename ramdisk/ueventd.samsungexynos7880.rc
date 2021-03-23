@@ -65,33 +65,33 @@
 /dev/video9               0660   mediacodec mediadrm
 
 # camera
-/dev/video100             0660   cameraserver      cameraserver
-/dev/video101             0660   cameraserver      cameraserver
-/dev/video102             0660   cameraserver      cameraserver
-/dev/video109             0660   cameraserver      cameraserver
-/dev/video110             0660   cameraserver      cameraserver
-/dev/video111             0660   cameraserver      cameraserver
-/dev/video112             0660   cameraserver      cameraserver
-/dev/video120             0660   cameraserver      cameraserver
-/dev/video121             0660   cameraserver      cameraserver
-/dev/video122             0660   cameraserver      cameraserver
-/dev/video130             0660   cameraserver      cameraserver
-/dev/video131             0660   cameraserver      cameraserver
-/dev/video132             0660   cameraserver      cameraserver
-/dev/video140             0660   cameraserver      cameraserver
-/dev/video141             0660   cameraserver      cameraserver
-/dev/video142             0660   cameraserver      cameraserver
-/dev/video150             0660   cameraserver      cameraserver
-/dev/video151             0660   cameraserver      cameraserver
-/dev/video152             0660   cameraserver      cameraserver
-/dev/video160             0660   cameraserver      cameraserver
-/dev/video161             0660   cameraserver      cameraserver
-/dev/video170             0660   cameraserver      cameraserver
-/dev/video171             0660   cameraserver      cameraserver
-/dev/video172             0660   cameraserver      cameraserver
-/dev/video173             0660   cameraserver      cameraserver
-/dev/video174             0660   cameraserver      cameraserver
-/dev/video180             0660   cameraserver      cameraserver
+/dev/video100             0660   media      media
+/dev/video101             0660   media      media
+/dev/video102             0660   media      media
+/dev/video109             0660   media      media
+/dev/video110             0660   media      media
+/dev/video111             0660   media      media
+/dev/video112             0660   media      media
+/dev/video120             0660   media      media
+/dev/video121             0660   media      media
+/dev/video122             0660   media      media
+/dev/video130             0660   media      media
+/dev/video131             0660   media      media
+/dev/video132             0660   media      media
+/dev/video140             0660   media      media
+/dev/video141             0660   media      media
+/dev/video142             0660   media      media
+/dev/video150             0660   media      media
+/dev/video151             0660   media      media
+/dev/video152             0660   media      media
+/dev/video160             0660   media      media
+/dev/video161             0660   media      media
+/dev/video170             0660   media      media
+/dev/video171             0660   media      media
+/dev/video172             0660   media      media
+/dev/video173             0660   media      media
+/dev/video174             0660   media      media
+/dev/video180             0660   media      media
 /dev/media2               0660   media      media
 
 # hevc
@@ -104,12 +104,8 @@
 # audio
 /dev/seiren               0660   system     audio
 
-# MobiCore
-#/dev/mobicore             0600   drmrpc     drmrpc
-#/dev/mobicore-user        0660   drm        drmrpc
-
 # Secure MEM driver
-#/dev/s5p-smem             0660   drm        drmrpc
+/dev/s5p-smem             0660   drm        drmrpc
 
 # cbd modem block
 /dev/block/mmcblk0p5     0400  radio   system
@@ -123,24 +119,29 @@
 /dev/ramdump_memshare     0660   system     radio
 /dev/umts_ciq*            0660   system     bridge_rw
 
-# Google FRP solution
-/dev/block/platform/13540000.dwmmc0/by-name/PERSISTENT    0660    system    system
-
-# Reactivation Lock solution
-/dev/block/platform/13540000.dwmmc0/by-name/STEADY    0660    system    system
-
-# from Samsungueventd.rc
-
-# MobiCore
-/dev/mobicore             0700   system     system
-/dev/mobicore-user        0666   radio     system
-
-# Secure MEM driver
-/dev/s5p-smem             0666   system     system
-
 # Sensorhub IIO
 /dev/ssp_sensorhub        0660   system       system
 /dev/iio:device*          0660   system       system
 /sys/devices/13930000.spi/spi_master/spi2/spi2.0/iio:device*    buffer/enable       0660    system    system
 /sys/devices/13930000.spi/spi_master/spi2/spi2.0/iio:device*    buffer/length       0660    system    system
 /sys/bus/iio/devices/iio:device*    0664   system     radio
+
+# interactive governor parameters
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/timer_rate                  0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/timer_slack                 0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/min_sample_time             0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/hispeed_freq                0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/target_loads                0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/go_hispeed_load             0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/above_hispeed_delay         0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/boost                       0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/boostpulse                  0200    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/input_boost                 0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/boostpulse_duration         0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/io_is_busy                  0660    system  system
+
+# Google FRP solution
+/dev/block/platform/13540000.dwmmc0/by-name/PERSISTENT    0660    system    system
+
+# Reactivation Lock
+/dev/block/platform/13540000.dwmmc0/by-name/STEADY    0660    system    system

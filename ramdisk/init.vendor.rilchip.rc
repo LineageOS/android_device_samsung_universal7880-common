@@ -21,20 +21,3 @@ service ril-daemon1 /vendor/bin/hw/rild -c 2 -l ${vendor.sec.rild.libpath2}
     onrestart restart cpboot-daemon
     onrestart restart DIAG-daemon
 
-on post-fs-data
-    mkdir /data/vendor/secradio 0770 radio radio
-
-on property:ro.vendor.multisim.simslotcount=1
-    stop ril-daemon1
-
-on property:hwservicemanager.ready=false
-    restart ril-daemon
-
-on property:hwservicemanager.ready=false && property:ro.vendor.multisim.simslotcount=2
-    restart ril-daemon1
-
-on early-boot
-# Assign TCP buffer thresholds to be ceiling value of technology maximums
-# Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max 2097152
-    write /proc/sys/net/core/wmem_max 2097152

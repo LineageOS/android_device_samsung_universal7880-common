@@ -75,6 +75,6 @@ on property:ro.multisim.simslotcount=*
 
 on property:ro.multisim.simslotcount=1
     setprop persist.radio.multisim.config ss
-
+    
 on property:ro.multisim.simslotcount=2
     setprop persist.radio.multisim.config dsds
