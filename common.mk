@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
     init.gps.rc \
     mobicore.rc \
     wifi.rc \
-    wifi_qcom.rc \
     ueventd.samsungexynos7880.rc
 
 # Permissions
