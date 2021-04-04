@@ -1,4 +1,5 @@
 service sec-camera-provider-2-4 /vendor/bin/hw/vendor.samsung.hardware.camera.provider@2.4-service
+    interface vendor.samsung.hardware.camera.provider@2.4::ISecCameraProvider legacy/0
     class hal
     user cameraserver
     group audio camera input drmrpc system media_rw sdcard_rw
