@@ -39,6 +39,7 @@ type sysfs_iio, fs_type, sysfs_type, mlstrustedobject;
 ### data types
 type display_vendor_data_file, file_type, data_file_type;
 type fingerprintd_vendor_data_file, data_file_type, file_type;
+type mobicore_vendor_data_file, data_file_type, file_type;
 type mediadrm_data_file, file_type, data_file_type;
 type radio_vendor_data_file, data_file_type, file_type;
 type nfc_vendor_data_file, data_file_type, file_type;
