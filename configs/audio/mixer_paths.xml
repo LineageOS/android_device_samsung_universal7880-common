@@ -1036,8 +1036,7 @@
 
 	<!-- WifiCall input -->
 	<path name="wificall_wb-handset-mic">
-		<path name="route-ap-rx" />
-		<path name="dev-dual-mic" />
+		<path name="media-mic" />
 	</path>
 
 	<path name="wificall_wb-speaker-mic">
@@ -1050,8 +1049,7 @@
 	</path>
 
 	<path name="wificall_wb-headphone-mic">
-		<path name="route-ap-rx" />
-		<path name="dev-dual-mic" />
+		<path name="media-mic" />
 	</path>
 
 	<path name="wificall_wb-bt-sco-headset-in">
@@ -1059,8 +1057,7 @@
 	</path>
 
 	<path name="wificall_nb-handset-mic">
-		<path name="route-ap-rx" />
-		<path name="dev-dual-mic" />
+		<path name="media-mic" />
 	</path>
 
 	<path name="wificall_nb-speaker-mic">
@@ -1073,8 +1070,7 @@
 	</path>
 
 	<path name="wificall_nb-headphone-mic">
-		<path name="route-ap-rx" />
-		<path name="dev-dual-mic" />
+		<path name="media-mic" />
 	</path>
 
 	<path name="wificall_nb-bt-sco-headset-in">
@@ -1182,7 +1178,7 @@
 
 	<path name="incall_nb-headphone-mic">
 		<path name="route-cp" />
-		<path name="dev-dual-mic" />
+		<path name="dev-main-mic" />
 	</path>
 
 	<path name="incall_nb-bt-sco-headset-in">
