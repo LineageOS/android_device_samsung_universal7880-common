@@ -1,4 +1,8 @@
 service vendor.drm-widevine-hal-1-1 /vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+    interface android.hardware.drm@1.0::ICryptoFactory widevine
+    interface android.hardware.drm@1.0::IDrmFactory widevine
+    interface android.hardware.drm@1.1::ICryptoFactory widevine
+    interface android.hardware.drm@1.1::IDrmFactory widevine
     class hal
     user media
     group media mediadrm drmrpc system inet readproc radio
