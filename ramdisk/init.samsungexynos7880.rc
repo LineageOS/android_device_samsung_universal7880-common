@@ -1,7 +1,3 @@
-import init.samsungexynos7880.usb.rc
-import init.baseband.rc
-import init.samsung.rc
-
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
