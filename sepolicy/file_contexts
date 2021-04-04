@@ -106,7 +106,8 @@
 /data/vendor/mediadrm(/.*)?       u:object_r:mediadrm_data_file:s0
 
 # mobicore
-/data/misc/mcRegistry(/.*)?  u:object_r:mobicore_data_file:s0
+/data/misc/mcRegistry(/.*)?    u:object_r:mobicore_data_file:s0
+/data/vendor/mcRegistry(/.*)?  u:object_r:mobicore_vendor_data_file:s0
 
 # biometrics
 /data/biometrics(/.*)?       u:object_r:fingerprintd_data_file:s0
