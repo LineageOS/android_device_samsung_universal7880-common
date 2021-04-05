@@ -18,6 +18,9 @@
 #ifndef SAMSUNG_POWER_H
 #define SAMSUNG_POWER_H
 
+#define HAS_TOUCHSCREEN_FB_NOTIFIER_CALLBACK 1
+#define HAS_TOUCHKEY_FB_NOTIFIER_CALLBACK 1
+
 static const std::vector<std::string> cpuSysfsPaths = {
     "/sys/devices/system/cpu/cpu0",
     "/sys/devices/system/cpu/cpu4"
