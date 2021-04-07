@@ -30,6 +30,7 @@ TARGET_BOARD_PLATFORM := exynos5
 #TARGET_SLSI_VARIANT := bsp
 TARGET_SOC := exynos7880
 TARGET_BOOTLOADER_BOARD_NAME := universal7880
+BOARD_VENDOR := samsung
 
 # CPU
 TARGET_ARCH := arm64
@@ -197,9 +198,7 @@ CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 TARGET_TAP_TO_WAKE_NODE := /sys/class/sec/tsp/dt2w_enable
 
 # RIL
-BOARD_VENDOR := samsung
 BOARD_MODEM_TYPE := ss333
-BOARD_PROVIDES_LIBRIL := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security Patch Level
