@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "35274e6e_e09182d5",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2021-04-07T15:14:23Z",
+      "side": 0,
+      "message": "Removing this variable breaks build. Used in hardware/ril/libril/Android.mk",
+      "revId": "3a5533a07bd15636f7a2a596f659049c30204f30",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
