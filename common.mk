@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     init.recovery.samsungexynos7880.rc \
     init.gps.rc \
     mobicore.rc \
-    wifi.rc \
+    wifi_sec.rc \
     wifi_qcom.rc \
     ueventd.samsungexynos7880.rc
 
