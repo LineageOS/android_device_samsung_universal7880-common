@@ -115,11 +115,6 @@ on post-fs-data
     # create basic filesystem structure
     mkdir /data/log 0775 system log
     mkdir /data/log/bt 0770 bluetooth bluetooth
-    mkdir /data/local/dsms 0710 dsms dsms
-    rm /data/local/dsms/preboot.log
-    write /data/local/dsms/preboot.log ""
-    chown dsms dsms /data/local/dsms/preboot.log
-    chmod 0620 /data/local/dsms/preboot.log
 
     #lpnetConfig AppSync
     mkdir /data/misc/lpnet 0700 system system
@@ -195,10 +190,6 @@ on post-fs-data
     # change owner background io bigdata node for hqm write
     chown system system /sys/fs/fsio/bgiostat/sec_stat
 
-# [ SEC_PRODUCT_FEATURE_SECURITY_SUPPORT_FIVE
-    mkdir /data/misc/integrity 0775 vendor_audit system
-# ] SEC_PRODUCT_FEATURE_SECURITY_SUPPORT_FIVE
-
 # [ SEC_AASA_ASKS_PORTING
     # Seperate location for storing security policy files on data
     mkdir /data/security 0701 system system
@@ -254,11 +245,11 @@ on post-fs-data
     mkdir /data/app_fonts 0775 system system
 
 # [ SEC_SELINUX_PORTING_COMMON
-    restorecon --recursive --force /efs
-    restorecon --recursive --force /cpefs
-    restorecon --recursive --force /mnt/vendor/efs
-    restorecon --recursive --force /mnt/vendor/cpefs
-    restorecon --recursive --force /sec_efs
+    restorecon --recursive /efs
+    restorecon --recursive /cpefs
+    restorecon --recursive /mnt/vendor/efs
+    restorecon --recursive /mnt/vendor/cpefs
+    restorecon --recursive /sec_efs
     restorecon /sys/kernel/debug/tracing/trace_marker
 # ] SEC_SELINUX_PORTING_COMMON
 
@@ -1090,7 +1081,7 @@ on property:sys.boot_completed=1
 
 # package_fw
 on property:sys.do_restorecon_user=*
-    restorecon --recursive --force /data/media/${sys.do_restorecon_user}
+    restorecon --recursive /data/media/${sys.do_restorecon_user}
 
 # Booting performance
 on property:persist.sys.zygote.early=true
