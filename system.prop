@@ -26,6 +26,7 @@ dalvik.vm.isa.arm.features=default
 # Graphics
 debug.hwc.skip_dma_types=0,2
 ro.opengles.version=196610
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # Media
 debug.stagefright.ccodec=0
