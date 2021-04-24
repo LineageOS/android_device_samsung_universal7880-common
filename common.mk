@@ -93,6 +93,11 @@ PRODUCT_PACKAGES += \
     libion \
     libfimg
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-impl \
+    android.hardware.health@2.0-service
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
