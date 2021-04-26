@@ -20,15 +20,3 @@ service ril-daemon1 /vendor/bin/hw/rild -c 2 -l ${vendor.sec.rild.libpath2}
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW SYS_ADMIN CHOWN SYS_TIME
     onrestart restart cpboot-daemon
     onrestart restart DIAG-daemon
-
-on post-fs-data
-    mkdir /data/vendor/secradio 0770 radio radio
-
-on property:ro.vendor.multisim.simslotcount=1
-    stop ril-daemon1
-
-on property:hwservicemanager.ready=false
-    restart ril-daemon
-
-on property:hwservicemanager.ready=false && property:ro.vendor.multisim.simslotcount=2
-    restart ril-daemon1

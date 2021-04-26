@@ -28,3 +28,4 @@ sys.mobicoredaemon.enable         u:object_r:tee_prop:s0
 ro.multisim.                   u:object_r:vendor_radio_prop:s0
 ro.vendor.multisim.            u:object_r:vendor_radio_prop:s0
 ro.vendor.radio.               u:object_r:vendor_radio_prop:s0
+ro.multisim.simslotcount       u:object_r:radio_prop:s0

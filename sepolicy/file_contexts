@@ -216,11 +216,11 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey                    u:object_r:hal_drm_clearkey_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine                    u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/sec\.android\.hardware\.nfc@1\.1-service                         u:object_r:hal_nfc_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.radio@1\.3-radio-service\.samsung             u:object_r:hal_radio_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android.hardware.usb@1.1-service\.universal7880                  u:object_r:hal_usb_default_exec:s0
 
 # deamons in vendor
-/(vendor|system/vendor)/bin/cbd              u:object_r:cpboot-daemon_exec:s0
-/(vendor|system/vendor)/bin/hw/gpsd          u:object_r:gpsd_exec:s0
-/(vendor|system/vendor)/bin/mcDriverDaemon   u:object_r:tee_exec:s0
-/(vendor|system/vendor)/bin/modemloader      u:object_r:modemloader_exec:s0
+/(vendor|system/vendor)/bin/cbd               u:object_r:cpboot-daemon_exec:s0
+/(vendor|system/vendor)/bin/hw/gpsd           u:object_r:gpsd_exec:s0
+/(vendor|system/vendor)/bin/mcDriverDaemon    u:object_r:tee_exec:s0
+/(vendor|system/vendor)/bin/modemloader       u:object_r:modemloader_exec:s0
+/(vendor|system/vendor)/bin/secril_config_svc u:object_r:vendor_secril_config_svc_exec:s0

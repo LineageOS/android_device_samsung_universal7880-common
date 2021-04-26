@@ -1,3 +1,2 @@
-allow hal_radio_default hal_sec_radio_hwservice:hwservice_manager find;
 allow hal_radio_default rild:binder call;
 allow hal_radio_default rild:binder transfer;
