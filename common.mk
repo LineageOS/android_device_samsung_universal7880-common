@@ -27,6 +27,7 @@ PRODUCT_PACKAGES += \
     fstab.samsungexynos7880 \
     init.baseband.rc \
     init.vendor.rilchip.rc \
+    init.vendor.rilcommon.rc \
     init.samsung.rc \
     init.samsungexynos7880.rc \
     init.samsungexynos7880.usb.rc \
@@ -147,7 +148,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4 \
     android.hardware.radio.config@1.2 \
-    android.hardware.radio@1.3-radio-service.samsung \
     libxml2 \
     libprotobuf-cpp-full
 
