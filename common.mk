@@ -94,6 +94,11 @@ PRODUCT_PACKAGES += \
     libion \
     libfimg
 
+# Configstore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.1-service \
+    vndservicemanager
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
