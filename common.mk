@@ -182,6 +182,7 @@ PRODUCT_PACKAGES += \
     libqsap_sdk \
     libQWiFiSoftApCfg \
     libwpa_client \
+    WifiOverlay \
     TetheringConfigOverlay \
     wificond \
     wifilogd \
