@@ -171,11 +171,8 @@ vendor/lib64/libMcRegistry.so
 vendor/bin/mcDriverDaemon
 
 # NFC
-lib64/vendor.samsung.hardware.nfc@1.1.so
-vendor/bin/hw/sec.android.hardware.nfc@1.1-service
 vendor/etc/nfc/sec_s3nrn81_rfreg.bin
 vendor/firmware/nfc/sec_s3nrn81_firmware.bin
-vendor/lib64/nfc_nci_sec.so
 
 # libsecnativefeature
 lib/libsecnativefeature.so
