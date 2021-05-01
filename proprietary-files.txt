@@ -25,7 +25,7 @@ lib/hw/camera.exynos5.so
 lib64/hw/camera.exynos5.so
 lib/libexynoscamera.so
 lib64/libexynoscamera.so
-lib/libexynoscamera3.so
+lib/libexynoscamera3.so|21dfda93fee73f515241f77c13828f93782055b2
 lib64/libexynoscamera3.so
 lib/libhwjpeg.so
 lib64/libhwjpeg.so
