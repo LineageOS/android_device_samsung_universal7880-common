@@ -11,5 +11,3 @@ allow hal_nfc_default {
 }:file create_file_perms;
 
 set_prop(hal_nfc_default, vendor_nfc_prop)
-
-allow hal_nfc_default hal_nfc_hwservice:hwservice_manager add;
