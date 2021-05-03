@@ -35,6 +35,13 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">83</integer>
 
+    <!-- Button backlight control. Possible values are:
+            0 - Not supported
+            1 - Supported, but only on/off mode
+            2 - Supported with variable brightness control
+    -->
+    <integer name="config_deviceSupportsButtonBrightnessControl">1</integer>
+
     <!-- Defines the actions shown in advanced reboot submenu -->
     <string-array name="config_restartActionsList">
         <item>restart</item>
