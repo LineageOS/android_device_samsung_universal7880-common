@@ -8,6 +8,22 @@
         "target_path": "hardware/samsung/nfc"
     },
     {
+        "repository": "android_hardware_samsung_slsi_exynos",
+        "target_path": "hardware/samsung_slsi/exynos"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi_exynos5",
+        "target_path": "hardware/samsung_slsi/exynos5"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi_exynos7880",
+        "target_path": "hardware/samsung_slsi/exynos7880"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi_openmax",
+        "target_path": "hardware/samsung_slsi/openmax"
+    },
+    {
         "repository": "android_kernel_samsung_universal7880",
         "target_path": "kernel/samsung/universal7880"
     }
