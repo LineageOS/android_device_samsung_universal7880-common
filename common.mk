@@ -88,8 +88,9 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.renderscript@1.0-impl \
-    gralloc.exynos5 \
-    memtrack.exynos5
+    memtrack.exynos5 \
+    hwcomposer.exynos5 \
+    libhwc2on1adapter
 
 PRODUCT_PACKAGES += \
     libion \
@@ -341,8 +342,8 @@ PRODUCT_PACKAGES += \
 TARGET_SYSTEM_PROP += device/samsung/universal7880-common/system.prop
 
 # call Samsung LSI board support package
-#$(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
-#$(call inherit-product, hardware/samsung_slsi/exynos7880/exynos7880.mk)
+$(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
+$(call inherit-product, hardware/samsung_slsi/exynos7880/exynos7880.mk)
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/universal7880-common/universal7880-common-vendor.mk)
