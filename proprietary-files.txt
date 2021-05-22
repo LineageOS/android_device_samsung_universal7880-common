@@ -67,7 +67,7 @@ vendor/lib64/vendor.samsung.camera.device@3.2-impl.so
 vendor/lib64/vendor.samsung.camera.device@3.3-impl.so
 vendor/lib64/vendor.samsung.camera.device@3.4-impl.so
 # from G960FXXS7CTA1 (P)
-vendor/bin/hw/vendor.samsung.hardware.camera.provider@2.4-service|edd072c6ef7c6909b4dc71a920023db2
+vendor/bin/hw/vendor.samsung.hardware.camera.provider@2.4-service|6b0a79b7f804b9368b90160722d9e8ae970f4bf5
 
 # DRM
 vendor/lib/liboemcrypto.so
