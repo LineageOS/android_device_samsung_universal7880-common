@@ -184,9 +184,7 @@ vendor/lib64/libprotobuf-cpp-full-3.9.1.so|b9613d7b25ffd6ab31f7aa32a904aa6f5f4f9
 vendor/bin/cbd|aae9a11fefb25f0293aa7da714a093d5f017d826
 vendor/bin/hw/rild|c77d17bde3312077a77a3a8238a62e649a996f44
 vendor/lib/libengmode_client.so|38b95cf93d0c1f497e1d8a6370e53b903bb03510
-vendor/lib/libreference-ril.so|46374a18b4a2cff2bbcd7eb4706421ac404dd924
 vendor/lib/libril.so|3e64e6fa4078d892d2c83b21edd1632bcf7fd827
-vendor/lib/librilutils.so|6af19cf1ab9ec150213d61552870277a6f49096b
 vendor/lib/libsec-ril-dsds.so|1bf5ba8954f7d0b8fc13b71aa4df7aa0bb0fa5ae
 vendor/lib/libsec-ril.so|5888ae1363fdb0ba5ec9e02df0cd1a12d64e6184
 vendor/lib/libsec_semRil.so|0e098bc1099a8cb466e29b2918c8968d214fb56c
@@ -199,9 +197,7 @@ vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so|8f1ef76608e97b5864e30ea2
 vendor/lib/vendor.samsung.hardware.radio@2.0.so|1c976df4082e7829578a9cb48c040706e1753a6d
 vendor/lib/vendor.samsung.hardware.radio@2.1.so|6ce633e09b82f54aabd789ca23a5f1833a232f68
 vendor/lib64/libengmode_client.so|ac3615bb78e4e569841abd804c0278c6de181b2c
-vendor/lib64/libreference-ril.so|3ed00a3a6d7baaef60d6edc4be9818d8ccea9801
 vendor/lib64/libril.so|d81e76523a5a28fdf488fa42c0e1d4a2b15fff19
-vendor/lib64/librilutils.so|ad142dbbca112ae7676a58b0f55bf1c1a04e87f7
 vendor/lib64/libsec-ril-dsds.so|ddc49c92278ba494d7d5c1362db91fb981952982
 vendor/lib64/libsec-ril.so|f1934f7303c5f3b3c11c3726b271c376f66720c4
 vendor/lib64/libsec_semRil.so|7987ec9be7bf937438c43fc0b9859f6c9b4b5787
