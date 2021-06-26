@@ -20,6 +20,8 @@ on init
     symlink /data/app /factory
     symlink /dev/block/platform/13540000.dwmmc0/by-name/PERSISTENT /dev/block/persistent
     symlink /dev/block/platform/13540000.dwmmc0/by-name/STEADY /dev/block/steady
+    
+    write /proc/sys/vm/page-cluster 0
 
 on post-fs-data
 # Log data folder
@@ -520,6 +522,7 @@ on boot
 on fs
     write /sys/class/scsi_disk/0:0:0:0/cache_type "none"
     mount_all /vendor/etc/fstab.samsungexynos7880
+    swapon_all /vendor/etc/fstab.samsungexynos7880
     setprop ro.crypto.fuse_sdcard true
     chown radio system /efs
 
