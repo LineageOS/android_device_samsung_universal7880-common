@@ -47,7 +47,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Audio
 AUDIOSERVER_MULTILIB := 32
-USE_XML_AUDIO_POLICY_CONF := 1
 
 # Extracted with libbootimg
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
