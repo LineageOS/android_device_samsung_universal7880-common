@@ -32,6 +32,8 @@ using android::sp;
 using android::status_t;
 using android::OK;
 
+using vendor::lineage::livedisplay::V2_0::IAntiFlicker;
+using vendor::lineage::livedisplay::V2_0::implementation::AntiFlicker;
 using vendor::lineage::livedisplay::V2_0::IDisplayColorCalibration;
 using vendor::lineage::livedisplay::V2_0::implementation::DisplayColorCalibration;
 using vendor::lineage::livedisplay::V2_0::IDisplayModes;
@@ -42,6 +44,7 @@ using vendor::lineage::livedisplay::V2_0::ISunlightEnhancement;
 using vendor::lineage::livedisplay::V2_0::implementation::SunlightEnhancement;
 
 int main() {
+    sp<IAntiFlicker> antiFlicker;
     sp<IDisplayColorCalibration> displayColorCalibration;
     sp<IDisplayModes> displayModes;
     sp<IReadingEnhancement> readingEnhancement;
@@ -49,6 +52,13 @@ int main() {
     status_t status;
 
     LOG(INFO) << "LiveDisplay HAL service is starting.";
+
+    antiFlicker = new AntiFlicker();
+    if (antiFlicker == nullptr) {
+        LOG(ERROR)
+            << "Can not create an instance of LiveDisplay HAL AntiFlicker Iface, exiting.";
+        goto shutdown;
+    }
 
     displayColorCalibration = new DisplayColorCalibration();
     if (displayColorCalibration == nullptr) {
@@ -79,6 +89,14 @@ int main() {
     }
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);
+
+    status = antiFlicker->registerAsService();
+    if (status != OK) {
+        LOG(ERROR)
+            << "Could not register service for LiveDisplay HAL AntiFlicker Iface ("
+            << status << ")";
+        goto shutdown;
+    }
 
     status = displayColorCalibration->registerAsService();
     if (status != OK) {
