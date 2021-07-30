@@ -25,4 +25,8 @@
 
     <!-- Default access point SSID used for tethering -->
     <string name="wifi_tether_configure_ssid_default" translatable="false">Samsung Galaxy A 2017</string>
+
+    <!-- Enable WPA2 to WPA3 auto-upgrade -->
+    <bool translatable="false" name="config_wifiSaeUpgradeEnabled">false</bool>
+
 </resources>
