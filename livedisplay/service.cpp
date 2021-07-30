@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.universal7880"
+#define LOG_TAG "vendor.lineage.livedisplay@2.1-service.universal7880"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
@@ -32,16 +32,16 @@ using android::sp;
 using android::status_t;
 using android::OK;
 
-using vendor::lineage::livedisplay::V2_0::IAntiFlicker;
-using vendor::lineage::livedisplay::V2_0::implementation::AntiFlicker;
-using vendor::lineage::livedisplay::V2_0::IDisplayColorCalibration;
-using vendor::lineage::livedisplay::V2_0::implementation::DisplayColorCalibration;
-using vendor::lineage::livedisplay::V2_0::IDisplayModes;
-using vendor::lineage::livedisplay::V2_0::implementation::DisplayModes;
-using vendor::lineage::livedisplay::V2_0::IReadingEnhancement;
-using vendor::lineage::livedisplay::V2_0::implementation::ReadingEnhancement;
-using vendor::lineage::livedisplay::V2_0::ISunlightEnhancement;
-using vendor::lineage::livedisplay::V2_0::implementation::SunlightEnhancement;
+using vendor::lineage::livedisplay::V2_1::IAntiFlicker;
+using vendor::lineage::livedisplay::V2_1::implementation::AntiFlicker;
+using vendor::lineage::livedisplay::V2_1::IDisplayColorCalibration;
+using vendor::lineage::livedisplay::V2_1::implementation::DisplayColorCalibration;
+using vendor::lineage::livedisplay::V2_1::IDisplayModes;
+using vendor::lineage::livedisplay::V2_1::implementation::DisplayModes;
+using vendor::lineage::livedisplay::V2_1::IReadingEnhancement;
+using vendor::lineage::livedisplay::V2_1::implementation::ReadingEnhancement;
+using vendor::lineage::livedisplay::V2_1::ISunlightEnhancement;
+using vendor::lineage::livedisplay::V2_1::implementation::SunlightEnhancement;
 
 int main() {
     sp<IAntiFlicker> antiFlicker;
