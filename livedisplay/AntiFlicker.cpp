@@ -31,14 +31,14 @@ namespace livedisplay {
 namespace V2_0 {
 namespace implementation {
 
-static constexpr const char* kDcDimmingStatusPath = "/sys/class/lcd/panel/smart_on";
+static constexpr const char* kAntiFlickerStatusPath = "/sys/class/lcd/panel/smart_on";
 
 // Methods from ::vendor::lineage::livedisplay::V2_0::IAntiFlicker follow.
 Return<bool> AntiFlicker::isEnabled() {
     std::string tmp;
     int32_t contents = 0;
 
-    if (ReadFileToString(kDcDimmingStatusPath, &tmp)) {
+    if (ReadFileToString(kAntiFlickerStatusPath, &tmp)) {
         contents = std::stoi(Trim(tmp));
     }
 
@@ -46,7 +46,7 @@ Return<bool> AntiFlicker::isEnabled() {
 }
 
 Return<bool> AntiFlicker::setEnabled(bool enabled) {
-    return WriteStringToFile(enabled ? "1" : "0", kDcDimmingStatusPath, true);
+    return WriteStringToFile(enabled ? "1" : "0", kAntiFlickerStatusPath, true);
 }
 
 }  // namespace implementation
