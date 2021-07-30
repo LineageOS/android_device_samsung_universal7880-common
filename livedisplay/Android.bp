@@ -18,6 +18,7 @@ cc_binary {
     relative_install_path: "hw",
     init_rc: ["vendor.lineage.livedisplay@2.0-service.universal7880.rc"],
     srcs: [
+        "AntiFlicker.cpp",
         "DisplayColorCalibration.cpp",
         "DisplayModes.cpp",
         "ReadingEnhancement.cpp",
