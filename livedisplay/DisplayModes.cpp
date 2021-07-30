@@ -23,7 +23,7 @@
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace implementation {
 
 static constexpr const char* kModePath = "/sys/class/mdnie/mdnie/mode";
@@ -61,11 +61,11 @@ DisplayModes::DisplayModes() : mDefaultModeId(0) {
     setDisplayMode(mDefaultModeId, false);
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IDisplayModes follow.
+// Methods from ::vendor::lineage::livedisplay::V2_1::IDisplayModes follow.
 Return<void> DisplayModes::getDisplayModes(getDisplayModes_cb resultCb) {
     std::ifstream maxModeFile(kModeMaxPath);
     int value;
-    std::vector<DisplayMode> modes;
+    std::vector<V2_0::DisplayMode> modes;
     if (!maxModeFile.fail()) {
         maxModeFile >> value;
     } else {
@@ -125,7 +125,7 @@ Return<bool> DisplayModes::setDisplayMode(int32_t modeID, bool makeDefault) {
 // Methods from ::android::hidl::base::V1_0::IBase follow.
 
 }  // namespace implementation
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
