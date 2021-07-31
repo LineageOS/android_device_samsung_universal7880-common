@@ -1,0 +1,2 @@
+allow fsck_untrusted sysfs_mmc:file r_file_perms;
+allow fsck_untrusted sysfs_mmc:dir search;
