@@ -35,6 +35,8 @@ type sysfs_lcd, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_modem, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_virtual, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_iio, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_graphics, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_mmc, fs_type, sysfs_type, mlstrustedobject;
 
 ### data types
 type display_vendor_data_file, file_type, data_file_type;

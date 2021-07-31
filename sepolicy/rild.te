@@ -58,6 +58,7 @@ allow rild radio_block_device:blk_file r_file_perms;
 
 # prop
 set_prop(rild, vendor_cbd_prop)
+allow rild vendor_radio_prop:file { read open getattr };
 
 # /dev/knox_kap
 allow rild knox_device:chr_file r_file_perms;
