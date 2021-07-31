@@ -25,3 +25,5 @@ allow kernel wifi_data_file:file rw_file_perms;
 
 # sysfs_lcd
 allow kernel sysfs_lcd:file { open read };
+
+allow kernel block_device:dir search;
