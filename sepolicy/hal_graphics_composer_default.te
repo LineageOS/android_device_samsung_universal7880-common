@@ -1,0 +1,13 @@
+allow hal_graphics_composer_default self:netlink_kobject_uevent_socket { read create getattr setopt bind };
+
+# /dev/vndbinder and /dev/s5p-mem
+allow hal_graphics_composer_default {
+    vndbinder_device
+    secmem_device
+}:chr_file rw_file_perms;
+
+# /sys/devices/14830000.decon_f/
+allow hal_graphics_composer_default sysfs_graphics:file r_file_perms;
+allow hal_graphics_composer_default sysfs_graphics:dir search;
+
+allow hal_graphics_composer_default video_device:chr_file rw_file_perms;

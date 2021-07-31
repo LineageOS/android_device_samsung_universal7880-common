@@ -9,3 +9,5 @@ allow mediacodec sysfs:dir { open read };
 # sysfs_virtual
 allow mediacodec sysfs_virtual:dir { open read search };
 allow mediacodec sysfs_virtual:file { open read };
+
+binder_call(mediacodec, hal_power_default)

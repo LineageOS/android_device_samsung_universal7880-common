@@ -6,6 +6,9 @@ set_prop(vendor_secril_config_svc, vendor_radio_prop)
 set_prop(vendor_secril_config_svc, radio_prop)
 
 # read /efs/factory.prop
-allow vendor_secril_config_svc efs_file:file r_file_perms;
+allow vendor_secril_config_svc {
+    efs_file
+    factoryprop_efs_file
+}:file r_file_perms;
 
 init_daemon_domain(vendor_secril_config_svc);

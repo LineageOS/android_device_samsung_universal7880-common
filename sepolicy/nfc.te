@@ -1,2 +1,5 @@
 allow nfc sec_efs_file:dir search;
 allow nfc efs_file:dir search;
+
+# /data/nfc
+allow nfc system_data_file:file open;
