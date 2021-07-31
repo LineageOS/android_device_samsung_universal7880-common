@@ -58,3 +58,8 @@ allow system_server gps_vendor_data_file:file create_file_perms;
 unix_socket_connect(system_server, property, gpsd)
 
 allow system_server proc:file { read open getattr };
+
+allow system_server {
+    userspace_reboot_exported_prop
+    userspace_reboot_config_prop
+}:file { read open getattr };
