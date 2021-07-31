@@ -13,6 +13,7 @@
 /dev/mobicore-user           u:object_r:tee_device:s0
 
 /dev/v4l-subdev[0-9]*        u:object_r:video_device:s0
+/dev/video(/.*)?             u:object_r:video_device:s0
 /dev/m2m1shot_scaler[0-9]*   u:object_r:video_device:s0
 /dev/media[0-3]*             u:object_r:camera_device:s0
 /dev/m2m1shot_jpeg           u:object_r:camera_device:s0
@@ -148,6 +149,9 @@
 /sys/devices/soc0/machine      u:object_r:sysfs_gps:s0
 /sys/devices/soc0/revision     u:object_r:sysfs_gps:s0
 
+# graphics
+/sys/devices/14830000.decon_f(/.*)?           u:object_r:sysfs_graphics:s0
+
 # input
 /sys/devices/i2c@20/i2c-6/6-0020/input/input0(/.*)?         u:object_r:sysfs_input:s0
 /sys/devices/13890000.i2c/i2c-9/9-0048/input/input1(/.*)?   u:object_r:sysfs_input:s0
@@ -167,6 +171,9 @@
 /sys/devices/[0-9]*\.dsim/lcd/panel/manufacture_code    u:object_r:sysfs_lcd:s0
 /sys/devices/[0-9]*\.dsim/lcd/panel/temperature         u:object_r:sysfs_lcd:s0
 /sys/devices/[0-9]*\.dsim/lcd/panel/window_type         u:object_r:sysfs_lcd:s0
+
+# mmc
+/sys/devices/13560000.dwmmc2(/.*)?         u:object_r:sysfs_mmc:s0
 
 # modem
 /sys/module/modem_ctrl_ss310ap/parameters/ds_detect   u:object_r:sysfs_modem:s0
