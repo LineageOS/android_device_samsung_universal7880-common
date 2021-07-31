@@ -26,6 +26,9 @@ allow init sysfs_mdnie:lnk_file { read setattr };
 allow init sysfs_camera:file { relabelto setattr };
 allow init sysfs_camera:filesystem associate;
 
+# ZRAM
+allow init ram_device:blk_file rw_file_perms;
+
 # sysfs
 allow init sysfs_bluetooth_writable:file setattr;
 allow init sysfs_mdnie:file setattr;
@@ -39,7 +42,7 @@ allow init sysfs_lcd:file { setattr open };
 allow init sysfs_svc:file setattr;
 allow init sysfs_modem:file { setattr open write };
 allow init sysfs_wlan_fwpath:file setattr;
-allow init sysfs_virtual:file { open setattr write };
+allow init sysfs_virtual:file {read open setattr write };
 allow init sysfs_virtual:lnk_file read;
 allow init sysfs_charger:file setattr;
 allow init sysfs_modem:file r_file_perms;
