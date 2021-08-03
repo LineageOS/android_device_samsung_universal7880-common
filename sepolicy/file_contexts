@@ -167,7 +167,6 @@
 /sys/devices/[0-9]*\.dsim/lcd/panel/manufacture_code    u:object_r:sysfs_lcd:s0
 /sys/devices/[0-9]*\.dsim/lcd/panel/temperature         u:object_r:sysfs_lcd:s0
 /sys/devices/[0-9]*\.dsim/lcd/panel/window_type         u:object_r:sysfs_lcd:s0
-/sys/class/lcd/panel/smart_on                           u:object_r:sysfs_lcd:s0
 
 # modem
 /sys/module/modem_ctrl_ss310ap/parameters/ds_detect   u:object_r:sysfs_modem:s0
