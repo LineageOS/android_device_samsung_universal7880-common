@@ -171,7 +171,6 @@
 /sys/devices/[0-9]*\.dsim/lcd/panel/manufacture_code    u:object_r:sysfs_lcd:s0
 /sys/devices/[0-9]*\.dsim/lcd/panel/temperature         u:object_r:sysfs_lcd:s0
 /sys/devices/[0-9]*\.dsim/lcd/panel/window_type         u:object_r:sysfs_lcd:s0
-/sys/class/lcd/panel/smart_on                           u:object_r:sysfs_lcd:s0
 
 # mmc
 /sys/devices/13560000.dwmmc2(/.*)?         u:object_r:sysfs_mmc:s0
