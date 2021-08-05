@@ -20,7 +20,6 @@
 #include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
 
-#include "AntiFlicker.h"
 #include "DisplayColorCalibration.h"
 #include "DisplayModes.h"
 #include "ReadingEnhancement.h"
