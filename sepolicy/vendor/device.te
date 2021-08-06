@@ -4,9 +4,6 @@ type bluetooth_device, dev_type;
 # /dev/block/mmcblk0p[0-9] (/dev/mbin0)
 type emmcblk_device, file_type;
 
-# Radio block device mounted on /efs.
-type radio_block_device, dev_type;
-
 # /dev/umts_boot*, /dev/ehci_power
 type mif_device, dev_type;
 
@@ -15,9 +12,6 @@ type rfkill_device, dev_type;
 
 # /dev/s5p-smem
 type secmem_device, dev_type;
-
-# /dev/bbd*, /dev/ttyBCM[0-9]*
-type bbd_device, dev_type;
 
 # /dev/vfsspi
 type fingerprint_device, dev_type;

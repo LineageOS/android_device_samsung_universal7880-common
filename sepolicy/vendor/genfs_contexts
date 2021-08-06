@@ -1,0 +1,25 @@
+# mali debugfs
+genfscon debugfs /mali/			u:object_r:debugfs_mali:s0
+
+# ion debugfs
+genfscon debugfs /ion/			u:object_r:debugfs_ion:s0
+
+# hall
+genfscon sysfs /devices/certify_hall/input  u:object_r:sysfs_hall:s0
+genfscon sysfs /devices/hall/input/input5   u:object_r:sysfs_hall:s0
+genfscon sysfs /devices/hall/input/input4   u:object_r:sysfs_hall:s0
+
+# input
+genfscon sysfs /devices/gpio_keys/input/input3             u:object_r:sysfs_input:s0
+genfscon sysfs /devices/10610000.hsi2c/i2c-0/0-a004/input  u:object_r:sysfs_input:s0
+genfscon sysfs /devices/13890000.i2c/i2c-9/9-0020/input    u:object_r:sysfs_input:s0
+
+# mfc
+genfscon sysfs /devices/12c30000.mfc0/video6   u:object_r:sysfs_mfc:s0
+genfscon sysfs /devices/12c30000.mfc0/video7   u:object_r:sysfs_mfc:s0
+
+# socinfo
+genfscon sysfs /firmware/devicetree/base/      u:object_r:sysfs_socinfo:s0
+
+# usb
+genfscon sysfs /devices/13600000.usb/13600000.dwc3/gadget/lun0   u:object_r:sysfs_android_usb:s0

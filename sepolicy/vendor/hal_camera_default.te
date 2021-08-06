@@ -6,4 +6,6 @@ allow hal_camera_default hal_graphics_mapper_hwservice:hwservice_manager find;
 
 allow hal_camera_default media_rw_data_file:dir search;
 
+get_prop(hal_camera_default, exported_camera_prop)
+
 vndbinder_use(hal_camera_default)

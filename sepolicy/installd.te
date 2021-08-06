@@ -1,3 +1,0 @@
-# TbStorage (mobicore)
-allow installd mobicore_data_file:dir { rw_dir_perms rmdir };
-allow installd mobicore_vendor_data_file:dir { rw_dir_perms rmdir };

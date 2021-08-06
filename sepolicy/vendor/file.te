@@ -1,0 +1,46 @@
+### efs types
+type baro_delta_factoryapp_efs_file, file_type;
+type cpdebug_efs_file, file_type;
+type drm_efs_file, file_type;
+type factorymode_factoryapp_efs_file, file_type;
+type radio_factoryapp_efs_file, file_type;
+type sensor_efs_file, file_type;
+type sensor_factoryapp_efs_file, file_type;
+
+# gps
+type gps_socket, file_type;
+
+### sysfs types
+type sysfs_brightness, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_camera, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_charger, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_devfreq, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_gps, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_graphics, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_hall, sysfs_type, fs_type, mlstrustedobject;
+type sysfs_lcd, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_mdnie, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_mfc, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_mipi, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_mmc, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_modem, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_multipdp, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_sec, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_sec_touchkey, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_sec_touchscreena, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_socinfo, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_ssp, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_svc, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_virtual, fs_type, sysfs_type, mlstrustedobject;
+
+### data types
+type fingerprintd_vendor_data_file, data_file_type, file_type;
+type mediadrm_data_file, file_type, data_file_type;
+type nfc_vendor_data_file, data_file_type, file_type;
+type factoryprop_efs_file, data_file_type, file_type;
+
+allow sysfs_type tmpfs:filesystem associate;
+
+# debugfs types
+type debugfs_ion, fs_type, debugfs_type;
+type debugfs_mali, fs_type, debugfs_type;

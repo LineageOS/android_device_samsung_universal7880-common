@@ -1,3 +1,0 @@
-allow hal_health_default sysfs_charger:dir search;
-allow hal_health_default sysfs_charger:file { read open getattr };
-

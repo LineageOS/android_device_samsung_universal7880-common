@@ -1,0 +1,23 @@
+# Allow reading of sysfs nodes to find input devices
+
+allow hal_power_default sysfs_devices_system_cpu:file write;
+
+allow hal_power_default sysfs_input:dir r_dir_perms;
+allow hal_power_default sysfs_input:file r_file_perms;
+
+allow hal_power_default sysfs_virtual:dir r_dir_perms;
+allow hal_power_default sysfs_virtual:file rw_file_perms;
+
+allow hal_power_default sysfs_brightness:file rw_file_perms;
+
+allow hal_power_default sysfs_hall:dir r_dir_perms;
+allow hal_power_default sysfs_hall:file r_file_perms;
+
+allow hal_power_default sysfs_ssp:dir r_dir_perms;
+allow hal_power_default sysfs_ssp:file r_file_perms;
+
+allow hal_power_default sysfs_sec_touchkey:lnk_file read;
+allow hal_power_default sysfs_sec_touchscreen:file r_file_perms;
+
+allow hal_power_default sysfs_touchscreen_writable:dir r_dir_perms;
+allow hal_power_default sysfs_touchscreen_writable:file w_file_perms;

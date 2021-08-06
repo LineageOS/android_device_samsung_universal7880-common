@@ -10,7 +10,6 @@ allow kernel device:chr_file { create setattr getattr unlink };
 
 # /sys/devices/system/cpu/cpu[0-9]/cpufreq/*
 allow kernel sysfs_devices_system_cpu:file { setattr };
-allow kernel sysfs:file { setattr };
 
 # /efs contents
 allow kernel { app_efs_file battery_efs_file efs_file sensor_efs_file }:dir r_dir_perms;

@@ -39,10 +39,13 @@ allow cpboot-daemon factoryprop_efs_file:file { open read };
 allow cpboot-daemon bin_nv_data_efs_file:file rw_file_perms;
 
 # /sys/bus/usb/devices/1-2/idVendor
-allow cpboot-daemon sysfs:file r_file_perms;
+allow cpboot-daemon sysfs_usb:file r_file_perms;
 
 # /proc/cmdline
 allow cpboot-daemon proc_cmdline:file r_file_perms;
+
+# /sys/firmware/devicetree/base/model_info-system_rev
+allow cpboot-daemon sysfs_socinfo:file r_file_perms;
 
 # set properties on boot
 set_prop(cpboot-daemon, vendor_cbd_prop)

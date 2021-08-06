@@ -3,13 +3,6 @@ persist.bluetooth_fw_ver    u:object_r:bluetooth_prop:s0
 ro.bluetooth.tty            u:object_r:bluetooth_prop:s0
 wc_transport.               u:object_r:bluetooth_prop:s0
 
-# cbd
-vendor.cbd.                    u:object_r:vendor_cbd_prop:s0
-persist.vendor.cbd.            u:object_r:vendor_cbd_prop:s0
-
-# Fastcharge HAL
-persist.vendor.sec.fastchg_enabled     u:object_r:sec_fastcharge_prop:s0
-
 # NFC
 persist.nfc.log.index            u:object_r:vendor_nfc_prop:s0
 vendor.nfc.fw.                   u:object_r:vendor_nfc_prop:s0
@@ -20,12 +13,3 @@ hw.revision            u:object_r:modemloader_prop:s0
 ro.cbd.dt_revision     u:object_r:modemloader_prop:s0
 ril.cbd.dt_revision    u:object_r:modemloader_prop:s0
 ro.modemloader.done    u:object_r:modemloader_prop:s0
-
-# mobicore
-sys.mobicoredaemon.enable         u:object_r:tee_prop:s0
-
-### radio
-ro.multisim.                   u:object_r:vendor_radio_prop:s0
-ro.vendor.multisim.            u:object_r:vendor_radio_prop:s0
-ro.vendor.radio.               u:object_r:vendor_radio_prop:s0
-ro.multisim.simslotcount       u:object_r:radio_prop:s0

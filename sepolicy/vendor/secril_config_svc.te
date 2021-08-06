@@ -1,0 +1,5 @@
+# secril_config_svc.te
+
+allow secril_config_svc factoryprop_efs_file:file r_file_perms;
+
+set_prop(secril_config_svc, exported3_radio_prop)
