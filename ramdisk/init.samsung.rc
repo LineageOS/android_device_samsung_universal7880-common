@@ -57,9 +57,6 @@ on init
     chown system system /proc/extra
     chmod 0600 /proc/extra
 
-    # fastcharge switch
-    chown system radio /sys/class/sec/switch/afc_disable
-
 on fs
     setprop ro.crypto.fde_algorithm AES-256-XTS-DISK
 # Set model name by gpio
