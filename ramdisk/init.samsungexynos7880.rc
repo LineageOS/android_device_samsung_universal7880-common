@@ -507,7 +507,6 @@ on boot
     chown system system /sys/class/sec/switch/uart_sel
 
 # Switch Device
-    chown system radio /sys/class/sec/switch/afc_disable
     chown system radio /sys/class/sec/switch/afc_set_voltage
     chown system radio /sys/class/sec/switch/vbus_value
 
