@@ -39,35 +39,22 @@ OUTDIR=vendor/$VENDOR/$DEVICE_COMMON
 
 (cat << EOF) >> $ANDROID_ROOT/$OUTDIR/Android.mk
 include \$(CLEAR_VARS)
-LOCAL_MODULE := libGLES_mali
-LOCAL_MODULE_OWNER := samsung
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/egl/libGLES_mali.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/egl/libGLES_mali.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_CHECK_ELF_FILES := false
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_PATH_32 := \$(\$(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_VENDOR_SHARED_LIBRARIES)/egl
-LOCAL_MODULE_PATH_64 := \$(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/egl
 
-SYMLINKS := \$(TARGET_OUT)/vendor
-\$(SYMLINKS):
-	@echo "Symlink: vulkan.exynos5.so"
-	@mkdir -p \$@/lib/hw
-	@mkdir -p \$@/lib64/hw
-	\$(hide) ln -sf ../egl/libGLES_mali.so \$@/lib/hw/vulkan.exynos5.so
-	\$(hide) ln -sf ../egl/libGLES_mali.so \$@/lib64/hw/vulkan.exynos5.so
-	@echo "Symlink: libOpenCL.so.1.1"
-	\$(hide) ln -sf egl/libGLES_mali.so \$@/lib/libOpenCL.so.1.1
-	\$(hide) ln -sf egl/libGLES_mali.so \$@/lib64/libOpenCL.so.1.1
+EGL_LIBS := libGLES_mali.so libOpenCL.so libOpenCL.so.1 libOpenCL.so.1.1 vulkan.exynos5.so
 
-ALL_MODULES.\$(LOCAL_MODULE).INSTALLED := \\
-	\$(ALL_MODULES.\$(LOCAL_MODULE).INSTALLED) \$(SYMLINKS)
+EGL_32_SYMLINKS := \$(addprefix \$(TARGET_OUT_VENDOR)/lib/,\$(EGL_LIBS))
+\$(EGL_32_SYMLINKS): \$(LOCAL_INSTALLED_MODULE)
+	@echo "Symlink: EGL 32-bit lib: \$@"
+	@mkdir -p \$(dir \$@)
+	@rm -rf \$@
+	\$(hide) ln -sf /vendor/lib/egl/libGLES_mali.so \$@
 
-include \$(BUILD_PREBUILT)
-
-include \$(CLEAR_VARS)
+EGL_64_SYMLINKS := \$(addprefix \$(TARGET_OUT_VENDOR)/lib64/,\$(EGL_LIBS))
+\$(EGL_64_SYMLINKS): \$(LOCAL_INSTALLED_MODULE)
+	@echo "Symlink: EGL 64-bit lib : \$@"
+	@mkdir -p \$(dir \$@)
+	@rm -rf \$@
+	\$(hide) ln -sf /vendor/lib64/egl/libGLES_mali.so \$@
 
 LIFEVIBES_LIBS := libLifevibes_lvverx.so libLifevibes_lvvetx.so
 
@@ -78,14 +65,7 @@ LIFEVIBES_SYMLINKS := \$(addprefix \$(TARGET_OUT_VENDOR)/lib/,\$(notdir \$(LIFEV
 	@rm -rf \$@
 	\$(hide) ln -sf /vendor/lib/soundfx/\$(notdir \$@) \$@
 
-ALL_DEFAULT_INSTALLED_MODULES += \$(LIFEVIBES_SYMLINKS)
-
-EOF
-
-(cat << EOF) >> $ANDROID_ROOT/$OUTDIR/$DEVICE_COMMON-vendor.mk
-
-# Create Mali links for Vulkan and OpenCL
-PRODUCT_PACKAGES += libGLES_mali
+ALL_DEFAULT_INSTALLED_MODULES += \$(EGL_32_SYMLINKS) \$(EGL_64_SYMLINKS) \$(LIFEVIBES_SYMLINKS)
 
 EOF
 
