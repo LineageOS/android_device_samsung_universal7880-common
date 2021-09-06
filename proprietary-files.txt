@@ -93,13 +93,8 @@ vendor/lib/libwrappergps.so
 vendor/lib64/libwrappergps.so
 
 # Graphics
-# we are overriding some blobs built from the bsp
 lib64/hw/gralloc.exynos5.so
 lib/hw/gralloc.exynos5.so
-lib64/libexynosscaler.so
-lib/libexynosscaler.so
-vendor/lib64/libcsc.so:lib64/libcsc.so
-vendor/lib/libcsc.so:lib/libcsc.so
 vendor/lib64/libion_exynos.so
 vendor/lib/libion_exynos.so
 # Vulcan and OpenCL are implemented in this file,
