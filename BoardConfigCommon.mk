@@ -183,8 +183,8 @@ WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true
 BOARD_HAVE_SAMSUNG_WIFI := true
 
 # Build fingerprint
-BUILD_FINGERPRINT := "samsung/a7y17lteskt/a7y17lteskt:9/PPR1.180610.011/A720SKSU5CTL2:user/release-keys"
-PRIVATE_BUILD_DESC := "a7y17lteskt-user 9 PPR1.180610.011 A720SKSU5CTL2 release-keys"
+BUILD_FINGERPRINT := "samsung/a7y17lteskt/a7y17lteskt:9/PPR1.180610.011/A720SKSU5CUJ2:user/release-keys"
+PRIVATE_BUILD_DESC := "a7y17lteskt-user 9 PPR1.180610.011 A720SKSU5CUJ2 release-keys"
 
 # Charger
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
@@ -201,7 +201,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_USES_VND_SECRIL := true
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2020-12-01
+VENDOR_SECURITY_PATCH := 2021-10-01
 
 # Release tools
 #TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
