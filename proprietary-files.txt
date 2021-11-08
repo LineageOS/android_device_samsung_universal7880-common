@@ -234,8 +234,8 @@ etc/firmware/utfbd32.bin
 # a5y17lte config is set to load a different firmware, which is not
 # present in A720S stock rom. We need to pull these from A520F oreo.
 # A520FXXUBCSG1
-etc/firmware/bdwlan30_OLD.bin|c3d5b46d0193fbd931dbfe8403662768
-etc/firmware/utfbd30_OLD.bin|c3d5b46d0193fbd931dbfe8403662768
+etc/firmware/bdwlan30_OLD.bin|5eb5823f9349c64797cffbf5f3386b355777d309
+etc/firmware/utfbd30_OLD.bin|5eb5823f9349c64797cffbf5f3386b355777d309
 
 # NXP Noise Cancelling
 vendor/etc/nxp/AzControlParams_SPEAKER.txt
