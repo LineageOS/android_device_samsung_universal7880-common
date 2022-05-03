@@ -21,11 +21,11 @@ vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
 # Camera
-lib/hw/camera.exynos5.so
-lib64/hw/camera.exynos5.so
+lib/hw/camera.exynos5.so:lib/hw/camera.vendor.exynos5.so
+lib64/hw/camera.exynos5.so:lib64/hw/camera.vendor.exynos5.so
 lib/libexynoscamera.so
 lib64/libexynoscamera.so
-lib/libexynoscamera3.so|21dfda93fee73f515241f77c13828f93782055b2
+lib/libexynoscamera3.so
 lib64/libexynoscamera3.so
 lib/libhwjpeg.so
 lib64/libhwjpeg.so
