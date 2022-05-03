@@ -113,7 +113,8 @@ PRODUCT_PACKAGES += \
     camera.device@3.3-impl \
     camera.device@3.4-impl \
     libexynoscamera_shim \
-    libcamera_client_shim
+    libcamera_client_shim \
+    camera.exynos5
 
 # Camera service
 PRODUCT_COPY_FILES += \
