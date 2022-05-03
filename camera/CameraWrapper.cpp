@@ -370,7 +370,7 @@ static void camera_get_vendor_tag_ops(vendor_tag_ops_t *ops)
 }
 
 static int camera_open_legacy(const struct hw_module_t *module,
-        const char *id, uint32_t halVersion, struct hw_device_t **device)
+        const char *id, uint32_t halVersion __unused, struct hw_device_t **device)
 {
     ALOGV("%s", __FUNCTION__);
     if (check_vendor_module())
