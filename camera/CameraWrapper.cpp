@@ -24,6 +24,7 @@
 #define LOG_NDEBUG 0
 
 #define LOG_TAG "CameraWrapper"
+#include <android/fdsan.h>
 #include <cutils/log.h>
 
 #include <hardware/hardware.h>
@@ -90,6 +91,7 @@ typedef struct wrapper_camera_device {
 
 static int check_vendor_module()
 {
+    android_fdsan_set_error_level(ANDROID_FDSAN_ERROR_LEVEL_DISABLED);
     int rv = 0;
     ALOGV("%s", __FUNCTION__);
 
