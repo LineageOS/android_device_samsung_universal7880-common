@@ -1,0 +1,39 @@
+cc_library_shared {
+    name: "camera.exynos5",
+    relative_install_path: "hw",
+
+    srcs: [
+        "CameraWrapper.cpp",
+    ],
+
+    export_shared_lib_headers: [
+        "android.hardware.graphics.bufferqueue@1.0",
+        "android.hardware.graphics.bufferqueue@2.0",
+    ],
+
+    generated_headers: [
+        "android.hardware.graphics.bufferqueue@1.0_genc++_headers",
+        "android.hardware.graphics.bufferqueue@2.0_genc++_headers",
+    ],
+
+    shared_libs: [
+        "libhardware",
+        "liblog",
+        "libcamera_client",
+        "libutils",
+        "libcutils",
+        "android.hidl.token@1.0-utils",
+        "android.hardware.graphics.bufferqueue@1.0",
+        "android.hardware.graphics.bufferqueue@2.0",
+    ],
+
+    include_dirs: [
+        "frameworks/native/libs/nativewindow/include",
+        "frameworks/native/libs/arect/include",
+        "frameworks/av/media/ndk/include",
+    ],
+
+    header_libs: [
+        "libnativebase_headers",
+    ],
+}
